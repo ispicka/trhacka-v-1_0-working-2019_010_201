@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="XMLSchema2"
+    targetNamespace="http://tempuri.org/XMLSchema2.xsd"
+    elementFormDefault="qualified"
+    xmlns="http://tempuri.org/XMLSchema2.xsd"
+    xmlns:mstns="http://tempuri.org/XMLSchema2.xsd"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+>
+  <xs:element name="program">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="cmd" type="xs:string"></xs:element>
+        <xs:element name="pozition" type="xs:double"></xs:element>
+        <xs:element name="speed" type="xs:double"></xs:element>
+        <xs:element name="force" type="xs:double"></xs:element>
+        <xs:element name="acceleration" type="xs:double"></xs:element>
+        <xs:element name="time" type="xs:time"></xs:element>
+        <xs:element name="duration" type="xs:time"></xs:element>
+      </xs:sequence>
+      <xs:attribute name="uid" type="xs:string"></xs:attribute>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

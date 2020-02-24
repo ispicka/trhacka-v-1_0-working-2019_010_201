@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{45BA5088-2EEA-4465-B13B-97BE766694D7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>trhacka_v_1_0_working_2019_010_201</RootNamespace>
+    <AssemblyName>UA Client 1500</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup />
+  <ItemGroup>
+    <Reference Include="ColorSlider">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\ColorSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\CsvHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Geared">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.Geared.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Client">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\Opc.Ua.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Opc.Ua.Core">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\Opc.Ua.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="ScottPlot, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\old_trhacka-v-1_0-working-2019_010_20\packages\ScottPlot.4.0.2\lib\netstandard2.0\ScottPlot.dll</HintPath>
+    </Reference>
+    <Reference Include="ScottPlot.WinForms, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\old_trhacka-v-1_0-working-2019_010_20\packages\ScottPlot.WinForms.4.0.2\lib\net461\ScottPlot.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="SmoothProgressBar">
+      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\SmoothProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\old_trhacka-v-1_0-working-2019_010_20\packages\System.Drawing.Common.4.6.0\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IdentityModel" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ChartPID_TimeForceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartPID_TimeForceForm.Designer.cs">
+      <DependentUpon>ChartPID_TimeForceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartPID_TimePositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartPID_TimePositionForm.Designer.cs">
+      <DependentUpon>ChartPID_TimePositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartPID_TimeVelocityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartPID_TimeVelocityForm.Designer.cs">
+      <DependentUpon>ChartPID_TimeVelocityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartsData.cs" />
+    <Compile Include="ChartForceVelocityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartForceVelocityForm.Designer.cs">
+      <DependentUpon>ChartForceVelocityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartForcePositionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartForcePositionForm.Designer.cs">
+      <DependentUpon>ChartForcePositionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChartTimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChartTimeForm.Designer.cs">
+      <DependentUpon>ChartTimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DataRecordAllTime.cs" />
+    <Compile Include="DataRecordAllTimeHeader.cs" />
+    <Compile Include="DataRecordForcePosition.cs" />
+    <Compile Include="DataRecordForceVelocity.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="ProgramForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramForm.Designer.cs">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Programming.cs" />
+    <Compile Include="VericalProgressBar.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedTestVm.cs" />
+    <Compile Include="UAClientCertForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UAClientCertForm.Designer.cs">
+      <DependentUpon>UAClientCertForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UAClientForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UAClientForm.Designer.cs">
+      <DependentUpon>UAClientForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UAClientHelperAPI.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChartForcePositionForm.resx">
+      <DependentUpon>ChartForcePositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartForceVelocityForm.resx">
+      <DependentUpon>ChartForceVelocityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartPID_TimeForceForm.resx">
+      <DependentUpon>ChartPID_TimeForceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartPID_TimePositionForm.resx">
+      <DependentUpon>ChartPID_TimePositionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartPID_TimeVelocityForm.resx">
+      <DependentUpon>ChartPID_TimeVelocityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChartTimeForm.resx">
+      <DependentUpon>ChartTimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramForm.resx">
+      <DependentUpon>ProgramForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UAClientCertForm.resx">
+      <DependentUpon>UAClientCertForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UAClientForm.resx">
+      <DependentUpon>UAClientForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="plc.uap" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="XMLSchema1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="XMLSchema2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
