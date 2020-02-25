@@ -4252,6 +4252,106 @@ namespace trhacka_v_1_0_working_2019_010_201
             }
         }
 
+        private void textBoxHighForceRawLow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceEngLow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceRawHigh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceEngHigh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceRawLow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceEngLow_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceRawHigh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceEngHigh_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox16_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox13_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxHighForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBoxLowForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
         private void ButtonSetZero_Click(object sender, EventArgs e)
         {
 
