@@ -895,7 +895,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_raw",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.tare_std",
-   
+
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_raw",
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_std",
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref2_raw",
@@ -2476,7 +2476,11 @@ namespace trhacka_v_1_0_working_2019_010_201
             }
 
         }
-
+        /// <summary>
+        /// NotificationWriteToValuesConstants
+        /// </summary>
+        /// <param name="monitoredItem"></param>
+        /// <param name="notification"></param>
         private void NotificationWriteToValuesConstants(MonitoredItem monitoredItem, MonitoredItemNotification notification)
         {
             try
@@ -2484,7 +2488,7 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw")
                 {
-
+                    textBoxActualHighForceRawLowEcho.Text = notification.Value.Value.ToString();
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std")
                 {
@@ -2513,7 +2517,7 @@ namespace trhacka_v_1_0_working_2019_010_201
 
             }
 
-
+            ///
 #pragma warning disable CS0168 // The variable 'ex' is declared but never used
             catch (Exception ex)
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
@@ -4254,102 +4258,123 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void textBoxHighForceRawLow_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceRawLow);
         }
 
         private void textBoxHighForceEngLow_TextChanged(object sender, EventArgs e)
-        {
 
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceEngLow);
         }
 
         private void textBoxHighForceRawHigh_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceRawHig);
         }
 
         private void textBoxHighForceEngHigh_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceEngHigh);
         }
 
         private void textBoxLowForceRawLow_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceRawLow);
         }
 
         private void textBoxLowForceEngLow_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceEngLow);
         }
 
         private void textBoxLowForceRawHigh_TextChanged(object sender, EventArgs e)
         {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceRawHigh);
         }
 
         private void textBoxLowForceEngHigh_TextChanged(object sender, EventArgs e)
         {
-
-        }
-
-        private void textBox16_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox13_TextChanged(object sender, EventArgs e)
-        {
-
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceEngHigh);
         }
 
         private void textBoxHighForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_raw";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxHighForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxHighForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_raw";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxHighForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxLowForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_raw";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxLowForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxLowForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_raw";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void textBoxLowForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
-        private void textBox13_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxHighCellTara_TextChanged(object sender, EventArgs e)
         {
-
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
-        private void textBox16_KeyPress(object sender, KeyPressEventArgs e)
+        private void textBoxHighCellTara_KeyPress(object sender, KeyPressEventArgs e)
         {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+        }
 
+        private void textBoxLowCellTara_TextChanged(object sender, EventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:MachineControl.input.position.SetValue";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+        }
+
+        private void textBoxLowCellTara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:MachineControl.input.position.SetValue";
+            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
