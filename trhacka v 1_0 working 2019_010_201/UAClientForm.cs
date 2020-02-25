@@ -926,7 +926,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw",
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std",
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw",
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std",
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std",
 
             "constMConrol_weight_parameterLoadCell1_ref1_raw",
@@ -2488,29 +2488,67 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw")
                 {
-                    textBoxActualHighForceRawLowEcho.Text = notification.Value.Value.ToString();
+                    textBoxActualRawLowEcho.Text = notification.Value.Value.ToString();
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std")
                 {
-
+                    textBoxActualStdLowEcho.Text = notification.Value.Value.ToString();
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw")
                 {
-
+                    textBoxActualLRawHighEcho.Text= notification.Value.Value.ToString();
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw")
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std")
                 {
-
+                    textBoxActualStdHighEcho.Text = notification.Value.Value.ToString();
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std")
                 {
+                    textBoxTaraEcho.Text = notification.Value.Value.ToString();
+                }
 
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_ref1_raw")
+                {
+                    textBoxHighForceRawLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_ref1_std")
+                {
+                    textBoxHighForceStdLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_ref2_raw")
+                {
+                    textBoxHighForceRawHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_ref2_std")
+                {
+                    textBoxHighForceStdHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_tare_std")
+                {
+                    textBoxHighForceTaraEcho.Text = notification.Value.Value.ToString();
                 }
 
 
-
-
-
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell2_ref1_raw")
+                {
+                    textBoxLowForceRawLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell2_ref1_std")
+                {
+                    textBoxLowForceStdLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell2_ref2_raw")
+                {
+                    textBoxLowForceRawHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell2_ref2_std")
+                {
+                    textBoxLowForceStdHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell2_tare_std")
+                {
+                    textBoxLowForceTaraEcho.Text = notification.Value.Value.ToString();
+                }
 
 
 
@@ -3104,10 +3142,10 @@ namespace trhacka_v_1_0_working_2019_010_201
                         string monitoredItemName = namesOfConstats[1, i];
                         string nodeName = namesOfConstats[0, i];
                         //SubsribeURL(nodeName, monitoredItemName);
-                        myMonitoredItem = ChartsData.myClientHelperAPI.AddMonitoredItem(mySubscriptionConstants, nodeName, monitoredItemName, 200, Notification_MonitoredItem_FiltersAndRamps);
+                        myMonitoredItem = ChartsData.myClientHelperAPI.AddMonitoredItem(mySubscriptionConstants, nodeName, monitoredItemName, 200, Notification_MonitoredItem_Constants);
 
                     }
-                    ChartsData.myClientHelperAPI.ItemChangedNotification += new MonitoredItemNotificationEventHandler(Notification_MonitoredItem_FiltersAndRamps);
+                    ChartsData.myClientHelperAPI.ItemChangedNotification += new MonitoredItemNotificationEventHandler(Notification_MonitoredItem_Constants);
 
                 }
                 ChartsData.endOfSubstription = true;
@@ -4272,7 +4310,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void textBoxHighForceRawHigh_TextChanged(object sender, EventArgs e)
         {
             double val;
-            val = testNumericValueAndSetColor(textBoxHighForceRawHig);
+            val = testNumericValueAndSetColor(textBoxHighForceRawHigh);
         }
 
         private void textBoxHighForceEngHigh_TextChanged(object sender, EventArgs e)
@@ -4355,8 +4393,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void textBoxHighCellTara_TextChanged(object sender, EventArgs e)
         {
-            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.tare_std";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceTara);
         }
 
         private void textBoxHighCellTara_KeyPress(object sender, KeyPressEventArgs e)
@@ -4367,8 +4405,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void textBoxLowCellTara_TextChanged(object sender, EventArgs e)
         {
-            string command = "ns=6;s=::AsGlobalPV:MachineControl.input.position.SetValue";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceTara);
         }
 
         private void textBoxLowCellTara_KeyPress(object sender, KeyPressEventArgs e)

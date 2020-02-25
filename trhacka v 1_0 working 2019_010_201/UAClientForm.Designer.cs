@@ -98,9 +98,9 @@
             this.buttonReadCellParametersHigh = new System.Windows.Forms.Button();
             this.radioButtonLoadCellHigh = new System.Windows.Forms.RadioButton();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighForceEngLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceStdLowEcho = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBoxActualHighForceRawLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualRawLowEcho = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
             this.textBoxHighForceEngLow = new System.Windows.Forms.TextBox();
@@ -109,7 +109,7 @@
             this.label61 = new System.Windows.Forms.Label();
             this.buttonSaveForceParametersHigh = new System.Windows.Forms.Button();
             this.groupBox17 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighForceEngHighEcho = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceStdHighEcho = new System.Windows.Forms.TextBox();
             this.label71 = new System.Windows.Forms.Label();
             this.textBoxHighForceRawHighEcho = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
@@ -122,7 +122,7 @@
             this.buttonReadCellParametersLow = new System.Windows.Forms.Button();
             this.radioButtonLoadCellLow = new System.Windows.Forms.RadioButton();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowForceEngLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceStdLowEcho = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.textBoxLowForceRawLowEcho = new System.Windows.Forms.TextBox();
             this.label74 = new System.Windows.Forms.Label();
@@ -133,7 +133,7 @@
             this.label63 = new System.Windows.Forms.Label();
             this.buttonSaveForceParametersLow = new System.Windows.Forms.Button();
             this.groupBox19 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowForceEngHighEcho = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceStdHighEcho = new System.Windows.Forms.TextBox();
             this.label75 = new System.Windows.Forms.Label();
             this.textBoxLowForceRawHighEcho = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
@@ -370,18 +370,18 @@
             this.openFileDialogProgram = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogProgram = new System.Windows.Forms.SaveFileDialog();
             this.timerSendProgram = new System.Windows.Forms.Timer(this.components);
-            this.textBoxActualHighForceStdLowEcho = new System.Windows.Forms.TextBox();
-            this.textBoxActualLLowForceRawLowEcho = new System.Windows.Forms.TextBox();
-            this.textBoxActualLowForceStdLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualStdLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualLRawHighEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualStdHighEcho = new System.Windows.Forms.TextBox();
             this.textBoxTaraEcho = new System.Windows.Forms.TextBox();
             this.textBoxHighForceRawLowEcho = new System.Windows.Forms.TextBox();
             this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighCellTaraEcho = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceTaraEcho = new System.Windows.Forms.TextBox();
             this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowCellTaraEcho = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceTaraEcho = new System.Windows.Forms.TextBox();
             this.label78 = new System.Windows.Forms.Label();
-            this.textBoxHighCellTara = new System.Windows.Forms.TextBox();
-            this.textBoxLowCellTara = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceTara = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceTara = new System.Windows.Forms.TextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -963,7 +963,7 @@
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.textBoxHighForceRawLowEcho);
-            this.groupBox16.Controls.Add(this.textBoxHighForceEngLowEcho);
+            this.groupBox16.Controls.Add(this.textBoxHighForceStdLowEcho);
             this.groupBox16.Controls.Add(this.label69);
             this.groupBox16.Controls.Add(this.label70);
             this.groupBox16.Location = new System.Drawing.Point(155, 22);
@@ -973,13 +973,13 @@
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Dolní data";
             // 
-            // textBoxHighForceEngLowEcho
+            // textBoxHighForceStdLowEcho
             // 
-            this.textBoxHighForceEngLowEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighForceEngLowEcho.Name = "textBoxHighForceEngLowEcho";
-            this.textBoxHighForceEngLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceEngLowEcho.TabIndex = 39;
-            this.textBoxHighForceEngLowEcho.Text = "0";
+            this.textBoxHighForceStdLowEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceStdLowEcho.Name = "textBoxHighForceStdLowEcho";
+            this.textBoxHighForceStdLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceStdLowEcho.TabIndex = 39;
+            this.textBoxHighForceStdLowEcho.Text = "0";
             // 
             // label69
             // 
@@ -990,13 +990,13 @@
             this.label69.TabIndex = 41;
             this.label69.Text = "Síla";
             // 
-            // textBoxActualHighForceRawLowEcho
+            // textBoxActualRawLowEcho
             // 
-            this.textBoxActualHighForceRawLowEcho.Location = new System.Drawing.Point(161, 15);
-            this.textBoxActualHighForceRawLowEcho.Name = "textBoxActualHighForceRawLowEcho";
-            this.textBoxActualHighForceRawLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualHighForceRawLowEcho.TabIndex = 40;
-            this.textBoxActualHighForceRawLowEcho.Text = "0";
+            this.textBoxActualRawLowEcho.Location = new System.Drawing.Point(161, 15);
+            this.textBoxActualRawLowEcho.Name = "textBoxActualRawLowEcho";
+            this.textBoxActualRawLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualRawLowEcho.TabIndex = 40;
+            this.textBoxActualRawLowEcho.Text = "0";
             // 
             // label70
             // 
@@ -1069,7 +1069,7 @@
             // 
             // groupBox17
             // 
-            this.groupBox17.Controls.Add(this.textBoxHighForceEngHighEcho);
+            this.groupBox17.Controls.Add(this.textBoxHighForceStdHighEcho);
             this.groupBox17.Controls.Add(this.label71);
             this.groupBox17.Controls.Add(this.textBoxHighForceRawHighEcho);
             this.groupBox17.Controls.Add(this.label72);
@@ -1080,13 +1080,13 @@
             this.groupBox17.TabStop = false;
             this.groupBox17.Text = "Horní data";
             // 
-            // textBoxHighForceEngHighEcho
+            // textBoxHighForceStdHighEcho
             // 
-            this.textBoxHighForceEngHighEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighForceEngHighEcho.Name = "textBoxHighForceEngHighEcho";
-            this.textBoxHighForceEngHighEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceEngHighEcho.TabIndex = 39;
-            this.textBoxHighForceEngHighEcho.Text = "0";
+            this.textBoxHighForceStdHighEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceStdHighEcho.Name = "textBoxHighForceStdHighEcho";
+            this.textBoxHighForceStdHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceStdHighEcho.TabIndex = 39;
+            this.textBoxHighForceStdHighEcho.Text = "0";
             // 
             // label71
             // 
@@ -1204,7 +1204,7 @@
             // 
             // groupBox18
             // 
-            this.groupBox18.Controls.Add(this.textBoxLowForceEngLowEcho);
+            this.groupBox18.Controls.Add(this.textBoxLowForceStdLowEcho);
             this.groupBox18.Controls.Add(this.label73);
             this.groupBox18.Controls.Add(this.textBoxLowForceRawLowEcho);
             this.groupBox18.Controls.Add(this.label74);
@@ -1215,13 +1215,13 @@
             this.groupBox18.TabStop = false;
             this.groupBox18.Text = "Dolní data";
             // 
-            // textBoxLowForceEngLowEcho
+            // textBoxLowForceStdLowEcho
             // 
-            this.textBoxLowForceEngLowEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowForceEngLowEcho.Name = "textBoxLowForceEngLowEcho";
-            this.textBoxLowForceEngLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceEngLowEcho.TabIndex = 39;
-            this.textBoxLowForceEngLowEcho.Text = "0";
+            this.textBoxLowForceStdLowEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceStdLowEcho.Name = "textBoxLowForceStdLowEcho";
+            this.textBoxLowForceStdLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceStdLowEcho.TabIndex = 39;
+            this.textBoxLowForceStdLowEcho.Text = "0";
             // 
             // label73
             // 
@@ -1311,7 +1311,7 @@
             // 
             // groupBox19
             // 
-            this.groupBox19.Controls.Add(this.textBoxLowForceEngHighEcho);
+            this.groupBox19.Controls.Add(this.textBoxLowForceStdHighEcho);
             this.groupBox19.Controls.Add(this.label75);
             this.groupBox19.Controls.Add(this.textBoxLowForceRawHighEcho);
             this.groupBox19.Controls.Add(this.label76);
@@ -1322,13 +1322,13 @@
             this.groupBox19.TabStop = false;
             this.groupBox19.Text = "Horní data";
             // 
-            // textBoxLowForceEngHighEcho
+            // textBoxLowForceStdHighEcho
             // 
-            this.textBoxLowForceEngHighEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowForceEngHighEcho.Name = "textBoxLowForceEngHighEcho";
-            this.textBoxLowForceEngHighEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceEngHighEcho.TabIndex = 39;
-            this.textBoxLowForceEngHighEcho.Text = "0";
+            this.textBoxLowForceStdHighEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceStdHighEcho.Name = "textBoxLowForceStdHighEcho";
+            this.textBoxLowForceStdHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceStdHighEcho.TabIndex = 39;
+            this.textBoxLowForceStdHighEcho.Text = "0";
             // 
             // label75
             // 
@@ -1412,11 +1412,11 @@
             this.groupBox14.Controls.Add(this.buttonSaveScaleParameters);
             this.groupBox14.Controls.Add(this.label78);
             this.groupBox14.Controls.Add(this.buttonTara);
-            this.groupBox14.Controls.Add(this.textBoxActualLowForceStdLowEcho);
-            this.groupBox14.Controls.Add(this.textBoxActualLLowForceRawLowEcho);
-            this.groupBox14.Controls.Add(this.textBoxActualHighForceStdLowEcho);
+            this.groupBox14.Controls.Add(this.textBoxActualStdHighEcho);
+            this.groupBox14.Controls.Add(this.textBoxActualLRawHighEcho);
+            this.groupBox14.Controls.Add(this.textBoxActualStdLowEcho);
             this.groupBox14.Controls.Add(this.textBoxTaraEcho);
-            this.groupBox14.Controls.Add(this.textBoxActualHighForceRawLowEcho);
+            this.groupBox14.Controls.Add(this.textBoxActualRawLowEcho);
             this.groupBox14.Controls.Add(this.buttonLowForce);
             this.groupBox14.Controls.Add(this.buttonHighForce);
             this.groupBox14.Location = new System.Drawing.Point(15, 10);
@@ -3773,29 +3773,29 @@
             // 
             this.timerSendProgram.Tick += new System.EventHandler(this.timerSendProgram_Tick);
             // 
-            // textBoxActualHighForceStdLowEcho
+            // textBoxActualStdLowEcho
             // 
-            this.textBoxActualHighForceStdLowEcho.Location = new System.Drawing.Point(161, 43);
-            this.textBoxActualHighForceStdLowEcho.Name = "textBoxActualHighForceStdLowEcho";
-            this.textBoxActualHighForceStdLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualHighForceStdLowEcho.TabIndex = 40;
-            this.textBoxActualHighForceStdLowEcho.Text = "0";
+            this.textBoxActualStdLowEcho.Location = new System.Drawing.Point(161, 43);
+            this.textBoxActualStdLowEcho.Name = "textBoxActualStdLowEcho";
+            this.textBoxActualStdLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualStdLowEcho.TabIndex = 40;
+            this.textBoxActualStdLowEcho.Text = "0";
             // 
-            // textBoxActualLLowForceRawLowEcho
+            // textBoxActualLRawHighEcho
             // 
-            this.textBoxActualLLowForceRawLowEcho.Location = new System.Drawing.Point(161, 71);
-            this.textBoxActualLLowForceRawLowEcho.Name = "textBoxActualLLowForceRawLowEcho";
-            this.textBoxActualLLowForceRawLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualLLowForceRawLowEcho.TabIndex = 40;
-            this.textBoxActualLLowForceRawLowEcho.Text = "0";
+            this.textBoxActualLRawHighEcho.Location = new System.Drawing.Point(161, 71);
+            this.textBoxActualLRawHighEcho.Name = "textBoxActualLRawHighEcho";
+            this.textBoxActualLRawHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualLRawHighEcho.TabIndex = 40;
+            this.textBoxActualLRawHighEcho.Text = "0";
             // 
-            // textBoxActualLowForceStdLowEcho
+            // textBoxActualStdHighEcho
             // 
-            this.textBoxActualLowForceStdLowEcho.Location = new System.Drawing.Point(161, 101);
-            this.textBoxActualLowForceStdLowEcho.Name = "textBoxActualLowForceStdLowEcho";
-            this.textBoxActualLowForceStdLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualLowForceStdLowEcho.TabIndex = 40;
-            this.textBoxActualLowForceStdLowEcho.Text = "0";
+            this.textBoxActualStdHighEcho.Location = new System.Drawing.Point(161, 101);
+            this.textBoxActualStdHighEcho.Name = "textBoxActualStdHighEcho";
+            this.textBoxActualStdHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualStdHighEcho.TabIndex = 40;
+            this.textBoxActualStdHighEcho.Text = "0";
             // 
             // textBoxTaraEcho
             // 
@@ -3815,8 +3815,8 @@
             // 
             // groupBox20
             // 
-            this.groupBox20.Controls.Add(this.textBoxHighCellTara);
-            this.groupBox20.Controls.Add(this.textBoxHighCellTaraEcho);
+            this.groupBox20.Controls.Add(this.textBoxHighForceTara);
+            this.groupBox20.Controls.Add(this.textBoxHighForceTaraEcho);
             this.groupBox20.Location = new System.Drawing.Point(296, 22);
             this.groupBox20.Name = "groupBox20";
             this.groupBox20.Size = new System.Drawing.Size(129, 101);
@@ -3824,18 +3824,18 @@
             this.groupBox20.TabStop = false;
             this.groupBox20.Text = "Tára";
             // 
-            // textBoxHighCellTaraEcho
+            // textBoxHighForceTaraEcho
             // 
-            this.textBoxHighCellTaraEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighCellTaraEcho.Name = "textBoxHighCellTaraEcho";
-            this.textBoxHighCellTaraEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighCellTaraEcho.TabIndex = 39;
-            this.textBoxHighCellTaraEcho.Text = "0";
+            this.textBoxHighForceTaraEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceTaraEcho.Name = "textBoxHighForceTaraEcho";
+            this.textBoxHighForceTaraEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceTaraEcho.TabIndex = 39;
+            this.textBoxHighForceTaraEcho.Text = "0";
             // 
             // groupBox21
             // 
-            this.groupBox21.Controls.Add(this.textBoxLowCellTara);
-            this.groupBox21.Controls.Add(this.textBoxLowCellTaraEcho);
+            this.groupBox21.Controls.Add(this.textBoxLowForceTara);
+            this.groupBox21.Controls.Add(this.textBoxLowForceTaraEcho);
             this.groupBox21.Location = new System.Drawing.Point(294, 19);
             this.groupBox21.Name = "groupBox21";
             this.groupBox21.Size = new System.Drawing.Size(129, 101);
@@ -3843,13 +3843,13 @@
             this.groupBox21.TabStop = false;
             this.groupBox21.Text = "Tára";
             // 
-            // textBoxLowCellTaraEcho
+            // textBoxLowForceTaraEcho
             // 
-            this.textBoxLowCellTaraEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowCellTaraEcho.Name = "textBoxLowCellTaraEcho";
-            this.textBoxLowCellTaraEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowCellTaraEcho.TabIndex = 39;
-            this.textBoxLowCellTaraEcho.Text = "0";
+            this.textBoxLowForceTaraEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceTaraEcho.Name = "textBoxLowForceTaraEcho";
+            this.textBoxLowForceTaraEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceTaraEcho.TabIndex = 39;
+            this.textBoxLowForceTaraEcho.Text = "0";
             // 
             // label78
             // 
@@ -3860,25 +3860,25 @@
             this.label78.TabIndex = 41;
             this.label78.Text = "Tára";
             // 
-            // textBoxHighCellTara
+            // textBoxHighForceTara
             // 
-            this.textBoxHighCellTara.Location = new System.Drawing.Point(6, 37);
-            this.textBoxHighCellTara.Name = "textBoxHighCellTara";
-            this.textBoxHighCellTara.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighCellTara.TabIndex = 39;
-            this.textBoxHighCellTara.Text = "0";
-            this.textBoxHighCellTara.TextChanged += new System.EventHandler(this.textBoxHighCellTara_TextChanged);
-            this.textBoxHighCellTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighCellTara_KeyPress);
+            this.textBoxHighForceTara.Location = new System.Drawing.Point(6, 37);
+            this.textBoxHighForceTara.Name = "textBoxHighForceTara";
+            this.textBoxHighForceTara.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceTara.TabIndex = 39;
+            this.textBoxHighForceTara.Text = "0";
+            this.textBoxHighForceTara.TextChanged += new System.EventHandler(this.textBoxHighCellTara_TextChanged);
+            this.textBoxHighForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighCellTara_KeyPress);
             // 
-            // textBoxLowCellTara
+            // textBoxLowForceTara
             // 
-            this.textBoxLowCellTara.Location = new System.Drawing.Point(7, 36);
-            this.textBoxLowCellTara.Name = "textBoxLowCellTara";
-            this.textBoxLowCellTara.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowCellTara.TabIndex = 39;
-            this.textBoxLowCellTara.Text = "0";
-            this.textBoxLowCellTara.TextChanged += new System.EventHandler(this.textBoxLowCellTara_TextChanged);
-            this.textBoxLowCellTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowCellTara_KeyPress);
+            this.textBoxLowForceTara.Location = new System.Drawing.Point(7, 36);
+            this.textBoxLowForceTara.Name = "textBoxLowForceTara";
+            this.textBoxLowForceTara.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceTara.TabIndex = 39;
+            this.textBoxLowForceTara.Text = "0";
+            this.textBoxLowForceTara.TextChanged += new System.EventHandler(this.textBoxLowCellTara_TextChanged);
+            this.textBoxLowForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowCellTara_KeyPress);
             // 
             // UAClientForm
             // 
@@ -4278,39 +4278,39 @@
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label68;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.TextBox textBoxHighForceEngLowEcho;
+        private System.Windows.Forms.TextBox textBoxHighForceStdLowEcho;
         private System.Windows.Forms.Label label69;
-        private System.Windows.Forms.TextBox textBoxActualHighForceRawLowEcho;
+        private System.Windows.Forms.TextBox textBoxActualRawLowEcho;
         private System.Windows.Forms.Label label70;
         private System.Windows.Forms.GroupBox groupBox17;
-        private System.Windows.Forms.TextBox textBoxHighForceEngHighEcho;
+        private System.Windows.Forms.TextBox textBoxHighForceStdHighEcho;
         private System.Windows.Forms.Label label71;
         private System.Windows.Forms.TextBox textBoxHighForceRawHighEcho;
         private System.Windows.Forms.Label label72;
         private System.Windows.Forms.Button buttonReadCellParametersLow;
         private System.Windows.Forms.GroupBox groupBox18;
-        private System.Windows.Forms.TextBox textBoxLowForceEngLowEcho;
+        private System.Windows.Forms.TextBox textBoxLowForceStdLowEcho;
         private System.Windows.Forms.Label label73;
         private System.Windows.Forms.TextBox textBoxLowForceRawLowEcho;
         private System.Windows.Forms.Label label74;
         private System.Windows.Forms.GroupBox groupBox19;
-        private System.Windows.Forms.TextBox textBoxLowForceEngHighEcho;
+        private System.Windows.Forms.TextBox textBoxLowForceStdHighEcho;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.TextBox textBoxLowForceRawHighEcho;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Button buttonSaveScaleParameters;
         private System.Windows.Forms.GroupBox groupBox20;
-        private System.Windows.Forms.TextBox textBoxHighCellTaraEcho;
+        private System.Windows.Forms.TextBox textBoxHighForceTaraEcho;
         private System.Windows.Forms.TextBox textBoxHighForceRawLowEcho;
         private System.Windows.Forms.GroupBox groupBox21;
-        private System.Windows.Forms.TextBox textBoxLowCellTaraEcho;
+        private System.Windows.Forms.TextBox textBoxLowForceTaraEcho;
         private System.Windows.Forms.Label label78;
-        private System.Windows.Forms.TextBox textBoxActualLowForceStdLowEcho;
-        private System.Windows.Forms.TextBox textBoxActualLLowForceRawLowEcho;
-        private System.Windows.Forms.TextBox textBoxActualHighForceStdLowEcho;
+        private System.Windows.Forms.TextBox textBoxActualStdHighEcho;
+        private System.Windows.Forms.TextBox textBoxActualLRawHighEcho;
+        private System.Windows.Forms.TextBox textBoxActualStdLowEcho;
         private System.Windows.Forms.TextBox textBoxTaraEcho;
-        private System.Windows.Forms.TextBox textBoxHighCellTara;
-        private System.Windows.Forms.TextBox textBoxLowCellTara;
+        private System.Windows.Forms.TextBox textBoxHighForceTara;
+        private System.Windows.Forms.TextBox textBoxLowForceTara;
     }
 }
 
