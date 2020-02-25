@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle55 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle56 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle57 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle58 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle59 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle60 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle61 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle62 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle63 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle64 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle65 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle66 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle67 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle68 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle69 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle70 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle71 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle72 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UAClientForm));
             this.buttonHighForce = new System.Windows.Forms.Button();
             this.buttonLowForce = new System.Windows.Forms.Button();
@@ -97,13 +97,16 @@
             this.groupBox8 = new System.Windows.Forms.GroupBox();
             this.buttonReadCellParametersHigh = new System.Windows.Forms.Button();
             this.radioButtonLoadCellHigh = new System.Windows.Forms.RadioButton();
+            this.groupBox20 = new System.Windows.Forms.GroupBox();
+            this.textBoxHighForceTara = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceTaraEcho = new System.Windows.Forms.TextBox();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
+            this.textBoxHighForceRawLowEcho = new System.Windows.Forms.TextBox();
             this.textBoxHighForceStdLowEcho = new System.Windows.Forms.TextBox();
             this.label69 = new System.Windows.Forms.Label();
-            this.textBoxActualRawLowEcho = new System.Windows.Forms.TextBox();
             this.label70 = new System.Windows.Forms.Label();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighForceEngLow = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceStdLow = new System.Windows.Forms.TextBox();
             this.label60 = new System.Windows.Forms.Label();
             this.textBoxHighForceRawLow = new System.Windows.Forms.TextBox();
             this.label61 = new System.Windows.Forms.Label();
@@ -114,20 +117,23 @@
             this.textBoxHighForceRawHighEcho = new System.Windows.Forms.TextBox();
             this.label72 = new System.Windows.Forms.Label();
             this.groupBox9 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighForceEngHigh = new System.Windows.Forms.TextBox();
+            this.textBoxHighForceStdHigh = new System.Windows.Forms.TextBox();
             this.label58 = new System.Windows.Forms.Label();
             this.textBoxHighForceRawHigh = new System.Windows.Forms.TextBox();
             this.label59 = new System.Windows.Forms.Label();
             this.groupBox11 = new System.Windows.Forms.GroupBox();
             this.buttonReadCellParametersLow = new System.Windows.Forms.Button();
             this.radioButtonLoadCellLow = new System.Windows.Forms.RadioButton();
+            this.groupBox21 = new System.Windows.Forms.GroupBox();
+            this.textBoxLowForceTara = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceTaraEcho = new System.Windows.Forms.TextBox();
             this.groupBox18 = new System.Windows.Forms.GroupBox();
             this.textBoxLowForceStdLowEcho = new System.Windows.Forms.TextBox();
             this.label73 = new System.Windows.Forms.Label();
             this.textBoxLowForceRawLowEcho = new System.Windows.Forms.TextBox();
             this.label74 = new System.Windows.Forms.Label();
             this.groupBox12 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowForceEngLow = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceStdLow = new System.Windows.Forms.TextBox();
             this.label62 = new System.Windows.Forms.Label();
             this.textBoxLowForceRawLow = new System.Windows.Forms.TextBox();
             this.label63 = new System.Windows.Forms.Label();
@@ -138,12 +144,18 @@
             this.textBoxLowForceRawHighEcho = new System.Windows.Forms.TextBox();
             this.label76 = new System.Windows.Forms.Label();
             this.groupBox13 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowForceEngHigh = new System.Windows.Forms.TextBox();
+            this.textBoxLowForceStdHigh = new System.Windows.Forms.TextBox();
             this.label64 = new System.Windows.Forms.Label();
             this.textBoxLowForceRawHigh = new System.Windows.Forms.TextBox();
             this.label65 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
             this.buttonSaveScaleParameters = new System.Windows.Forms.Button();
+            this.label78 = new System.Windows.Forms.Label();
+            this.textBoxActualStdHighEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualLRawHighEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualStdLowEcho = new System.Windows.Forms.TextBox();
+            this.textBoxTaraEcho = new System.Windows.Forms.TextBox();
+            this.textBoxActualRawLowEcho = new System.Windows.Forms.TextBox();
             this.tabPageFiltersRamps = new System.Windows.Forms.TabPage();
             this.textBoxStrainFiltrOrder = new System.Windows.Forms.GroupBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -370,18 +382,6 @@
             this.openFileDialogProgram = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogProgram = new System.Windows.Forms.SaveFileDialog();
             this.timerSendProgram = new System.Windows.Forms.Timer(this.components);
-            this.textBoxActualStdLowEcho = new System.Windows.Forms.TextBox();
-            this.textBoxActualLRawHighEcho = new System.Windows.Forms.TextBox();
-            this.textBoxActualStdHighEcho = new System.Windows.Forms.TextBox();
-            this.textBoxTaraEcho = new System.Windows.Forms.TextBox();
-            this.textBoxHighForceRawLowEcho = new System.Windows.Forms.TextBox();
-            this.groupBox20 = new System.Windows.Forms.GroupBox();
-            this.textBoxHighForceTaraEcho = new System.Windows.Forms.TextBox();
-            this.groupBox21 = new System.Windows.Forms.GroupBox();
-            this.textBoxLowForceTaraEcho = new System.Windows.Forms.TextBox();
-            this.label78 = new System.Windows.Forms.Label();
-            this.textBoxHighForceTara = new System.Windows.Forms.TextBox();
-            this.textBoxLowForceTara = new System.Windows.Forms.TextBox();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -393,11 +393,13 @@
             this.tabPageTenzometers.SuspendLayout();
             this.groupBox15.SuspendLayout();
             this.groupBox8.SuspendLayout();
+            this.groupBox20.SuspendLayout();
             this.groupBox16.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox17.SuspendLayout();
             this.groupBox9.SuspendLayout();
             this.groupBox11.SuspendLayout();
+            this.groupBox21.SuspendLayout();
             this.groupBox18.SuspendLayout();
             this.groupBox12.SuspendLayout();
             this.groupBox19.SuspendLayout();
@@ -425,8 +427,6 @@
             this.groupBox4.SuspendLayout();
             this.groupBoxControl.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            this.groupBox20.SuspendLayout();
-            this.groupBox21.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonHighForce
@@ -559,57 +559,57 @@
             // 
             // Position
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Position.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle55.Format = "N2";
+            dataGridViewCellStyle55.NullValue = null;
+            this.Position.DefaultCellStyle = dataGridViewCellStyle55;
             this.Position.HeaderText = "Pozice";
             this.Position.Name = "Position";
             // 
             // Velocity
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Velocity.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle56.Format = "N2";
+            dataGridViewCellStyle56.NullValue = null;
+            this.Velocity.DefaultCellStyle = dataGridViewCellStyle56;
             this.Velocity.HeaderText = "Rychlost";
             this.Velocity.Name = "Velocity";
             // 
             // Force
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Force.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle57.Format = "N2";
+            dataGridViewCellStyle57.NullValue = null;
+            this.Force.DefaultCellStyle = dataGridViewCellStyle57;
             this.Force.HeaderText = "Síla";
             this.Force.Name = "Force";
             // 
             // Acceleration
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Acceleration.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle58.Format = "N2";
+            dataGridViewCellStyle58.NullValue = null;
+            this.Acceleration.DefaultCellStyle = dataGridViewCellStyle58;
             this.Acceleration.HeaderText = "Zrychlení";
             this.Acceleration.Name = "Acceleration";
             // 
             // Duration
             // 
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Duration.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle59.Format = "N2";
+            dataGridViewCellStyle59.NullValue = null;
+            this.Duration.DefaultCellStyle = dataGridViewCellStyle59;
             this.Duration.HeaderText = "Doba";
             this.Duration.Name = "Duration";
             // 
             // ActualDuration
             // 
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.ActualDuration.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle60.Format = "N2";
+            dataGridViewCellStyle60.NullValue = null;
+            this.ActualDuration.DefaultCellStyle = dataGridViewCellStyle60;
             this.ActualDuration.HeaderText = "Průběh";
             this.ActualDuration.Name = "ActualDuration";
             // 
             // EndForce
             // 
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.EndForce.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle61.Format = "N2";
+            dataGridViewCellStyle61.NullValue = null;
+            this.EndForce.DefaultCellStyle = dataGridViewCellStyle61;
             this.EndForce.HeaderText = "Síla STOP";
             this.EndForce.Name = "EndForce";
             // 
@@ -800,7 +800,7 @@
             this.endpointListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.endpointListView.HideSelection = false;
             this.endpointListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem4});
             this.endpointListView.Location = new System.Drawing.Point(8, 112);
             this.endpointListView.MultiSelect = false;
             this.endpointListView.Name = "endpointListView";
@@ -960,6 +960,35 @@
             this.radioButtonLoadCellHigh.Text = "Zvolený snímač";
             this.radioButtonLoadCellHigh.UseVisualStyleBackColor = true;
             // 
+            // groupBox20
+            // 
+            this.groupBox20.Controls.Add(this.textBoxHighForceTara);
+            this.groupBox20.Controls.Add(this.textBoxHighForceTaraEcho);
+            this.groupBox20.Location = new System.Drawing.Point(296, 22);
+            this.groupBox20.Name = "groupBox20";
+            this.groupBox20.Size = new System.Drawing.Size(129, 101);
+            this.groupBox20.TabIndex = 44;
+            this.groupBox20.TabStop = false;
+            this.groupBox20.Text = "Tára";
+            // 
+            // textBoxHighForceTara
+            // 
+            this.textBoxHighForceTara.Location = new System.Drawing.Point(6, 37);
+            this.textBoxHighForceTara.Name = "textBoxHighForceTara";
+            this.textBoxHighForceTara.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceTara.TabIndex = 39;
+            this.textBoxHighForceTara.Text = "0";
+            this.textBoxHighForceTara.TextChanged += new System.EventHandler(this.textBoxHighForceTara_TextChanged);
+            this.textBoxHighForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighForceTara_KeyPress);
+            // 
+            // textBoxHighForceTaraEcho
+            // 
+            this.textBoxHighForceTaraEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceTaraEcho.Name = "textBoxHighForceTaraEcho";
+            this.textBoxHighForceTaraEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceTaraEcho.TabIndex = 39;
+            this.textBoxHighForceTaraEcho.Text = "0";
+            // 
             // groupBox16
             // 
             this.groupBox16.Controls.Add(this.textBoxHighForceRawLowEcho);
@@ -972,6 +1001,14 @@
             this.groupBox16.TabIndex = 44;
             this.groupBox16.TabStop = false;
             this.groupBox16.Text = "Dolní data";
+            // 
+            // textBoxHighForceRawLowEcho
+            // 
+            this.textBoxHighForceRawLowEcho.Location = new System.Drawing.Point(6, 37);
+            this.textBoxHighForceRawLowEcho.Name = "textBoxHighForceRawLowEcho";
+            this.textBoxHighForceRawLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceRawLowEcho.TabIndex = 39;
+            this.textBoxHighForceRawLowEcho.Text = "0";
             // 
             // textBoxHighForceStdLowEcho
             // 
@@ -990,14 +1027,6 @@
             this.label69.TabIndex = 41;
             this.label69.Text = "Síla";
             // 
-            // textBoxActualRawLowEcho
-            // 
-            this.textBoxActualRawLowEcho.Location = new System.Drawing.Point(161, 15);
-            this.textBoxActualRawLowEcho.Name = "textBoxActualRawLowEcho";
-            this.textBoxActualRawLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualRawLowEcho.TabIndex = 40;
-            this.textBoxActualRawLowEcho.Text = "0";
-            // 
             // label70
             // 
             this.label70.AutoSize = true;
@@ -1009,7 +1038,7 @@
             // 
             // groupBox10
             // 
-            this.groupBox10.Controls.Add(this.textBoxHighForceEngLow);
+            this.groupBox10.Controls.Add(this.textBoxHighForceStdLow);
             this.groupBox10.Controls.Add(this.label60);
             this.groupBox10.Controls.Add(this.textBoxHighForceRawLow);
             this.groupBox10.Controls.Add(this.label61);
@@ -1020,15 +1049,15 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Dolní data";
             // 
-            // textBoxHighForceEngLow
+            // textBoxHighForceStdLow
             // 
-            this.textBoxHighForceEngLow.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighForceEngLow.Name = "textBoxHighForceEngLow";
-            this.textBoxHighForceEngLow.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceEngLow.TabIndex = 39;
-            this.textBoxHighForceEngLow.Text = "0";
-            this.textBoxHighForceEngLow.TextChanged += new System.EventHandler(this.textBoxHighForceEngLow_TextChanged);
-            this.textBoxHighForceEngLow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighForceEngLow_KeyPress);
+            this.textBoxHighForceStdLow.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceStdLow.Name = "textBoxHighForceStdLow";
+            this.textBoxHighForceStdLow.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceStdLow.TabIndex = 39;
+            this.textBoxHighForceStdLow.Text = "0";
+            this.textBoxHighForceStdLow.TextChanged += new System.EventHandler(this.textBoxHighForceStdLow_TextChanged);
+            this.textBoxHighForceStdLow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighForceStdLow_KeyPress);
             // 
             // label60
             // 
@@ -1116,7 +1145,7 @@
             // 
             // groupBox9
             // 
-            this.groupBox9.Controls.Add(this.textBoxHighForceEngHigh);
+            this.groupBox9.Controls.Add(this.textBoxHighForceStdHigh);
             this.groupBox9.Controls.Add(this.label58);
             this.groupBox9.Controls.Add(this.textBoxHighForceRawHigh);
             this.groupBox9.Controls.Add(this.label59);
@@ -1127,15 +1156,15 @@
             this.groupBox9.TabStop = false;
             this.groupBox9.Text = "Horní data";
             // 
-            // textBoxHighForceEngHigh
+            // textBoxHighForceStdHigh
             // 
-            this.textBoxHighForceEngHigh.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighForceEngHigh.Name = "textBoxHighForceEngHigh";
-            this.textBoxHighForceEngHigh.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceEngHigh.TabIndex = 39;
-            this.textBoxHighForceEngHigh.Text = "0";
-            this.textBoxHighForceEngHigh.TextChanged += new System.EventHandler(this.textBoxHighForceEngHigh_TextChanged);
-            this.textBoxHighForceEngHigh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighForceEngHigh_KeyPress);
+            this.textBoxHighForceStdHigh.Location = new System.Drawing.Point(6, 73);
+            this.textBoxHighForceStdHigh.Name = "textBoxHighForceStdHigh";
+            this.textBoxHighForceStdHigh.Size = new System.Drawing.Size(110, 20);
+            this.textBoxHighForceStdHigh.TabIndex = 39;
+            this.textBoxHighForceStdHigh.Text = "0";
+            this.textBoxHighForceStdHigh.TextChanged += new System.EventHandler(this.textBoxHighForceStdHigh_TextChanged);
+            this.textBoxHighForceStdHigh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighForceStdHigh_KeyPress);
             // 
             // label58
             // 
@@ -1202,6 +1231,35 @@
             this.radioButtonLoadCellLow.Text = "Zvolený snímač";
             this.radioButtonLoadCellLow.UseVisualStyleBackColor = true;
             // 
+            // groupBox21
+            // 
+            this.groupBox21.Controls.Add(this.textBoxLowForceTara);
+            this.groupBox21.Controls.Add(this.textBoxLowForceTaraEcho);
+            this.groupBox21.Location = new System.Drawing.Point(294, 19);
+            this.groupBox21.Name = "groupBox21";
+            this.groupBox21.Size = new System.Drawing.Size(129, 101);
+            this.groupBox21.TabIndex = 44;
+            this.groupBox21.TabStop = false;
+            this.groupBox21.Text = "Tára";
+            // 
+            // textBoxLowForceTara
+            // 
+            this.textBoxLowForceTara.Location = new System.Drawing.Point(7, 36);
+            this.textBoxLowForceTara.Name = "textBoxLowForceTara";
+            this.textBoxLowForceTara.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceTara.TabIndex = 39;
+            this.textBoxLowForceTara.Text = "0";
+            this.textBoxLowForceTara.TextChanged += new System.EventHandler(this.textBoxLowForceTara_TextChanged);
+            this.textBoxLowForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowForceTara_KeyPress);
+            // 
+            // textBoxLowForceTaraEcho
+            // 
+            this.textBoxLowForceTaraEcho.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceTaraEcho.Name = "textBoxLowForceTaraEcho";
+            this.textBoxLowForceTaraEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceTaraEcho.TabIndex = 39;
+            this.textBoxLowForceTaraEcho.Text = "0";
+            // 
             // groupBox18
             // 
             this.groupBox18.Controls.Add(this.textBoxLowForceStdLowEcho);
@@ -1251,7 +1309,7 @@
             // 
             // groupBox12
             // 
-            this.groupBox12.Controls.Add(this.textBoxLowForceEngLow);
+            this.groupBox12.Controls.Add(this.textBoxLowForceStdLow);
             this.groupBox12.Controls.Add(this.label62);
             this.groupBox12.Controls.Add(this.textBoxLowForceRawLow);
             this.groupBox12.Controls.Add(this.label63);
@@ -1262,15 +1320,15 @@
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Dolní data";
             // 
-            // textBoxLowForceEngLow
+            // textBoxLowForceStdLow
             // 
-            this.textBoxLowForceEngLow.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowForceEngLow.Name = "textBoxLowForceEngLow";
-            this.textBoxLowForceEngLow.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceEngLow.TabIndex = 39;
-            this.textBoxLowForceEngLow.Text = "0";
-            this.textBoxLowForceEngLow.TextChanged += new System.EventHandler(this.textBoxLowForceEngLow_TextChanged);
-            this.textBoxLowForceEngLow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowForceEngLow_KeyPress);
+            this.textBoxLowForceStdLow.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceStdLow.Name = "textBoxLowForceStdLow";
+            this.textBoxLowForceStdLow.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceStdLow.TabIndex = 39;
+            this.textBoxLowForceStdLow.Text = "0";
+            this.textBoxLowForceStdLow.TextChanged += new System.EventHandler(this.textBoxLowForceStdLow_TextChanged);
+            this.textBoxLowForceStdLow.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowForceStdLow_KeyPress);
             // 
             // label62
             // 
@@ -1358,7 +1416,7 @@
             // 
             // groupBox13
             // 
-            this.groupBox13.Controls.Add(this.textBoxLowForceEngHigh);
+            this.groupBox13.Controls.Add(this.textBoxLowForceStdHigh);
             this.groupBox13.Controls.Add(this.label64);
             this.groupBox13.Controls.Add(this.textBoxLowForceRawHigh);
             this.groupBox13.Controls.Add(this.label65);
@@ -1369,15 +1427,15 @@
             this.groupBox13.TabStop = false;
             this.groupBox13.Text = "Horní data";
             // 
-            // textBoxLowForceEngHigh
+            // textBoxLowForceStdHigh
             // 
-            this.textBoxLowForceEngHigh.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowForceEngHigh.Name = "textBoxLowForceEngHigh";
-            this.textBoxLowForceEngHigh.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceEngHigh.TabIndex = 39;
-            this.textBoxLowForceEngHigh.Text = "0";
-            this.textBoxLowForceEngHigh.TextChanged += new System.EventHandler(this.textBoxLowForceEngHigh_TextChanged);
-            this.textBoxLowForceEngHigh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowForceEngHigh_KeyPress);
+            this.textBoxLowForceStdHigh.Location = new System.Drawing.Point(6, 73);
+            this.textBoxLowForceStdHigh.Name = "textBoxLowForceStdHigh";
+            this.textBoxLowForceStdHigh.Size = new System.Drawing.Size(110, 20);
+            this.textBoxLowForceStdHigh.TabIndex = 39;
+            this.textBoxLowForceStdHigh.Text = "0";
+            this.textBoxLowForceStdHigh.TextChanged += new System.EventHandler(this.textBoxLowForceStdHigh_TextChanged);
+            this.textBoxLowForceStdHigh.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowForceStdHigh_KeyPress);
             // 
             // label64
             // 
@@ -1434,6 +1492,55 @@
             this.buttonSaveScaleParameters.TabIndex = 39;
             this.buttonSaveScaleParameters.Text = "Zapiš";
             this.buttonSaveScaleParameters.UseVisualStyleBackColor = true;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(295, 81);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(29, 13);
+            this.label78.TabIndex = 41;
+            this.label78.Text = "Tára";
+            // 
+            // textBoxActualStdHighEcho
+            // 
+            this.textBoxActualStdHighEcho.Location = new System.Drawing.Point(161, 101);
+            this.textBoxActualStdHighEcho.Name = "textBoxActualStdHighEcho";
+            this.textBoxActualStdHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualStdHighEcho.TabIndex = 40;
+            this.textBoxActualStdHighEcho.Text = "0";
+            // 
+            // textBoxActualLRawHighEcho
+            // 
+            this.textBoxActualLRawHighEcho.Location = new System.Drawing.Point(161, 71);
+            this.textBoxActualLRawHighEcho.Name = "textBoxActualLRawHighEcho";
+            this.textBoxActualLRawHighEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualLRawHighEcho.TabIndex = 40;
+            this.textBoxActualLRawHighEcho.Text = "0";
+            // 
+            // textBoxActualStdLowEcho
+            // 
+            this.textBoxActualStdLowEcho.Location = new System.Drawing.Point(161, 43);
+            this.textBoxActualStdLowEcho.Name = "textBoxActualStdLowEcho";
+            this.textBoxActualStdLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualStdLowEcho.TabIndex = 40;
+            this.textBoxActualStdLowEcho.Text = "0";
+            // 
+            // textBoxTaraEcho
+            // 
+            this.textBoxTaraEcho.Location = new System.Drawing.Point(302, 102);
+            this.textBoxTaraEcho.Name = "textBoxTaraEcho";
+            this.textBoxTaraEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxTaraEcho.TabIndex = 40;
+            this.textBoxTaraEcho.Text = "0";
+            // 
+            // textBoxActualRawLowEcho
+            // 
+            this.textBoxActualRawLowEcho.Location = new System.Drawing.Point(161, 15);
+            this.textBoxActualRawLowEcho.Name = "textBoxActualRawLowEcho";
+            this.textBoxActualRawLowEcho.Size = new System.Drawing.Size(110, 20);
+            this.textBoxActualRawLowEcho.TabIndex = 40;
+            this.textBoxActualRawLowEcho.Text = "0";
             // 
             // tabPageFiltersRamps
             // 
@@ -1984,16 +2091,16 @@
             // attributeColumn
             // 
             this.attributeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
-            this.attributeColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle62.BackColor = System.Drawing.Color.Gainsboro;
+            this.attributeColumn.DefaultCellStyle = dataGridViewCellStyle62;
             this.attributeColumn.HeaderText = "Attribute";
             this.attributeColumn.Name = "attributeColumn";
             // 
             // valueColumn
             // 
             this.valueColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
-            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle63.BackColor = System.Drawing.Color.Gainsboro;
+            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle63;
             this.valueColumn.HeaderText = "Value";
             this.valueColumn.Name = "valueColumn";
             // 
@@ -2088,8 +2195,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle64.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle64;
             this.dataGridViewTextBoxColumn6.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -2098,8 +2205,8 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle65.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle65;
             this.dataGridViewTextBoxColumn7.HeaderText = "Value";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -2109,8 +2216,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle66.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle66;
             this.dataGridViewTextBoxColumn8.HeaderText = "Data Type";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -2158,8 +2265,8 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle67.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle67;
             this.dataGridViewTextBoxColumn3.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -2168,8 +2275,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle68.BackColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle68;
             this.dataGridViewTextBoxColumn4.HeaderText = "Value";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2178,8 +2285,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle69.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle69;
             this.dataGridViewTextBoxColumn5.HeaderText = "Data Type";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -2503,8 +2610,8 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle70.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle70;
             this.dataGridViewTextBoxColumn1.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -2514,8 +2621,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle71.BackColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle71;
             this.dataGridViewTextBoxColumn2.HeaderText = "Value";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2523,8 +2630,8 @@
             // typeColumn
             // 
             this.typeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
-            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle72.BackColor = System.Drawing.Color.Gainsboro;
+            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle72;
             this.typeColumn.HeaderText = "Data Type";
             this.typeColumn.Name = "typeColumn";
             this.typeColumn.ReadOnly = true;
@@ -3773,113 +3880,6 @@
             // 
             this.timerSendProgram.Tick += new System.EventHandler(this.timerSendProgram_Tick);
             // 
-            // textBoxActualStdLowEcho
-            // 
-            this.textBoxActualStdLowEcho.Location = new System.Drawing.Point(161, 43);
-            this.textBoxActualStdLowEcho.Name = "textBoxActualStdLowEcho";
-            this.textBoxActualStdLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualStdLowEcho.TabIndex = 40;
-            this.textBoxActualStdLowEcho.Text = "0";
-            // 
-            // textBoxActualLRawHighEcho
-            // 
-            this.textBoxActualLRawHighEcho.Location = new System.Drawing.Point(161, 71);
-            this.textBoxActualLRawHighEcho.Name = "textBoxActualLRawHighEcho";
-            this.textBoxActualLRawHighEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualLRawHighEcho.TabIndex = 40;
-            this.textBoxActualLRawHighEcho.Text = "0";
-            // 
-            // textBoxActualStdHighEcho
-            // 
-            this.textBoxActualStdHighEcho.Location = new System.Drawing.Point(161, 101);
-            this.textBoxActualStdHighEcho.Name = "textBoxActualStdHighEcho";
-            this.textBoxActualStdHighEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxActualStdHighEcho.TabIndex = 40;
-            this.textBoxActualStdHighEcho.Text = "0";
-            // 
-            // textBoxTaraEcho
-            // 
-            this.textBoxTaraEcho.Location = new System.Drawing.Point(302, 102);
-            this.textBoxTaraEcho.Name = "textBoxTaraEcho";
-            this.textBoxTaraEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxTaraEcho.TabIndex = 40;
-            this.textBoxTaraEcho.Text = "0";
-            // 
-            // textBoxHighForceRawLowEcho
-            // 
-            this.textBoxHighForceRawLowEcho.Location = new System.Drawing.Point(6, 37);
-            this.textBoxHighForceRawLowEcho.Name = "textBoxHighForceRawLowEcho";
-            this.textBoxHighForceRawLowEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceRawLowEcho.TabIndex = 39;
-            this.textBoxHighForceRawLowEcho.Text = "0";
-            // 
-            // groupBox20
-            // 
-            this.groupBox20.Controls.Add(this.textBoxHighForceTara);
-            this.groupBox20.Controls.Add(this.textBoxHighForceTaraEcho);
-            this.groupBox20.Location = new System.Drawing.Point(296, 22);
-            this.groupBox20.Name = "groupBox20";
-            this.groupBox20.Size = new System.Drawing.Size(129, 101);
-            this.groupBox20.TabIndex = 44;
-            this.groupBox20.TabStop = false;
-            this.groupBox20.Text = "Tára";
-            // 
-            // textBoxHighForceTaraEcho
-            // 
-            this.textBoxHighForceTaraEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxHighForceTaraEcho.Name = "textBoxHighForceTaraEcho";
-            this.textBoxHighForceTaraEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceTaraEcho.TabIndex = 39;
-            this.textBoxHighForceTaraEcho.Text = "0";
-            // 
-            // groupBox21
-            // 
-            this.groupBox21.Controls.Add(this.textBoxLowForceTara);
-            this.groupBox21.Controls.Add(this.textBoxLowForceTaraEcho);
-            this.groupBox21.Location = new System.Drawing.Point(294, 19);
-            this.groupBox21.Name = "groupBox21";
-            this.groupBox21.Size = new System.Drawing.Size(129, 101);
-            this.groupBox21.TabIndex = 44;
-            this.groupBox21.TabStop = false;
-            this.groupBox21.Text = "Tára";
-            // 
-            // textBoxLowForceTaraEcho
-            // 
-            this.textBoxLowForceTaraEcho.Location = new System.Drawing.Point(6, 73);
-            this.textBoxLowForceTaraEcho.Name = "textBoxLowForceTaraEcho";
-            this.textBoxLowForceTaraEcho.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceTaraEcho.TabIndex = 39;
-            this.textBoxLowForceTaraEcho.Text = "0";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(295, 81);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(29, 13);
-            this.label78.TabIndex = 41;
-            this.label78.Text = "Tára";
-            // 
-            // textBoxHighForceTara
-            // 
-            this.textBoxHighForceTara.Location = new System.Drawing.Point(6, 37);
-            this.textBoxHighForceTara.Name = "textBoxHighForceTara";
-            this.textBoxHighForceTara.Size = new System.Drawing.Size(110, 20);
-            this.textBoxHighForceTara.TabIndex = 39;
-            this.textBoxHighForceTara.Text = "0";
-            this.textBoxHighForceTara.TextChanged += new System.EventHandler(this.textBoxHighCellTara_TextChanged);
-            this.textBoxHighForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxHighCellTara_KeyPress);
-            // 
-            // textBoxLowForceTara
-            // 
-            this.textBoxLowForceTara.Location = new System.Drawing.Point(7, 36);
-            this.textBoxLowForceTara.Name = "textBoxLowForceTara";
-            this.textBoxLowForceTara.Size = new System.Drawing.Size(110, 20);
-            this.textBoxLowForceTara.TabIndex = 39;
-            this.textBoxLowForceTara.Text = "0";
-            this.textBoxLowForceTara.TextChanged += new System.EventHandler(this.textBoxLowCellTara_TextChanged);
-            this.textBoxLowForceTara.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxLowCellTara_KeyPress);
-            // 
             // UAClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3911,6 +3911,8 @@
             this.groupBox15.ResumeLayout(false);
             this.groupBox8.ResumeLayout(false);
             this.groupBox8.PerformLayout();
+            this.groupBox20.ResumeLayout(false);
+            this.groupBox20.PerformLayout();
             this.groupBox16.ResumeLayout(false);
             this.groupBox16.PerformLayout();
             this.groupBox10.ResumeLayout(false);
@@ -3921,6 +3923,8 @@
             this.groupBox9.PerformLayout();
             this.groupBox11.ResumeLayout(false);
             this.groupBox11.PerformLayout();
+            this.groupBox21.ResumeLayout(false);
+            this.groupBox21.PerformLayout();
             this.groupBox18.ResumeLayout(false);
             this.groupBox18.PerformLayout();
             this.groupBox12.ResumeLayout(false);
@@ -3969,10 +3973,6 @@
             this.groupBoxControl.ResumeLayout(false);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            this.groupBox20.ResumeLayout(false);
-            this.groupBox20.PerformLayout();
-            this.groupBox21.ResumeLayout(false);
-            this.groupBox21.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -4239,25 +4239,25 @@
         private System.Windows.Forms.GroupBox groupBox11;
         private System.Windows.Forms.RadioButton radioButtonLoadCellLow;
         private System.Windows.Forms.GroupBox groupBox12;
-        private System.Windows.Forms.TextBox textBoxLowForceEngLow;
+        private System.Windows.Forms.TextBox textBoxLowForceStdLow;
         private System.Windows.Forms.Label label62;
         private System.Windows.Forms.TextBox textBoxLowForceRawLow;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Button buttonSaveForceParametersLow;
         private System.Windows.Forms.GroupBox groupBox13;
-        private System.Windows.Forms.TextBox textBoxLowForceEngHigh;
+        private System.Windows.Forms.TextBox textBoxLowForceStdHigh;
         private System.Windows.Forms.Label label64;
         private System.Windows.Forms.TextBox textBoxLowForceRawHigh;
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.GroupBox groupBox8;
         private System.Windows.Forms.RadioButton radioButtonLoadCellHigh;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox textBoxHighForceEngLow;
+        private System.Windows.Forms.TextBox textBoxHighForceStdLow;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.TextBox textBoxHighForceRawLow;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.GroupBox groupBox9;
-        private System.Windows.Forms.TextBox textBoxHighForceEngHigh;
+        private System.Windows.Forms.TextBox textBoxHighForceStdHigh;
         private System.Windows.Forms.Label label58;
         private System.Windows.Forms.TextBox textBoxHighForceRawHigh;
         private System.Windows.Forms.Label label59;

@@ -4300,12 +4300,6 @@ namespace trhacka_v_1_0_working_2019_010_201
             val = testNumericValueAndSetColor(textBoxHighForceRawLow);
         }
 
-        private void textBoxHighForceEngLow_TextChanged(object sender, EventArgs e)
-
-        {
-            double val;
-            val = testNumericValueAndSetColor(textBoxHighForceEngLow);
-        }
 
         private void textBoxHighForceRawHigh_TextChanged(object sender, EventArgs e)
         {
@@ -4313,11 +4307,6 @@ namespace trhacka_v_1_0_working_2019_010_201
             val = testNumericValueAndSetColor(textBoxHighForceRawHigh);
         }
 
-        private void textBoxHighForceEngHigh_TextChanged(object sender, EventArgs e)
-        {
-            double val;
-            val = testNumericValueAndSetColor(textBoxHighForceEngHigh);
-        }
 
         private void textBoxLowForceRawLow_TextChanged(object sender, EventArgs e)
         {
@@ -4328,7 +4317,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void textBoxLowForceEngLow_TextChanged(object sender, EventArgs e)
         {
             double val;
-            val = testNumericValueAndSetColor(textBoxLowForceEngLow);
+            val = testNumericValueAndSetColor(textBoxLowForceStdLow);
         }
 
         private void textBoxLowForceRawHigh_TextChanged(object sender, EventArgs e)
@@ -4340,55 +4329,33 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void textBoxLowForceEngHigh_TextChanged(object sender, EventArgs e)
         {
             double val;
-            val = testNumericValueAndSetColor(textBoxLowForceEngHigh);
+            val = testNumericValueAndSetColor(textBoxLowForceStdHigh);
         }
 
         private void textBoxHighForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
         {
             string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_raw";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceRawLow);
         }
 
-        private void textBoxHighForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_std";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
-        }
 
         private void textBoxHighForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
             string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_raw";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
-        }
-
-        private void textBoxHighForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_std";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceRawHigh);
         }
 
         private void textBoxLowForceRawLow_KeyPress(object sender, KeyPressEventArgs e)
         {
             string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_raw";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceRawLow);
         }
 
-        private void textBoxLowForceEngLow_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_std";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
-        }
 
         private void textBoxLowForceRawHigh_KeyPress(object sender, KeyPressEventArgs e)
         {
             string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_raw";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
-        }
-
-        private void textBoxLowForceEngHigh_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_std";
-            sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceRawHigh);
         }
 
         private void textBoxHighCellTara_TextChanged(object sender, EventArgs e)
@@ -4413,6 +4380,78 @@ namespace trhacka_v_1_0_working_2019_010_201
         {
             string command = "ns=6;s=::AsGlobalPV:MachineControl.input.position.SetValue";
             sendValueFromTextBoxToPLC(e, command, textBoxPositionSet);
+        }
+
+        private void textBoxHighForceStdLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceStdLow);
+        }
+
+        private void textBoxHighForceStdHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceStdHigh);
+        }
+
+        private void textBoxHighForceStdHigh_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceStdHigh);
+        }
+
+        private void textBoxHighForceStdLow_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceStdLow);
+        }
+
+        private void textBoxLowForceStdLow_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceStdLow);
+        }
+
+        private void textBoxLowForceStdHigh_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceStdHigh);
+        }
+
+        private void textBoxLowForceStdHigh_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceStdHigh);
+        }
+
+        private void textBoxLowForceStdLow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceStdLow);
+        }
+
+        private void textBoxHighForceTara_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceTara);
+        }
+
+        private void textBoxHighForceTara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceTara);
+        }
+
+        private void textBoxLowForceTara_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceTara);
+        }
+
+        private void textBoxLowForceTara_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceTara);
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
