@@ -317,6 +317,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.enable",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.error",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.ready",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.actualCellType",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue2",
             "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_raw",
@@ -506,6 +507,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_controlWeight_status_enable",
             "MachineControl_strainControl_controlWeight_status_error",
             "MachineControl_strainControl_controlWeight_status_ready",
+            "MachineControl_strainControl_controlWeight_status_actualCellType",
             "MachineControl_strainControl_controlWeight_parameter_standartizedValue1",
             "MachineControl_strainControl_controlWeight_parameter_standartizedValue2",
             "constMachineControl_weight_parameterLoadCell1_ref1_raw",
@@ -2265,6 +2267,38 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
 
                 }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_actualCellType")
+                {
+                    int val;
+                    string str;
+                    try
+                    {
+                        str = notification.Value.Value.ToString();
+                        int.TryParse(str, out val);
+                        switch (val)
+                        {
+                            case 1:
+                                radioButtonLoadCellHigh.Checked = true;
+                                radioButtonLoadCellLow.Checked = false;
+                                break;
+                            case 2:
+                                radioButtonLoadCellHigh.Checked = false;
+                                radioButtonLoadCellLow.Checked = true;
+                                break;
+                            default:
+                                radioButtonLoadCellHigh.Checked = false;
+                                radioButtonLoadCellLow.Checked = false;
+                                break;
+                        }
+                    }
+                    catch (Exception)
+                    {
+
+                        throw;
+                    }
+
+
+                }
                 if (monitoredItem.DisplayName == "MachineControl_status_standartizeWeight1")
                 {
                     if ((bool)notification.Value.Value)
@@ -2496,7 +2530,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw")
                 {
-                    textBoxActualLRawHighEcho.Text= notification.Value.Value.ToString();
+                    textBoxActualLRawHighEcho.Text = notification.Value.Value.ToString();
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std")
                 {
@@ -4452,6 +4486,31 @@ namespace trhacka_v_1_0_working_2019_010_201
         {
             string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std";
             sendValueFromTextBoxToPLC(e, command, textBoxLowForceTara);
+        }
+
+        private void radioButtonLoadCellHigh_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonLoadCellHigh.Checked)
+            {
+                radioButtonLoadCellLow.Checked = false;
+                writeNode("1", "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.actualCellType");
+
+            }
+        }
+
+        private void radioButtonLoadCellLow_EnabledChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void radioButtonLoadCellLow_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButtonLoadCellLow.Checked)
+            {
+                radioButtonLoadCellHigh.Checked = false;
+                writeNode("2", "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.actualCellType");
+
+            }
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
