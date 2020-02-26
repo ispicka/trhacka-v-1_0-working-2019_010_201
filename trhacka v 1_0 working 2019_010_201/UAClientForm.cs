@@ -4071,17 +4071,17 @@ namespace trhacka_v_1_0_working_2019_010_201
                 ;
                 DialogResult result;
                 float value;
-                string message = "Chybně zadaná hodnota " + textBoxStrainSet.Text + "?";
+                string message = "Chybně zadaná hodnota " + textBoxActualStdHighEcho.Text + "?";
                 string caption = "Chyba zadání";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-                if (!float.TryParse(textBoxStrainSet.Text, out value))
+                if (!float.TryParse(textBoxActualStdHighEcho.Text, out value))
                 {
 
                     MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
                     return;
                 }
-                writeNode(textBoxStrainSet.Text, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue2");
-                message = "Nastavit horní hodnotu snímače: " + textBoxStrainSet.Text + "?";
+                writeNode(textBoxActualStdHighEcho.Text, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std");
+                message = "Nastavit horní hodnotu snímače: " + textBoxActualStdHighEcho.Text + "?";
                 caption = "Nastavit horní hodnotu";
                 buttons = MessageBoxButtons.YesNo;
                 result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
@@ -4108,17 +4108,17 @@ namespace trhacka_v_1_0_working_2019_010_201
             else
             {
                 float value;
-                string message = "Chybně zadaná hodnota " + textBoxStrainSet.Text + "?";
+                string message = "Chybně zadaná hodnota " + textBoxActualStdLowEcho.Text + "?";
                 string caption = "Chyba zadání";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-                if (!float.TryParse(textBoxStrainSet.Text, out value))
+                if (!float.TryParse(textBoxActualStdLowEcho.Text, out value))
                 {
 
                     MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
                     return;
                 }
-                writeNode(textBoxStrainSet.Text, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue1");
-                message = "Nastavit spodní hodnotu snímače: " + textBoxStrainSet.Text + "?";
+                writeNode(textBoxActualStdLowEcho.Text, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_std");
+                message = "Nastavit spodní hodnotu snímače: " + textBoxActualStdLowEcho.Text + "?";
                 caption = "Nastavit spodní hodnotu";
                 buttons = MessageBoxButtons.YesNo;
                 DialogResult result;
@@ -4511,6 +4511,48 @@ namespace trhacka_v_1_0_working_2019_010_201
                 writeNode("2", "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.actualCellType");
 
             }
+        }
+
+        private void textBoxActualRawLowEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceTara);
+        }
+
+        private void textBoxHighForceTaraEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxHighForceTaraEcho);
+        }
+
+        private void textBoxLowForceTaraEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxLowForceTaraEcho);
+        }
+
+        private void textBoxHighForceTaraEcho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxHighForceTaraEcho);
+        }
+
+        private void textBoxLowForceTaraEcho_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            string command = "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std";
+            sendValueFromTextBoxToPLC(e, command, textBoxLowForceTaraEcho);
+        }
+
+        private void textBoxActualStdHighEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxActualStdHighEcho);
+        }
+
+        private void textBoxActualStdLowEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxActualStdLowEcho);
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
