@@ -182,6 +182,8 @@ namespace trhacka_v_1_0_working_2019_010_201
         bool forceOK = false;
         bool positionOK = false;
         bool commandTaraStart = false;
+        bool commandReadCellParametersHigh = false;
+
         bool commandLowForceStart = false;
         bool commandHighForceStart = false;
         bool commandHomeStart = false;
@@ -241,6 +243,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.output.velocity.error",
             "ns=6;s=::AsGlobalPV:MachineControl.output.velocity.trackingActive",
             "ns=6;s=::AsGlobalPV:MachineControl.output.velocity.value",
+
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.control",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.filterOn",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.rampOn",
@@ -250,6 +253,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.runPID",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setRamp",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readFilter",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readRamp",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setMaxVelocity",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setZero",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.Home",
@@ -304,6 +309,14 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.simulate",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.manPID",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.runPID",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setFilter",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setRamp",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readFilter",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readRamp",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.maxVelocity",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.stopMinForce",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setStopMinForce",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setMaxVelocity",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doTare",
@@ -360,6 +373,13 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.simulate",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.manPID",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.runPID",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.rampOn",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.filterOn",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setRamp",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setFilter",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.raedFilter",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp",
+
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ActValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.SetValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ingValue",
@@ -441,6 +461,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_positionControl_command_runPID",
             "MachineControl.positionControl.command.setFilter",
             "MachineControl.positionControl.command.setRamp",
+            "MachineControl.positionControl.command.readFilter",
+            "MachineControl.positionControl.command.readRamp",
             "MachineControl.positionControl.command.setMaxVelocity",
             "MachineControl.positionControl.command.setZero",
             "MachineControl.positionControl.command.Home",
@@ -494,6 +516,15 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_command_simulate",
             "MachineControl_strainControl_command_manPID",
             "MachineControl_strainControl_command_runPID",
+            "MachineControl_strainControl_command_setFilter",
+            "MachineControl_strainControl_command_setRamp",
+            "MachineControl_strainControl_command_readFilter",
+            "MachineControl_strainControl_command_readRamp",
+            "MachineControl_strainControl_command_maxVelocity",
+            "MachineControl_strainControl_stopMinForce",
+            "MachineControl_strainControl_command_setStopMinForce",
+            "MachineControl_strainControl_command_setMaxVelocity",
+
             "MachineControl_strainControl_controlWeight_command_doStandartize1",
             "MachineControl_strainControl_controlWeight_command_doStandartize2",
             "MachineControl_strainControl_controlWeight_command_doTare",
@@ -550,6 +581,12 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_velocityControl_command_simulate",
             "MachineControl_velocityControl_command_manPID",
             "MachineControl_velocityControl_command_runPID",
+            "MachineControl_velocityControl_command_rampOn",
+            "MachineControl_velocityControl_command_filterOn",
+            "MachineControl_velocityControl_command_setRamp",
+            "MachineControl_velocityControl_command_setFilter",
+            "MachineControl_velocityControl_command_raedFilter",
+            "MachineControl_velocityControl_command_readRamp",
             "MachineControl_velocityControl_input_ActValue",
             "MachineControl_velocityControl_input_SetValue",
             "MachineControl_velocityControl_input_ingValue",
@@ -4553,6 +4590,163 @@ namespace trhacka_v_1_0_working_2019_010_201
         {
             double val;
             val = testNumericValueAndSetColor(textBoxActualStdLowEcho);
+        }
+
+        private void textBoxPositionFiltrOrder_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionFiltrOrder);
+        }
+
+        private void textBoxPositionFilterCutOffFreq_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionFilterCutOffFreq);
+        }
+
+        private void textBoxPositionRampMax_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionRampMax);
+        }
+
+        private void textBoxPositionRampSlewRate_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionRampSlewRate);
+        }
+
+        private void textBox6_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionRampSlewRate);
+        }
+
+        private void textBoxPositionRampMin_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionRampMin);
+        }
+
+        private void textBoxPositionRampSlewRateNeg_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxPositionRampSlewRateNeg);
+        }
+
+        private void textBoxVelocityFiltrOrder_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityFiltrOrder);
+        }
+
+        private void textBoxVelocityFilterCutOffFreq_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityFilterCutOffFreq);
+        }
+
+
+
+        private void textBoxVelocityRampMax_TextChanged_1(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityRampMax);
+        }
+
+        private void textBoxVelocityRampSlewRate_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityRampSlewRate);
+        }
+
+        private void textBoxVelocityRampMin_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityRampMin);
+        }
+
+        private void textBoxVelocityRampSlewRateNeg_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityRampSlewRateNeg);
+        }
+
+        private void textBox8_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxVelocityRampSlewRateNeg);
+        }
+
+        private void textBoxStrainFiltrOrder_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainFiltrOrder);
+        }
+
+        private void textBoxStrainFilterCutOffFreq_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainFilterCutOffFreq);
+        }
+
+        private void textBoxStrainRampMax_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainRampMax);
+        }
+
+        private void textBoxStrainRampSlewRate_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainRampSlewRate);
+        }
+
+        private void textBoxStrainRampMin_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainRampMin);
+        }
+
+        private void textBoxStrainRampSlewRateNeg_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxStrainRampSlewRateNeg);
+        }
+
+        private void buttonSaveForceParametersHigh_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonReadCellParametersHigh_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialog(buttonReadCellParametersHigh,
+                commandReadCellParametersHigh, 
+                "ns=6;s=::AsGlobalPV:MachineControl.command.tara", 
+                "Načíst data?", 
+                "Čtení");
+        }
+
+        private void sendCommandWithDialog(Button button, bool command, string commandToPlc, string message, string caption)
+        {
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (!command)
+                {
+
+                    button.Text = "Wait";
+                    button.ForeColor = Color.Red;
+                    writeNode(vTrue, commandToPlc);
+                    command = true;
+
+
+                }
+            }
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
