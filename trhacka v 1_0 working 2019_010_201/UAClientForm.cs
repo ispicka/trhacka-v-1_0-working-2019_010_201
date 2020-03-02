@@ -397,7 +397,29 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.status.initialized",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.status.manual",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.status.ready",
-            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.status.simulating"
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.status.simulating",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.rampSettings.MinOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.rampSettings.MaxOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.rampSettings.MaxPosSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.rampSettings.MaxNegSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.filterSettings.Type",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.filterSettings.Order",
+            "ns=6;s=::AsGlobalPV:constMachineControl.strain.filterSettings.CutOffFrequency",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.rampSettings.MinOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.rampSettings.MaxOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.rampSettings.MaxPosSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.rampSettings.MaxNegSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.filterSettings.Type",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.filterSettings.Order",
+            "ns=6;s=::AsGlobalPV:constMachineControl.position.filterSettings.CutOffFrequency",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.rampSettings.MinOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.rampSettings.MaxOut",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.rampSettings.MaxPosSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.rampSettings.MaxNegSlewRate",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.filterSettings.Type",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.filterSettings.Order",
+            "ns=6;s=::AsGlobalPV:constMachineControl.velocity.filterSettings.CutOffFrequency",
+
         },
         {
             "MachineControl_command_control",
@@ -604,7 +626,30 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_velocityControl_status_initialized",
             "MachineControl_velocityControl_status_manual",
             "MachineControl_velocityControl_status_ready",
-            "MachineControl_velocityControl_status_simulating"
+            "MachineControl_velocityControl_status_simulating",
+            "constMachineControl_strain_rampSettings_MinOut",
+            "constMachineControl_strain_rampSettings_MaxOut",
+            "constMachineControl_strain_rampSettings_MaxPosSlewRate",
+            "constMachineControl_strain_rampSettings_MinPosSlewRate",
+            "constMachineControl_strain_filterSettings_Type",
+            "constMachineControl_strain_filterSettings_Order",
+            "constMachineControl_strain_filterSettings_CutOffFrequency",
+            "constMachineControl_position_rampSettings_MinOut",
+            "constMachineControl_position_rampSettings_MaxOut",
+            "constMachineControl_position_rampSettings_MaxPosSlewRate",
+            "constMachineControl_position_rampSettings_MinPosSlewRate",
+            "constMachineControl_position_filterSettings_Type",
+            "constMachineControl_position_filterSettings_Order",
+            "constMachineControl_position_filterSettings_CutOffFrequency",
+            "constMachineControl_velocity_rampSettings_MinOut",
+            "constMachineControl_velocity_rampSettings_MaxOut",
+            "constMachineControl_velocity_rampSettings_MaxPosSlewRate",
+            "constMachineControl_velocity_rampSettings_MinPosSlewRate",
+            "constMachineControl_velocity_filterSettings_Type",
+            "constMachineControl_velocity_filterSettings_Order",
+            "constMachineControl_velocity_filterSettings_CutOffFrequency"
+
+
         }
      };
 
@@ -2411,6 +2456,94 @@ namespace trhacka_v_1_0_working_2019_010_201
                 if (monitoredItem.DisplayName == "MachineControl_input_strain_setValue")
                 {
                     textBoxStrainSetEcho.Text = notification.Value.Value.ToString();
+                }
+
+
+                if (monitoredItem.DisplayName == "constMachineControl_strain_rampSettings_MinOut")
+                {
+                    textBoxStrainRampMin.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_rampSettings_MaxOut")
+                {
+                    textBoxStrainRampMax.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_rampSettings_MaxPosSlewRate")
+                {
+                    textBoxStrainRampSlewRate.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_rampSettings_MinPosSlewRate")
+                {
+                    textBoxStrainRampSlewRateNeg.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_filterSettings_Type")
+                {
+                    
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_filterSettings_Order")
+                {
+                    textBoxStrainFiltrOrder.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_strain_filterSettings_CutOffFrequency")
+                {
+                    textBoxStrainFilterCutOffFreq.Text = notification.Value.Value.ToString();
+                }
+
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_rampSettings_MinOut")
+                {
+                    textBoxVelocityRampMin.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_rampSettings_MaxOut")
+                {
+                    textBoxVelocityRampMax.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_rampSettings_MaxPosSlewRate")
+                {
+                    textBoxVelocityRampSlewRate.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_rampSettings_MinPosSlewRate")
+                {
+                    textBoxVelocityRampSlewRateNeg.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_filterSettings_Type")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_filterSettings_Order")
+                {
+                    textBoxVelocityFiltrOrder.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_velocity_filterSettings_CutOffFrequency")
+                {
+                    textBoxVelocityFilterCutOffFreq.Text = notification.Value.Value.ToString();
+                }
+
+                if (monitoredItem.DisplayName == "constMachineControl_position_rampSettings_MinOut")
+                {
+                    textBoxPositionRampMin.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_rampSettings_MaxOut")
+                {
+                    textBoxPositionRampMax.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_rampSettings_MaxPosSlewRate")
+                {
+                    textBoxPositionRampSlewRate.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_rampSettings_MinPosSlewRate")
+                {
+                    textBoxPositionRampSlewRateNeg.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_filterSettings_Type")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_filterSettings_Order")
+                {
+                    textBoxPositionFiltrOrder.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "constMachineControl_position_filterSettings_CutOffFrequency")
+                {
+                    textBoxPositionFilterCutOffFreq.Text = notification.Value.Value.ToString();
                 }
 
             }
