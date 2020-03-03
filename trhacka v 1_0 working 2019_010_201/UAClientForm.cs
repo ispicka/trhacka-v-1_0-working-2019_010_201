@@ -984,6 +984,18 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.tare_std",
 
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.tare_std",
+
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.tare_std",
+
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_raw",
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_std",
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref2_raw",
@@ -1016,6 +1028,18 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw",
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std",
             "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std",
+
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_tare_std",
+
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std",
 
             "constMConrol_weight_parameterLoadCell1_ref1_raw",
             "constMConrol_weight_parameterLoadCell1_ref1_std",
@@ -2329,9 +2353,19 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                     }
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
                 {
                     changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.White;
+                        textBoxActualStdLowEcho.BackColor = Color.White;
+                        textBoxActualLRawHighEcho.BackColor = Color.White;
+                        textBoxActualRawLowEcho.BackColor = Color.White;
+                        textBoxTaraEcho.BackColor = Color.White;
+                    }
+
+
                 }
 
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
@@ -4907,7 +4941,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 }
             }
         }
-        private void sendCommandWithDialogTestButtonText(Button button, string text, string commandToPlc, string message, string caption)
+        private void sendCommandWithDialogWriteButtonText(Button button, string text, string commandToPlc, string message, string caption)
         {
 
             MessageBoxButtons buttons = MessageBoxButtons.YesNo;
@@ -4930,25 +4964,66 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void buttonSaveScaleParameters_Click(object sender, EventArgs e)
         {
             string memory ="";
-            string memoryPLC = "";
-            string memory1PLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1";
-            string memory2PLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2";
+            string memoryPLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory";
+            int valI;
+            double valD;
             if (radioButtonLoadCellHigh.Checked)
             {
                 memory = "1";
-                memoryPLC = memory1PLC;
             }
             else
             {
                 memory = "2";
-                memoryPLC = memory2PLC;
             }
-            sendCommandWithDialogTestButtonText(buttonSaveScaleParameters,
+            try
+            {
+                int.TryParse(textBoxActualLRawHighEcho.Text, out valI);
+                int.TryParse(textBoxActualRawLowEcho.Text, out valI);
+                int.TryParse(textBoxActualStdHighEcho.Text, out valI);
+                int.TryParse(textBoxActualStdLowEcho.Text, out valI);
+                int.TryParse(textBoxTaraEcho.Text, out valI);
+                string command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_raw";
+                writeNodeAndSetColorLightBlue(textBoxActualLRawHighEcho,command);
+                command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_raw";
+                writeNodeAndSetColorLightBlue(textBoxActualRawLowEcho, command);
+                command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std";
+                writeNodeAndSetColorLightBlue(textBoxActualStdHighEcho, command);
+                command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_std";
+                writeNodeAndSetColorLightBlue(textBoxActualStdLowEcho, command);
+                command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.tare_std";
+                writeNodeAndSetColorLightBlue(textBoxTaraEcho, command);
+
+
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            sendCommandWithDialogWriteButtonText(buttonSaveScaleParameters,
                 "Zapiš",
                memoryPLC,
                 "Zapsat parametry do pameti" + memory,
                 "Zápis do paměti");
 
+        }
+
+        private void writeNodeAndSetColorLightBlue(TextBox tb, string command)
+        {
+            writeNode(tb.Text, command);
+            tb.BackColor = Color.LightBlue;
+        }
+
+        private void textBoxTaraEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxTaraEcho);
+        }
+
+        private void textBoxActualLRawHighEcho_TextChanged(object sender, EventArgs e)
+        {
+            double val;
+            val = testNumericValueAndSetColor(textBoxActualLRawHighEcho);
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
