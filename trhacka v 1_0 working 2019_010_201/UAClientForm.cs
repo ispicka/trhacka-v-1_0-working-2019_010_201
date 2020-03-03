@@ -2356,6 +2356,7 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                     }
                 }
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
                 {
                     changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
@@ -2367,10 +2368,16 @@ namespace trhacka_v_1_0_working_2019_010_201
                         textBoxActualRawLowEcho.BackColor = Color.White;
                         textBoxTaraEcho.BackColor = Color.White;
                     }
-
+                    else
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.LightBlue;
+                        textBoxActualStdLowEcho.BackColor = Color.LightBlue;
+                        textBoxActualRawLowEcho.BackColor = Color.LightBlue;
+                        textBoxActualLRawHighEcho.BackColor = Color.LightBlue;
+                        textBoxTaraEcho.BackColor = Color.LightBlue;
+                    }
 
                 }
-
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
                 {
                     changeCommandButtonColor(notification, buttonSaveForceParametersHigh, "Zapiš");
@@ -2382,19 +2389,100 @@ namespace trhacka_v_1_0_working_2019_010_201
                         textBoxHighForceStdHigh.BackColor = Color.White;
                         textBoxHighForceTara.BackColor = Color.White;
                     }
-
+                    else
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.LightBlue;
+                        textBoxHighForceStdLow.BackColor = Color.LightBlue;
+                        textBoxHighForceRawHigh.BackColor = Color.LightBlue;
+                        textBoxHighForceStdHigh.BackColor = Color.LightBlue;
+                        textBoxHighForceTara.BackColor = Color.LightBlue;
+                    }
 
                 }
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory2")
                 {
-                    changeCommandButtonColor(notification, buttonSaveForceParametersLow, "Zapiš");
+                    changeCommandButtonColor(notification, buttonSaveForceParametersLow, "Načti");
                     if (!(bool)notification.Value.Value)
                     {
                         textBoxLowForceRawLow.BackColor = Color.White;
                         textBoxLowForceStdLow.BackColor = Color.White;
                         textBoxLowForceRawHigh.BackColor = Color.White;
                         textBoxLowForceStdHigh.BackColor = Color.White;
+                        textBoxLowForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.LightBlue;
+                        textBoxLowForceStdLow.BackColor = Color.LightBlue;
+                        textBoxLowForceRawHigh.BackColor = Color.LightBlue;
+                        textBoxLowForceStdHigh.BackColor = Color.LightBlue;
+                        textBoxLowForceTara.BackColor = Color.LightBlue;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters")
+                {
+                    changeCommandButtonColor(notification, buttonReadActualCellParameters, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.White;
+                        textBoxActualStdLowEcho.BackColor = Color.White;
+                        textBoxActualLRawHighEcho.BackColor = Color.White;
+                        textBoxActualRawLowEcho.BackColor = Color.White;
+                        textBoxTaraEcho.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.LightGreen;
+                        textBoxActualStdLowEcho.BackColor = Color.LightGreen;
+                        textBoxActualLRawHighEcho.BackColor = Color.LightGreen;
+                        textBoxActualRawLowEcho.BackColor = Color.LightGreen;
+                        textBoxTaraEcho.BackColor = Color.LightGreen;
+                   }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters1")
+                {
+                    changeCommandButtonColor(notification, buttonReadCellParametersHigh, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.White;
+                        textBoxHighForceStdLow.BackColor = Color.White;
+                        textBoxHighForceRawHigh.BackColor = Color.White;
+                        textBoxHighForceStdHigh.BackColor = Color.White;
                         textBoxHighForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.LightGreen;
+                        textBoxHighForceStdLow.BackColor = Color.LightGreen;
+                        textBoxHighForceRawHigh.BackColor = Color.LightGreen;
+                        textBoxHighForceStdHigh.BackColor = Color.LightGreen;
+                        textBoxHighForceTara.BackColor = Color.LightGreen;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters2")
+                {
+                    changeCommandButtonColor(notification, buttonReadCellParametersLow, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.White;
+                        textBoxLowForceStdLow.BackColor = Color.White;
+                        textBoxLowForceRawHigh.BackColor = Color.White;
+                        textBoxLowForceStdHigh.BackColor = Color.White;
+                        textBoxLowForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.LightGreen;
+                        textBoxLowForceStdLow.BackColor = Color.LightGreen;
+                        textBoxLowForceRawHigh.BackColor = Color.LightGreen;
+                        textBoxLowForceStdHigh.BackColor = Color.LightGreen;
+                        textBoxLowForceTara.BackColor = Color.LightGreen;
                     }
 
 
@@ -2463,12 +2551,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                     textBoxLowForceTara.Text = notification.Value.Value.ToString();
                 }
 
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std")
-                {
-                    textBoxLowForceTara.Text = notification.Value.Value.ToString();
-                }
-
-
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
                 {
 
@@ -2493,6 +2575,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
 
                 }
+                               
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_actualCellType")
                 {
                     int val;
@@ -5097,7 +5180,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             {
                 writeNode(vTrue, memoryPLC1);
             }
-            else
+            if (radioButtonLoadCellLow.Checked)
             {
                 writeNode(vTrue, memoryPLC2);
             }
@@ -5124,8 +5207,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void buttonReadCellParametersLow_Click(object sender, EventArgs e)
         {
-            sendCommandWithDialog(buttonReadCellParametersLow,
-                commandReadCellParametersHigh,
+            sendCommandWithDialogWriteButtonText(buttonReadCellParametersLow,
+                "Načti",
                 "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters2",
                 "Načíst data?",
                 "Čtení");
@@ -5134,8 +5217,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void buttonReadActualCellParameters_Click(object sender, EventArgs e)
         {
-            sendCommandWithDialogWriteButtonText(buttonReadCellParametersLow,
-                "Zapiš",
+            sendCommandWithDialogWriteButtonText(buttonReadActualCellParameters,
+                "Načti",
                 "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters",
                 "Načíst data?",
                 "Čtení");
