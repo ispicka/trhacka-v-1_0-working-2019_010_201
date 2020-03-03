@@ -324,7 +324,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1", 
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.doneStandartize1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.doneStandartize2",
@@ -335,21 +335,38 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.actualCellType",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.standartizedValue2",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.tare_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref1_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref1_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref2_raw",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref2_std",
-            "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.tare_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref1_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.ref2_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell1.tare_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref1_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.ref2_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.parameterLoadCell2.tare_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref1_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref1_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref2_raw",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.ref2_std",
+            //"ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.tare_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.tare_std",
+
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.tare_std",
+
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_raw",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_std",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.tare_std",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.input.actValue",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.input.setValue",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.output.active",
@@ -567,21 +584,39 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_controlWeight_status_actualCellType",
             "MachineControl_strainControl_controlWeight_parameter_standartizedValue1",
             "MachineControl_strainControl_controlWeight_parameter_standartizedValue2",
-            "constMachineControl_weight_parameterLoadCell1_ref1_raw",
-            "constMachineControl_weight_parameterLoadCell1_ref1_std",
-            "constMachineControl_weight_parameterLoadCell1_ref2_raw",
-            "constMachineControl_weight_parameterLoadCell1_ref2_std",
-            "constMachineControl_weight_parameterLoadCell1_tare_std",
-            "constMachineControl_weight_parameterLoadCell2_ref1_raw",
-            "constMachineControl_weight_parameterLoadCell2_ref1_std",
-            "constMachineControl_weight_parameterLoadCell2_ref2_raw",
-            "constMachineControl_weight_parameterLoadCell2_ref2_std",
-            "constMachineControl_weight_parameterLoadCell2_tare_std",
-            "constMachineControl_weight_scaleParameter_ref1_raw",
-            "constMachineControl_weight_scaleParameter_ref1_std",
-            "constMachineControl_weight_scaleParameter_ref2_raw",
-            "constMachineControl_weight_scaleParameter_ref2_std",
-            "constMachineControl_weight_scaleParameter_tare_std",
+
+            //"constMachineControl_weight_parameterLoadCell1_ref1_raw",
+            //"constMachineControl_weight_parameterLoadCell1_ref1_std",
+            //"constMachineControl_weight_parameterLoadCell1_ref2_raw",
+            //"constMachineControl_weight_parameterLoadCell1_ref2_std",
+            //"constMachineControl_weight_parameterLoadCell1_tare_std",
+            //"constMachineControl_weight_parameterLoadCell2_ref1_raw",
+            //"constMachineControl_weight_parameterLoadCell2_ref1_std",
+            //"constMachineControl_weight_parameterLoadCell2_ref2_raw",
+            //"constMachineControl_weight_parameterLoadCell2_ref2_std",
+            //"constMachineControl_weight_parameterLoadCell2_tare_std",
+            //"constMachineControl_weight_scaleParameter_ref1_raw",
+            //"constMachineControl_weight_scaleParameter_ref1_std",
+            //"constMachineControl_weight_scaleParameter_ref2_raw",
+            //"constMachineControl_weight_scaleParameter_ref2_std",
+            //"constMachineControl_weight_scaleParameter_tare_std",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std",
+            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std",
+
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_tare_std",
+
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_raw",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_std",
+            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std",
             "MachineControl_strainControl_input_actValue",
             "MachineControl_strainControl_input_setValue",
             "MachineControl_strainControl_output_active",
@@ -978,23 +1013,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         string[,] namesOfConstats = new string[,]
         {
             {
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.tare_std",
 
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref1_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.ref2_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell1.tare_std",
-
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref1_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_raw",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.ref2_std",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.parameterLoadCell2.tare_std",
 
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_raw",
             "ns=6;s=::MachineSta:initMasterTask_0.constMConrol.weight.parameterLoadCell1.ref1_std",
@@ -1023,23 +1042,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:constMachineControl.weight.scaleParameter.tare_std"
             },
             {
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw",
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std",
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw",
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std",
-            "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std",
 
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_raw",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_std",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_raw",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_std",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_tare_std",
-
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_raw",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_std",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_raw",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_std",
-            "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std",
 
             "constMConrol_weight_parameterLoadCell1_ref1_raw",
             "constMConrol_weight_parameterLoadCell1_ref1_std",
@@ -2368,6 +2371,104 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                 }
 
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
+                {
+                    changeCommandButtonColor(notification, buttonSaveForceParametersHigh, "Zapiš");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.White;
+                        textBoxHighForceStdLow.BackColor = Color.White;
+                        textBoxHighForceRawHigh.BackColor = Color.White;
+                        textBoxHighForceStdHigh.BackColor = Color.White;
+                        textBoxHighForceTara.BackColor = Color.White;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory2")
+                {
+                    changeCommandButtonColor(notification, buttonSaveForceParametersLow, "Zapiš");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.White;
+                        textBoxLowForceStdLow.BackColor = Color.White;
+                        textBoxLowForceRawHigh.BackColor = Color.White;
+                        textBoxLowForceStdHigh.BackColor = Color.White;
+                        textBoxHighForceTara.BackColor = Color.White;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw")
+                {
+                    textBoxActualRawLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std")
+                {
+                    textBoxActualStdLowEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw")
+                {
+                    textBoxActualLRawHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std")
+                {
+                    textBoxActualStdHighEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std")
+                {
+                    textBoxTaraEcho.Text = notification.Value.Value.ToString();
+                }
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_raw")
+                {
+                    textBoxHighForceRawLow.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref1_std")
+                {
+                    textBoxHighForceStdLow.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_raw")
+                {
+                    textBoxHighForceRawHigh.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_ref2_std")
+                {
+                    textBoxHighForceStdHigh.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell1_tare_std")
+                {
+                    textBoxHighForceTara.Text = notification.Value.Value.ToString();
+                }
+
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref_raw")
+                {
+                    textBoxLowForceRawLow.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref1_std")
+                {
+                    textBoxLowForceStdLow.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_raw")
+                {
+                    textBoxLowForceRawHigh.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_ref2_std")
+                {
+                    textBoxLowForceStdHigh.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std")
+                {
+                    textBoxLowForceTara.Text = notification.Value.Value.ToString();
+                }
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_parameterLoadCell2_tare_std")
+                {
+                    textBoxLowForceTara.Text = notification.Value.Value.ToString();
+                }
+
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
                 {
 
@@ -2520,7 +2621,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 }
                 if (monitoredItem.DisplayName == "constMachineControl_strain_filterSettings_Type")
                 {
-                    
+
                 }
                 if (monitoredItem.DisplayName == "constMachineControl_strain_filterSettings_Order")
                 {
@@ -2750,26 +2851,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             try
             {
 
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw")
-                {
-                    textBoxActualRawLowEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_std")
-                {
-                    textBoxActualStdLowEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_raw")
-                {
-                    textBoxActualLRawHighEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref2_std")
-                {
-                    textBoxActualStdHighEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_tare_std")
-                {
-                    textBoxTaraEcho.Text = notification.Value.Value.ToString();
-                }
+
 
                 if (monitoredItem.DisplayName == "constMachineControl_weight_parameterLoadCell1_ref1_raw")
                 {
@@ -4909,15 +4991,19 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void buttonSaveForceParametersHigh_Click(object sender, EventArgs e)
         {
-
+            sendCommandWithDialogWriteButtonText(buttonSaveForceParametersHigh,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1",
+                "Uložit parametry čidla do paměti?",
+                "Zápis do paměti!");
         }
 
         private void buttonReadCellParametersHigh_Click(object sender, EventArgs e)
         {
             sendCommandWithDialog(buttonReadCellParametersHigh,
-                commandReadCellParametersHigh, 
-                "ns=6;s=::AsGlobalPV:MachineControl.command.tara", 
-                "Načíst data?", 
+                commandReadCellParametersHigh,
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters1",
+                "Načíst data?",
                 "Čtení");
         }
 
@@ -4963,8 +5049,10 @@ namespace trhacka_v_1_0_working_2019_010_201
         }
         private void buttonSaveScaleParameters_Click(object sender, EventArgs e)
         {
-            string memory ="";
+            string memory = "";
             string memoryPLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory";
+            string memoryPLC1 = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1";
+            string memoryPLC2 = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2";
             int valI;
             double valD;
             if (radioButtonLoadCellHigh.Checked)
@@ -4983,7 +5071,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 int.TryParse(textBoxActualStdLowEcho.Text, out valI);
                 int.TryParse(textBoxTaraEcho.Text, out valI);
                 string command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_raw";
-                writeNodeAndSetColorLightBlue(textBoxActualLRawHighEcho,command);
+                writeNodeAndSetColorLightBlue(textBoxActualLRawHighEcho, command);
                 command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref1_raw";
                 writeNodeAndSetColorLightBlue(textBoxActualRawLowEcho, command);
                 command = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.parameter.scaleParameter.ref2_std";
@@ -4998,13 +5086,21 @@ namespace trhacka_v_1_0_working_2019_010_201
             catch (Exception)
             {
 
-                
+
             }
             sendCommandWithDialogWriteButtonText(buttonSaveScaleParameters,
                 "Zapiš",
                memoryPLC,
                 "Zapsat parametry do pameti" + memory,
                 "Zápis do paměti");
+            if (radioButtonLoadCellHigh.Checked)
+            {
+                writeNode(vTrue, memoryPLC1);
+            }
+            else
+            {
+                writeNode(vTrue, memoryPLC2);
+            }
 
         }
 
@@ -5024,6 +5120,34 @@ namespace trhacka_v_1_0_working_2019_010_201
         {
             double val;
             val = testNumericValueAndSetColor(textBoxActualLRawHighEcho);
+        }
+
+        private void buttonReadCellParametersLow_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialog(buttonReadCellParametersLow,
+                commandReadCellParametersHigh,
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters2",
+                "Načíst data?",
+                "Čtení");
+        }
+
+
+        private void buttonReadActualCellParameters_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonReadCellParametersLow,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters",
+                "Načíst data?",
+                "Čtení");
+        }
+
+        private void buttonSaveForceParametersLow_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonSaveForceParametersLow,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2",
+                "Uložit parametry čidla do paměti?",
+                "Zápis do paměti!");
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
