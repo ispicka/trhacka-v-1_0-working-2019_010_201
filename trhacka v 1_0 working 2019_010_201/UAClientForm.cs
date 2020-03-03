@@ -320,9 +320,11 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doTare",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.getParameters2",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1", 
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.doneStandartize1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.status.doneStandartize2",
@@ -550,8 +552,10 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_controlWeight_command_doStandartize1",
             "MachineControl_strainControl_controlWeight_command_doStandartize2",
             "MachineControl_strainControl_controlWeight_command_doTare",
+            "MachineControl_strainControl_controlWeight_command_getParameters",
             "MachineControl_strainControl_controlWeight_command_getParameters1",
             "MachineControl_strainControl_controlWeight_command_getParameters2",
+            "MachineControl_strainControl_controlWeight_command_writeToMemory",
             "MachineControl_strainControl_controlWeight_command_writeToMemory1",
             "MachineControl_strainControl_controlWeight_command_writeToMemory2",
             "MachineControl_strainControl_controlWeight_status_doneStandartize1",
@@ -2325,6 +2329,11 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                     }
                 }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
+                {
+                    changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
+                }
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
                 {
 
@@ -2557,6 +2566,23 @@ namespace trhacka_v_1_0_working_2019_010_201
             }
 
         }
+
+        private void changeCommandButtonColor(MonitoredItemNotification notification, Button bt, string buttonText)
+        {
+            if ((bool)notification.Value.Value)
+            {
+                bt.BackColor = Color.Red;
+                bt.ForeColor = Color.Black;
+            }
+            else
+            {
+                bt.BackColor = SystemColors.Control;
+                bt.Text = buttonText;
+
+
+            }
+        }
+
         private void NotificationWriteToValuesFintersAndRamps(MonitoredItem monitoredItem, MonitoredItemNotification notification)
         {
             try
@@ -4880,6 +4906,49 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                 }
             }
+        }
+        private void sendCommandWithDialogTestButtonText(Button button, string text, string commandToPlc, string message, string caption)
+        {
+
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+            result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                if (button.Text == text)
+                {
+
+                    button.Text = "Wait";
+                    button.ForeColor = Color.Red;
+                    writeNode(vTrue, commandToPlc);
+
+
+
+                }
+            }
+        }
+        private void buttonSaveScaleParameters_Click(object sender, EventArgs e)
+        {
+            string memory ="";
+            string memoryPLC = "";
+            string memory1PLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory1";
+            string memory2PLC = "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2";
+            if (radioButtonLoadCellHigh.Checked)
+            {
+                memory = "1";
+                memoryPLC = memory1PLC;
+            }
+            else
+            {
+                memory = "2";
+                memoryPLC = memory2PLC;
+            }
+            sendCommandWithDialogTestButtonText(buttonSaveScaleParameters,
+                "Zapiš",
+               memoryPLC,
+                "Zapsat parametry do pameti" + memory,
+                "Zápis do paměti");
+
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
