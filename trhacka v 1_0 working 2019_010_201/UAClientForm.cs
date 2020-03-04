@@ -255,17 +255,19 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setRamp",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readRamp",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setMaxVelocity",
+//            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setMaxVelocity",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setZero",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.Home",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.MinPosition",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.MaxPosition",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.MaxVelocity",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SetMaxPosition",
-            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SeMinPosition",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.minPosition", //opravit
+           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.maxPosition", // opraviit
+//           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.MaxVelocity",
+//            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SetMaxPosition",
+//            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SeMinPosition",
 
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.ActValue",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.SetValue",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.minPosition", //opravit
+           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.maxPosition", // opraviit
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.active",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.error",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.value",
@@ -280,6 +282,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.status.manual",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.status.ready",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.status.simulating",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.status.settingZeroPosition",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.status.homing",
             "ns=6;s=::AsGlobalPV:MachineControl.status.error",
             "ns=6;s=::AsGlobalPV:MachineControl.status.filterOn",
             "ns=6;s=::AsGlobalPV:MachineControl.status.force",
@@ -298,7 +302,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.status.state",
             "ns=6;s=::AsGlobalPV:MachineControl.status.tara",
             "ns=6;s=::AsGlobalPV:MachineControl.status.tuningActive",
-            "ns=6;s=::AsGlobalPV:MachineControl.status.velocity",
+            "ns=6;s=::AsGlobalPV:MachineControl.status.simulating",
+             "ns=6;s=::AsGlobalPV:MachineControl.status.velocity",
             "ns=6;s=::AsGlobalPV:MachineControl.status.standartizeWeight1",
             "ns=6;s=::AsGlobalPV:MachineControl.status.standartizeWeight2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.control",
@@ -313,10 +318,10 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setRamp",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readRamp",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.maxVelocity",
+//            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.maxVelocity",
+            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.preForce", //doplnit
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.stopMinForce",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setStopMinForce",
-            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setMaxVelocity",
+//            "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setMaxVelocity",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize1",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doStandartize2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.doTare",
@@ -398,10 +403,13 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.raedFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp",
-
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitAcceleration",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitSpeed",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ActValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.SetValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ingValue",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitAcceleration",
+            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitSpeed",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.output.IntegrationHold",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.output.active",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.output.trackingActive",
@@ -500,20 +508,21 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_positionControl_command_simulate",
             "MachineControl_positionControl_command_manPID",
             "MachineControl_positionControl_command_runPID",
-            "MachineControl.positionControl.command.setFilter",
-            "MachineControl.positionControl.command.setRamp",
-            "MachineControl.positionControl.command.readFilter",
-            "MachineControl.positionControl.command.readRamp",
-            "MachineControl.positionControl.command.setMaxVelocity",
-            "MachineControl.positionControl.command.setZero",
-            "MachineControl.positionControl.command.Home",
-            "MachineControl.positionControl.command.MinPosition",
-            "MachineControl.positionControl.command.MaxPosition",
-            "MachineControl.positionControl.command.MaxVelocity",
-            "MachineControl.positionControl.command.SetMaxPosition",
-            "MachineControl.positionControl.command.SeMinPosition",
+            "MachineControl_positionControl_command_setFilter",
+            "MachineControl_positionControl_command_setRamp",
+            "MachineControl_positionControl_command_readFilter",
+            "MachineControl_positionControl_command_readRamp",
+//            "MachineControl_positionControl_command_setMaxVelocity",
+            "MachineControl_positionControl_command_setZero",
+            "MachineControl_positionControl_command_Home",
+            "MachineControl_positionControl_command_minPosition", //opravit
+            "MachineControl_positionControl_command_maxPosition",// opravit
+//            "MachineControl_positionControl_command_MaxVelocity",
+//            "MachineControl_positionControl_command_SeMinPosition",
              "MachineControl_positionControl_input_ActValue",
             "MachineControl_positionControl_input_SetValue",
+            "MachineControl_positionControl_input_minPosition", //opravit
+            "MachineControl_positionControl_input_maxPosition",// opravit
             "MachineControl_positionControl_output_active",
             "MachineControl_positionControl_output_error",
             "MachineControl_positionControl_output_value",
@@ -528,6 +537,9 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_positionControl_status_manual",
             "MachineControl_positionControl_status_ready",
             "MachineControl_positionControl_status_simulating",
+            "MachineControl_positionControl_status_settingZeroPosition", //doplnit
+            "MachineControl_positionControl_status_homing",//doplnit
+
             "MachineControl_status_error",
             "MachineControl_status_filterOn",
             "MachineControl_status_force",
@@ -546,6 +558,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_status_state",
             "MachineControl_status_tara",
             "MachineControl_status_tuningActive",
+            "MachineControl_status_simulating",
             "MachineControl_status_velocity",
             "MachineControl_status_standartizeWeight1",
             "MachineControl_status_standartizeWeight2",
@@ -561,10 +574,10 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_command_setRamp",
             "MachineControl_strainControl_command_readFilter",
             "MachineControl_strainControl_command_readRamp",
-            "MachineControl_strainControl_command_maxVelocity",
-            "MachineControl_strainControl_stopMinForce",
-            "MachineControl_strainControl_command_setStopMinForce",
-            "MachineControl_strainControl_command_setMaxVelocity",
+            "MachineControl_strainControl_command_preForce", //doplnit
+            "MachineControl_strainControl_command_stopMinForce", //doplnit,
+//            "MachineControl_strainControl_command_setMinForce", // opravit
+//            "MachineControl_strainControl_command_setMaxVelocity",
 
             "MachineControl_strainControl_controlWeight_command_doStandartize1",
             "MachineControl_strainControl_controlWeight_command_doStandartize2",
@@ -648,9 +661,13 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_velocityControl_command_setFilter",
             "MachineControl_velocityControl_command_raedFilter",
             "MachineControl_velocityControl_command_readRamp",
+            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitAcceleration", //doplnitg
+            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitSpeed", //doplnit
             "MachineControl_velocityControl_input_ActValue",
             "MachineControl_velocityControl_input_SetValue",
             "MachineControl_velocityControl_input_ingValue",
+            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitAcceleration", //doplnit
+            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitSpeed",
             "MachineControl_velocityControl_output_IntegrationHold",
             "MachineControl_velocityControl_output_active",
             "MachineControl_velocityControl_output_trackingActive",
@@ -2131,6 +2148,40 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
+                if (monitoredItem.DisplayName == "MachineControl_status_tara")
+                {
+                    if ((bool)notification.Value.Value)
+                    {
+                        buttonTara.BackColor = Color.Red;
+                        buttonTara.ForeColor = Color.Black;
+                    }
+                    else
+                    {
+                        buttonTara.BackColor = SystemColors.Control;
+                        buttonTara.Text = "Tara";
+                        commandTaraStart = false;
+
+                    }
+                }
+                if (monitoredItem.DisplayName == "MachineControl_status_simulating")
+                {
+
+                    if ((bool)notification.Value.Value)
+                    {
+                        labelSimulation.Visible = true;
+                        labelSimulation.ForeColor = Color.Blue;
+                    }
+                    else
+                    {
+                        labelSimulation.Visible = false;
+                        labelSimulation.ForeColor = Color.Black;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_status_programControl")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxControlOnProgram);
+                }
 
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_status_ready")
                 {
@@ -2151,7 +2202,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_output_error")
                 {
 
@@ -2170,6 +2220,63 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                     }
 
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_simulating")
+                {
+
+                    if ((bool)notification.Value.Value)
+                    {
+                        checkBoxStatusPosition.BackColor = Color.Blue;
+                        formChartPidTimePosition.checkBoxSimulationActive.Checked = true;
+                    }
+                    else
+                    {
+                        checkBoxStatusPosition.BackColor = SystemColors.Control;
+                        formChartPidTimePosition.checkBoxSimulationActive.Checked = false;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_settingZeroPosition")
+                {
+
+                    if ((bool)notification.Value.Value)
+                    {
+                        //checkBoxStatusPosition.BackColor = Color.Blue;
+                        //formChartPidTimePosition.checkBoxSimulationActive.Checked = true;
+                    }
+                    else
+                    {
+                        //    checkBoxStatusPosition.BackColor = SystemColors.Control;
+                        //    formChartPidTimePosition.checkBoxSimulationActive.Checked = false;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_homing")
+                {
+
+                    if ((bool)notification.Value.Value)
+                    {
+                        //checkBoxStatusPosition.BackColor = Color.Blue;
+                        //formChartPidTimePosition.checkBoxSimulationActive.Checked = true;
+                    }
+                    else
+                    {
+                        //checkBoxStatusPosition.BackColor = SystemColors.Control;
+                        //formChartPidTimePosition.checkBoxSimulationActive.Checked = false;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_RampActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxRampOnPosition);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_FilterActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxFilterOnPosition);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_PIDActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxControlOnPosition);
                 }
 
                 if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_ready")
@@ -2193,7 +2300,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-
                 if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_error")
                 {
 
@@ -2214,21 +2320,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl__status_simulating")
-                {
-
-                    if ((bool)notification.Value.Value)
-                    {
-                        labelSimulation.Visible = true;
-                        labelSimulation.ForeColor = Color.Blue;
-                    }
-                    else
-                    {
-                        labelSimulation.Visible = false;
-                        labelSimulation.ForeColor = Color.Black;
-                    }
-
-                }
                 if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_simulating")
                 {
 
@@ -2244,6 +2335,19 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_RampActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxRampOnVelocity);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_FilterActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxFilterOnVelocity);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_PIDActive")
+                {
+                    CheckBoxStatusWrite(notification, checkBoxControlOnVelocity);
+                }
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_status_simulating")
                 {
 
@@ -2259,68 +2363,14 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_simulating")
-                {
-
-                    if ((bool)notification.Value.Value)
-                    {
-                        checkBoxStatusPosition.BackColor = Color.Blue;
-                        formChartPidTimePosition.checkBoxSimulationActive.Checked = true;
-                    }
-                    else
-                    {
-                        checkBoxStatusPosition.BackColor = SystemColors.Control;
-                        formChartPidTimePosition.checkBoxSimulationActive.Checked = false;
-                    }
-
-                }
-
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_status_RampActive")
                 {
                     CheckBoxStatusWrite(notification, checkBoxRampOnForce);
                 }
-
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_status_FilterActive")
                 {
                     CheckBoxStatusWrite(notification, checkBoxFilterOnForce);
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_status_PIDActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxControlOnForce);
-                }
-
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_RampActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxRampOnPosition);
-                }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_FilterActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxFilterOnPosition);
-                }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_PIDActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxControlOnPosition);
-                }
-
-                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_RampActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxRampOnVelocity);
-                }
-
-                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_FilterActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxFilterOnVelocity);
-                }
-                if (monitoredItem.DisplayName == "MachineControl_velocityControl_status_PIDActive")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxControlOnVelocity);
-                }
-
-                if (monitoredItem.DisplayName == "MachineControl_status_programControl")
-                {
-                    CheckBoxStatusWrite(notification, checkBoxControlOnProgram);
-                }
-
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_status_ready")
                 {
                     forceOK = (bool)notification.Value.Value;
@@ -2341,21 +2391,11 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_status_tara")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        buttonTara.BackColor = Color.Red;
-                        buttonTara.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        buttonTara.BackColor = SystemColors.Control;
-                        buttonTara.Text = "Tara";
-                        commandTaraStart = false;
 
-                    }
-                }
+
+
+
+
 
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
                 {
@@ -5231,6 +5271,16 @@ namespace trhacka_v_1_0_working_2019_010_201
                 "ns=6;s=::AsGlobalPV:MachineControl.strainControl.controlWeight.command.writeToMemory2",
                 "Uložit parametry čidla do paměti?",
                 "Zápis do paměti!");
+        }
+
+        private void textBoxPreStrainSet_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxStopWhenForceUpSet_TextChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void ButtonSetZero_Click(object sender, EventArgs e)
