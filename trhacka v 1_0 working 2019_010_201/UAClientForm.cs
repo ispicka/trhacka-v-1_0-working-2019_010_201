@@ -2031,6 +2031,208 @@ namespace trhacka_v_1_0_working_2019_010_201
             try
             {
 
+
+                if (monitoredItem.DisplayName == "MachineControl_input_position_SetValue")
+                {
+                    textBoxPositionSetEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_input_velocity_SetValue")
+                {
+                    textBoxVelocitySetEcho.Text = notification.Value.Value.ToString();
+                }
+                if (monitoredItem.DisplayName == "MachineControl_input_strain_setValue")
+                {
+                    textBoxStrainSetEcho.Text = notification.Value.Value.ToString();
+                }
+
+
+
+
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_output_error")
+                {
+
+                    if ((bool)notification.Value.Value)
+                    {
+                        checkBoxStatusPosition.Checked = false;
+                        checkBoxStatusProgram.Checked = false;
+                        checkBoxStatusPosition.BackColor = Color.Red;
+
+
+                    }
+                    else
+                    {
+
+                        checkBoxStatusPosition.BackColor = SystemColors.Control;
+
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_output_trackingActive")
+                {
+                    if ((bool)notification.Value.Value)
+                    {
+                        checkBoxPositionPidMan.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        checkBoxPositionPidMan.BackColor = SystemColors.Control;
+                    }
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_output_trackingActive")
+                {
+                    if ((bool)notification.Value.Value)
+                    {
+                        checkBoxForcePidMan.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        checkBoxForcePidMan.BackColor = SystemColors.Control;
+                    }
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_output_trackingActive")
+                {
+                    if ((bool)notification.Value.Value)
+                    {
+                        checkBoxVelocityPidMan.BackColor = Color.Green;
+                    }
+                    else
+                    {
+                        checkBoxVelocityPidMan.BackColor = SystemColors.Control;
+                    }
+                }
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
+                {
+                    changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.White;
+                        textBoxActualStdLowEcho.BackColor = Color.White;
+                        textBoxActualLRawHighEcho.BackColor = Color.White;
+                        textBoxActualRawLowEcho.BackColor = Color.White;
+                        textBoxTaraEcho.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.LightBlue;
+                        textBoxActualStdLowEcho.BackColor = Color.LightBlue;
+                        textBoxActualRawLowEcho.BackColor = Color.LightBlue;
+                        textBoxActualLRawHighEcho.BackColor = Color.LightBlue;
+                        textBoxTaraEcho.BackColor = Color.LightBlue;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
+                {
+                    changeCommandButtonColor(notification, buttonSaveForceParametersHigh, "Zapiš");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.White;
+                        textBoxHighForceStdLow.BackColor = Color.White;
+                        textBoxHighForceRawHigh.BackColor = Color.White;
+                        textBoxHighForceStdHigh.BackColor = Color.White;
+                        textBoxHighForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.LightBlue;
+                        textBoxHighForceStdLow.BackColor = Color.LightBlue;
+                        textBoxHighForceRawHigh.BackColor = Color.LightBlue;
+                        textBoxHighForceStdHigh.BackColor = Color.LightBlue;
+                        textBoxHighForceTara.BackColor = Color.LightBlue;
+                    }
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory2")
+                {
+                    changeCommandButtonColor(notification, buttonSaveForceParametersLow, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.White;
+                        textBoxLowForceStdLow.BackColor = Color.White;
+                        textBoxLowForceRawHigh.BackColor = Color.White;
+                        textBoxLowForceStdHigh.BackColor = Color.White;
+                        textBoxLowForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.LightBlue;
+                        textBoxLowForceStdLow.BackColor = Color.LightBlue;
+                        textBoxLowForceRawHigh.BackColor = Color.LightBlue;
+                        textBoxLowForceStdHigh.BackColor = Color.LightBlue;
+                        textBoxLowForceTara.BackColor = Color.LightBlue;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters")
+                {
+                    changeCommandButtonColor(notification, buttonReadActualCellParameters, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.White;
+                        textBoxActualStdLowEcho.BackColor = Color.White;
+                        textBoxActualLRawHighEcho.BackColor = Color.White;
+                        textBoxActualRawLowEcho.BackColor = Color.White;
+                        textBoxTaraEcho.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxActualStdHighEcho.BackColor = Color.LightGreen;
+                        textBoxActualStdLowEcho.BackColor = Color.LightGreen;
+                        textBoxActualLRawHighEcho.BackColor = Color.LightGreen;
+                        textBoxActualRawLowEcho.BackColor = Color.LightGreen;
+                        textBoxTaraEcho.BackColor = Color.LightGreen;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters1")
+                {
+                    changeCommandButtonColor(notification, buttonReadCellParametersHigh, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.White;
+                        textBoxHighForceStdLow.BackColor = Color.White;
+                        textBoxHighForceRawHigh.BackColor = Color.White;
+                        textBoxHighForceStdHigh.BackColor = Color.White;
+                        textBoxHighForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxHighForceRawLow.BackColor = Color.LightGreen;
+                        textBoxHighForceStdLow.BackColor = Color.LightGreen;
+                        textBoxHighForceRawHigh.BackColor = Color.LightGreen;
+                        textBoxHighForceStdHigh.BackColor = Color.LightGreen;
+                        textBoxHighForceTara.BackColor = Color.LightGreen;
+                    }
+
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters2")
+                {
+                    changeCommandButtonColor(notification, buttonReadCellParametersLow, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.White;
+                        textBoxLowForceStdLow.BackColor = Color.White;
+                        textBoxLowForceRawHigh.BackColor = Color.White;
+                        textBoxLowForceStdHigh.BackColor = Color.White;
+                        textBoxLowForceTara.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxLowForceRawLow.BackColor = Color.LightGreen;
+                        textBoxLowForceStdLow.BackColor = Color.LightGreen;
+                        textBoxLowForceRawHigh.BackColor = Color.LightGreen;
+                        textBoxLowForceStdHigh.BackColor = Color.LightGreen;
+                        textBoxLowForceTara.BackColor = Color.LightGreen;
+                    }
+
+
+                }
+
+
                 if (monitoredItem.DisplayName == "MachineControl_status_ioOK")
                 {
                     machineIoOK = (bool)notification.Value.Value;
@@ -2182,7 +2384,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
                     CheckBoxStatusWrite(notification, checkBoxControlOnProgram);
                 }
-
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_status_ready")
                 {
                     positionOK = (bool)notification.Value.Value;
@@ -2202,25 +2403,6 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_output_error")
-                {
-
-                    if ((bool)notification.Value.Value)
-                    {
-                        checkBoxStatusPosition.Checked = false;
-                        checkBoxStatusProgram.Checked = false;
-                        checkBoxStatusPosition.BackColor = Color.Red;
-
-
-                    }
-                    else
-                    {
-
-                        checkBoxStatusPosition.BackColor = SystemColors.Control;
-
-                    }
-
-                }
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_status_simulating")
                 {
 
@@ -2236,7 +2418,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_settingZeroPosition")
+               if (monitoredItem.DisplayName == "MachineControl_positionControl_status_settingZeroPosition")
                 {
 
                     if ((bool)notification.Value.Value)
@@ -2251,6 +2433,10 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
+
+
+
+ 
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_status_homing")
                 {
 
@@ -2392,141 +2578,101 @@ namespace trhacka_v_1_0_working_2019_010_201
 
                 }
 
-
-
-
-
-
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
                 {
-                    changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
-                    if (!(bool)notification.Value.Value)
-                    {
-                        textBoxActualStdHighEcho.BackColor = Color.White;
-                        textBoxActualStdLowEcho.BackColor = Color.White;
-                        textBoxActualLRawHighEcho.BackColor = Color.White;
-                        textBoxActualRawLowEcho.BackColor = Color.White;
-                        textBoxTaraEcho.BackColor = Color.White;
-                    }
-                    else
-                    {
-                        textBoxActualStdHighEcho.BackColor = Color.LightBlue;
-                        textBoxActualStdLowEcho.BackColor = Color.LightBlue;
-                        textBoxActualRawLowEcho.BackColor = Color.LightBlue;
-                        textBoxActualLRawHighEcho.BackColor = Color.LightBlue;
-                        textBoxTaraEcho.BackColor = Color.LightBlue;
-                    }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory1")
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize2")
                 {
-                    changeCommandButtonColor(notification, buttonSaveForceParametersHigh, "Zapiš");
-                    if (!(bool)notification.Value.Value)
-                    {
-                        textBoxHighForceRawLow.BackColor = Color.White;
-                        textBoxHighForceStdLow.BackColor = Color.White;
-                        textBoxHighForceRawHigh.BackColor = Color.White;
-                        textBoxHighForceStdHigh.BackColor = Color.White;
-                        textBoxHighForceTara.BackColor = Color.White;
-                    }
-                    else
-                    {
-                        textBoxHighForceRawLow.BackColor = Color.LightBlue;
-                        textBoxHighForceStdLow.BackColor = Color.LightBlue;
-                        textBoxHighForceRawHigh.BackColor = Color.LightBlue;
-                        textBoxHighForceStdHigh.BackColor = Color.LightBlue;
-                        textBoxHighForceTara.BackColor = Color.LightBlue;
-                    }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory2")
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneTare")
                 {
-                    changeCommandButtonColor(notification, buttonSaveForceParametersLow, "Načti");
-                    if (!(bool)notification.Value.Value)
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_enable")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_error")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_ready")
+                {
+
+                }
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_actualCellType")
+                {
+                    int val;
+                    string str;
+                    try
                     {
-                        textBoxLowForceRawLow.BackColor = Color.White;
-                        textBoxLowForceStdLow.BackColor = Color.White;
-                        textBoxLowForceRawHigh.BackColor = Color.White;
-                        textBoxLowForceStdHigh.BackColor = Color.White;
-                        textBoxLowForceTara.BackColor = Color.White;
+                        str = notification.Value.Value.ToString();
+                        int.TryParse(str, out val);
+                        switch (val)
+                        {
+                            case 1:
+                                radioButtonLoadCellHigh.Checked = true;
+                                radioButtonLoadCellLow.Checked = false;
+                                break;
+                            case 2:
+                                radioButtonLoadCellHigh.Checked = false;
+                                radioButtonLoadCellLow.Checked = true;
+                                break;
+                            default:
+                                radioButtonLoadCellHigh.Checked = false;
+                                radioButtonLoadCellLow.Checked = false;
+                                break;
+                        }
                     }
-                    else
+                    catch (Exception)
                     {
-                        textBoxLowForceRawLow.BackColor = Color.LightBlue;
-                        textBoxLowForceStdLow.BackColor = Color.LightBlue;
-                        textBoxLowForceRawHigh.BackColor = Color.LightBlue;
-                        textBoxLowForceStdHigh.BackColor = Color.LightBlue;
-                        textBoxLowForceTara.BackColor = Color.LightBlue;
+
+                        throw;
                     }
 
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters")
+                if (monitoredItem.DisplayName == "MachineControl_status_standartizeWeight1")
                 {
-                    changeCommandButtonColor(notification, buttonReadActualCellParameters, "Načti");
-                    if (!(bool)notification.Value.Value)
+                    if ((bool)notification.Value.Value)
                     {
-                        textBoxActualStdHighEcho.BackColor = Color.White;
-                        textBoxActualStdLowEcho.BackColor = Color.White;
-                        textBoxActualLRawHighEcho.BackColor = Color.White;
-                        textBoxActualRawLowEcho.BackColor = Color.White;
-                        textBoxTaraEcho.BackColor = Color.White;
+                        buttonLowForce.BackColor = Color.Red;
+                        buttonLowForce.ForeColor = Color.Black;
                     }
                     else
                     {
-                        textBoxActualStdHighEcho.BackColor = Color.LightGreen;
-                        textBoxActualStdLowEcho.BackColor = Color.LightGreen;
-                        textBoxActualLRawHighEcho.BackColor = Color.LightGreen;
-                        textBoxActualRawLowEcho.BackColor = Color.LightGreen;
-                        textBoxTaraEcho.BackColor = Color.LightGreen;
-                   }
+                        buttonLowForce.BackColor = SystemColors.Control;
+                        buttonLowForce.Text = "Low Force";
+                        commandLowForceStart = false;
 
-
+                    }
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters1")
+                if (monitoredItem.DisplayName == "MachineControl_status_standartizeWeight2")
                 {
-                    changeCommandButtonColor(notification, buttonReadCellParametersHigh, "Načti");
-                    if (!(bool)notification.Value.Value)
+                    if ((bool)notification.Value.Value)
                     {
-                        textBoxHighForceRawLow.BackColor = Color.White;
-                        textBoxHighForceStdLow.BackColor = Color.White;
-                        textBoxHighForceRawHigh.BackColor = Color.White;
-                        textBoxHighForceStdHigh.BackColor = Color.White;
-                        textBoxHighForceTara.BackColor = Color.White;
+                        buttonHighForce.BackColor = Color.Red;
+                        buttonHighForce.ForeColor = Color.Black;
                     }
                     else
                     {
-                        textBoxHighForceRawLow.BackColor = Color.LightGreen;
-                        textBoxHighForceStdLow.BackColor = Color.LightGreen;
-                        textBoxHighForceRawHigh.BackColor = Color.LightGreen;
-                        textBoxHighForceStdHigh.BackColor = Color.LightGreen;
-                        textBoxHighForceTara.BackColor = Color.LightGreen;
-                    }
+                        buttonHighForce.BackColor = SystemColors.Control;
+                        buttonHighForce.Text = "High Force";
+                        commandHighForceStart = false;
 
+                    }
 
                 }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_getParameters2")
-                {
-                    changeCommandButtonColor(notification, buttonReadCellParametersLow, "Načti");
-                    if (!(bool)notification.Value.Value)
-                    {
-                        textBoxLowForceRawLow.BackColor = Color.White;
-                        textBoxLowForceStdLow.BackColor = Color.White;
-                        textBoxLowForceRawHigh.BackColor = Color.White;
-                        textBoxLowForceStdHigh.BackColor = Color.White;
-                        textBoxLowForceTara.BackColor = Color.White;
-                    }
-                    else
-                    {
-                        textBoxLowForceRawLow.BackColor = Color.LightGreen;
-                        textBoxLowForceStdLow.BackColor = Color.LightGreen;
-                        textBoxLowForceRawHigh.BackColor = Color.LightGreen;
-                        textBoxLowForceStdHigh.BackColor = Color.LightGreen;
-                        textBoxLowForceTara.BackColor = Color.LightGreen;
-                    }
 
 
-                }
+
+
+
+
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_parameter_scaleParameter_ref1_raw")
                 {
                     textBoxActualRawLowEcho.Text = notification.Value.Value.ToString();
@@ -2591,139 +2737,8 @@ namespace trhacka_v_1_0_working_2019_010_201
                     textBoxLowForceTara.Text = notification.Value.Value.ToString();
                 }
 
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize1")
-                {
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneStandartize2")
-                {
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_doneTare")
-                {
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_enable")
-                {
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_error")
-                {
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_ready")
-                {
-
-                }
-                               
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_status_actualCellType")
-                {
-                    int val;
-                    string str;
-                    try
-                    {
-                        str = notification.Value.Value.ToString();
-                        int.TryParse(str, out val);
-                        switch (val)
-                        {
-                            case 1:
-                                radioButtonLoadCellHigh.Checked = true;
-                                radioButtonLoadCellLow.Checked = false;
-                                break;
-                            case 2:
-                                radioButtonLoadCellHigh.Checked = false;
-                                radioButtonLoadCellLow.Checked = true;
-                                break;
-                            default:
-                                radioButtonLoadCellHigh.Checked = false;
-                                radioButtonLoadCellLow.Checked = false;
-                                break;
-                        }
-                    }
-                    catch (Exception)
-                    {
-
-                        throw;
-                    }
 
 
-                }
-                if (monitoredItem.DisplayName == "MachineControl_status_standartizeWeight1")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        buttonLowForce.BackColor = Color.Red;
-                        buttonLowForce.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        buttonLowForce.BackColor = SystemColors.Control;
-                        buttonLowForce.Text = "Low Force";
-                        commandLowForceStart = false;
-
-                    }
-                }
-                if (monitoredItem.DisplayName == "MachineControl_status_standartizeWeight2")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        buttonHighForce.BackColor = Color.Red;
-                        buttonHighForce.ForeColor = Color.Black;
-                    }
-                    else
-                    {
-                        buttonHighForce.BackColor = SystemColors.Control;
-                        buttonHighForce.Text = "High Force";
-                        commandHighForceStart = false;
-
-                    }
-
-                }
-                if (monitoredItem.DisplayName == "MachineControl_positionControl_output_trackingActive")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        checkBoxPositionPidMan.BackColor = Color.Green;
-                    }
-                    else
-                    {
-                        checkBoxPositionPidMan.BackColor = SystemColors.Control;
-                    }
-                }
-                if (monitoredItem.DisplayName == "MachineControl_strainControl_output_trackingActive")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        checkBoxForcePidMan.BackColor = Color.Green;
-                    }
-                    else
-                    {
-                        checkBoxForcePidMan.BackColor = SystemColors.Control;
-                    }
-                }
-                if (monitoredItem.DisplayName == "MachineControl_velocityControl_output_trackingActive")
-                {
-                    if ((bool)notification.Value.Value)
-                    {
-                        checkBoxVelocityPidMan.BackColor = Color.Green;
-                    }
-                    else
-                    {
-                        checkBoxVelocityPidMan.BackColor = SystemColors.Control;
-                    }
-                }
-                if (monitoredItem.DisplayName == "MachineControl_input_position_SetValue")
-                {
-                    textBoxPositionSetEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_input_velocity_SetValue")
-                {
-                    textBoxVelocitySetEcho.Text = notification.Value.Value.ToString();
-                }
-                if (monitoredItem.DisplayName == "MachineControl_input_strain_setValue")
-                {
-                    textBoxStrainSetEcho.Text = notification.Value.Value.ToString();
-                }
 
 
                 if (monitoredItem.DisplayName == "constMachineControl_strain_rampSettings_MinOut")
