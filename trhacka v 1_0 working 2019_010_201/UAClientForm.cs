@@ -259,7 +259,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setZero",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.Home",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.minPosition", //opravit
-           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.maxPosition", // opraviit
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.maxPosition", // opraviit
 //           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.MaxVelocity",
 //            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SetMaxPosition",
 //            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.SeMinPosition",
@@ -267,7 +267,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.ActValue",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.SetValue",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.minPosition", //opravit
-           "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.maxPosition", // opraviit
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.input.maxPosition", // opraviit
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.active",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.error",
             "ns=6;s=::AsGlobalPV:MachineControl.positionControl.output.value",
@@ -303,7 +303,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.status.tara",
             "ns=6;s=::AsGlobalPV:MachineControl.status.tuningActive",
             "ns=6;s=::AsGlobalPV:MachineControl.status.simulating",
-             "ns=6;s=::AsGlobalPV:MachineControl.status.velocity",
+            "ns=6;s=::AsGlobalPV:MachineControl.status.velocity",
             "ns=6;s=::AsGlobalPV:MachineControl.status.standartizeWeight1",
             "ns=6;s=::AsGlobalPV:MachineControl.status.standartizeWeight2",
             "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.control",
@@ -403,8 +403,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.raedFilter",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp",
-            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitAcceleration",
-            "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitSpeed",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.minPosition",
+            "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.minPosition",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ActValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.SetValue",
             "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.input.ingValue",
@@ -515,11 +515,11 @@ namespace trhacka_v_1_0_working_2019_010_201
 //            "MachineControl_positionControl_command_setMaxVelocity",
             "MachineControl_positionControl_command_setZero",
             "MachineControl_positionControl_command_Home",
-            "MachineControl_positionControl_command_minPosition", //opravit
-            "MachineControl_positionControl_command_maxPosition",// opravit
+            "MachineControl_positionControl_command_minPosition", 
+            "MachineControl_positionControl_command_maxPosition",
 //            "MachineControl_positionControl_command_MaxVelocity",
 //            "MachineControl_positionControl_command_SeMinPosition",
-             "MachineControl_positionControl_input_ActValue",
+            "MachineControl_positionControl_input_ActValue",
             "MachineControl_positionControl_input_SetValue",
             "MachineControl_positionControl_input_minPosition", //opravit
             "MachineControl_positionControl_input_maxPosition",// opravit
@@ -574,8 +574,8 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_strainControl_command_setRamp",
             "MachineControl_strainControl_command_readFilter",
             "MachineControl_strainControl_command_readRamp",
-            "MachineControl_strainControl_command_preForce", //doplnit
-            "MachineControl_strainControl_command_stopMinForce", //doplnit,
+            "MachineControl_strainControl_command_preForce", 
+            "MachineControl_strainControl_command_stopMinForce", 
 //            "MachineControl_strainControl_command_setMinForce", // opravit
 //            "MachineControl_strainControl_command_setMaxVelocity",
 
@@ -661,13 +661,13 @@ namespace trhacka_v_1_0_working_2019_010_201
             "MachineControl_velocityControl_command_setFilter",
             "MachineControl_velocityControl_command_raedFilter",
             "MachineControl_velocityControl_command_readRamp",
-            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitAcceleration", //doplnitg
-            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitSpeed", //doplnit
+            "MachineControl_positionControl.command.minPosition", //doplnitg
+            "MachineControl_positionControl.command.minPosition", //doplnit
             "MachineControl_velocityControl_input_ActValue",
             "MachineControl_velocityControl_input_SetValue",
             "MachineControl_velocityControl_input_ingValue",
-            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitAcceleration", //doplnit
-            "ns=6;s=::AsGlobalPV:MachineControl_velocityControl_command_limitSpeed",
+            "MachineControl_velocityControl_command_limitAcceleration", //doplnit
+            "MachineControl_velocityControl_command_limitSpeed",
             "MachineControl_velocityControl_output_IntegrationHold",
             "MachineControl_velocityControl_output_active",
             "MachineControl_velocityControl_output_trackingActive",
@@ -2101,6 +2101,31 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
                 }
 
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_limitSpeed")
+                {
+                    changeCheckBoxStatus(notification, checkBoxVelocityMax);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_limitAcceleration")
+                {
+                    changeCheckBoxStatus(notification, checkBoxAccelarationMax);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_command_minPosition")
+                {
+                    changeCheckBoxStatus(notification, checkBoxLowPosition);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_command_maxPosition")
+                {
+                    changeCheckBoxStatus(notification, checkBoxHighPosition);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_preForce")
+                {
+                    changeCheckBoxStatus(notification, checkBoxPreForce);
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_stopMinForce")
+                {
+                    changeCheckBoxStatus(notification, checkBoxStopWhenForceUp);
+                }
+
                 if (monitoredItem.DisplayName == "MachineControl_strainControl_controlWeight_command_writeToMemory")
                 {
                     changeCommandButtonColor(notification, buttonSaveScaleParameters, "Zapiš");
@@ -2418,7 +2443,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                     }
 
                 }
-               if (monitoredItem.DisplayName == "MachineControl_positionControl_status_settingZeroPosition")
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_status_settingZeroPosition")
                 {
 
                     if ((bool)notification.Value.Value)
@@ -2836,6 +2861,23 @@ namespace trhacka_v_1_0_working_2019_010_201
 #pragma warning restore CS0168 // The variable 'ex' is declared but never used
             {
                 //throw;
+            }
+
+        }
+
+        private void changeCheckBoxStatus(MonitoredItemNotification notification, CheckBox chb)
+        {
+            if ((bool)notification.Value.Value)
+            {
+                chb.Checked = true;
+                chb.BackColor = Color.Green;
+
+
+            }
+            else
+            {
+                chb.BackColor = Color.White;
+                chb.Checked = false;
             }
 
         }
@@ -4767,14 +4809,42 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void CheckBoxVelocityMax_CheckedChanged(object sender, EventArgs e)
         {
-            int maxVelocity = 0;
-            if (int.TryParse(textBoxMaxVelocitySet.Text, out maxVelocity))
-            {
+            checkValueAndSendCommandWhenChecked(checkBoxVelocityMax,textBoxMaxVelocitySet,"ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitSpeed");
 
+        }
+
+        private void checkValueAndSendCommandWhenChecked(CheckBox chb, TextBox tb,string node)
+        {
+
+            if (chb.Checked)
+            {
+                try
+                {
+                    float.Parse(tb.Text);
+                    writeNode(vTrue,node );
+                    chb.BackColor = Color.White;
+                }
+                catch (Exception)
+                {
+                    string message = "Chybně zadaná hodnota " + tb.Text + "?";
+                    string caption = "Chyba zadání";
+                    MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                    DialogResult result;
+                    result = MessageBox.Show(message, caption, buttons, MessageBoxIcon.Question);
+                    chb.BackColor = Color.Red;
+                    if (result == DialogResult.Yes)
+                    {
+                        chb.BackColor = Color.White;
+                        chb.Checked = false;
+                        return;
+
+                    }
+                }
             }
             else
             {
-
+                chb.BackColor = Color.LightBlue;
+                writeNode(vFalse, node);
             }
         }
 
@@ -5298,15 +5368,36 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         }
 
+        private void checkBoxAccelarationMax_CheckedChanged(object sender, EventArgs e)
+        {
+            checkValueAndSendCommandWhenChecked(checkBoxAccelarationMax, textBoxMaxAccelerationSet, "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.limitAcceleration");
+        }
+
+        private void checkBoxLowPosition_CheckedChanged(object sender, EventArgs e)
+        {
+            checkValueAndSendCommandWhenChecked(checkBoxLowPosition, textBoxPositionLowLimitSet, "ns=6;::AsGlobalPV:MachineControl.positionControl.command.minPosition");
+        }
+
+        private void checkBoxHighPosition_CheckedChanged(object sender, EventArgs e)
+        {
+            checkValueAndSendCommandWhenChecked(checkBoxHighPosition, textBoxPositionHighLimitSet , "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.maxPosition");
+        }
+
+        private void checkBoxStopWhenForceUp_CheckedChanged(object sender, EventArgs e)
+        {
+            checkValueAndSendCommandWhenChecked(checkBoxStopWhenForceUp, textBoxStopWhenForceUpSet, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.stopMinForce");
+        }
+
+        private void checkBoxPreForce_CheckedChanged(object sender, EventArgs e)
+        {
+            checkValueAndSendCommandWhenChecked(checkBoxPreForce, textBoxPreStrainSet, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.preForce");
+        }
+
         private void ButtonSetZero_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void CheckBox1_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
 
         bool testStepEq(StepType step1, StepType step2)
         {
