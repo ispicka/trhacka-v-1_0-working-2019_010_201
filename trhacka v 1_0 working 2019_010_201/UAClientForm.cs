@@ -1967,7 +1967,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             if (ChartsData.endOfSubstription)
             {
 
-                NotificationWriteToValuesFintersAndRamps(monitoredItem, notification);
+                NotificationWriteToValuesFiltersAndRamps(monitoredItem, notification);
                 notification = null;
 
             }
@@ -2852,7 +2852,164 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
                     textBoxPositionFilterCutOffFreq.Text = notification.Value.Value.ToString();
                 }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_raedFilter")
+                {
+                    changeCommandButtonColor(notification, buttonReadFilterAndRampPosition, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxPositionFiltrOrder.BackColor = Color.White;
+                        textBoxPositionFilterCutOffFreq.BackColor = Color.White;
+                        textBoxPositionRampMax.BackColor = Color.White;
+                        textBoxPositionRampSlewRate.BackColor = Color.White;
+                        textBoxPositionRampMin.BackColor = Color.White;
+                        textBoxPositionRampSlewRateNeg.BackColor = Color.White;
+                    }
+                    else
+                    {
+                        textBoxPositionFiltrOrder.BackColor = Color.LightGreen;
+                        textBoxPositionFilterCutOffFreq.BackColor = Color.LightGreen;
+                        textBoxPositionRampMax.BackColor = Color.LightGreen;
+                        textBoxPositionRampSlewRate.BackColor = Color.LightGreen;
+                        textBoxPositionRampMin.BackColor = Color.LightGreen;
+                        textBoxPositionRampSlewRateNeg.BackColor = Color.LightGreen;
+                    }
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_command_setRamp")
+                {
 
+                }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_command_readFilter")
+                {
+                    changeCommandButtonColor(notification, buttonReadFilterAndRampPosition, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+                        textBoxPositionFiltrOrder.BackColor = Color.White;
+                        textBoxPositionFilterCutOffFreq.BackColor = Color.White;
+
+                    }
+                    else
+                    {
+                        textBoxPositionFiltrOrder.BackColor = Color.LightGreen;
+                        textBoxPositionFilterCutOffFreq.BackColor = Color.LightGreen;
+
+                    }
+                if (monitoredItem.DisplayName == "MachineControl_positionControl_command_readRamp")
+                {
+                    changeCommandButtonColor(notification, buttonReadFilterAndRampPosition, "Načti");
+                    if (!(bool)notification.Value.Value)
+                    {
+
+                        textBoxPositionRampMax.BackColor = Color.White;
+                        textBoxPositionRampSlewRate.BackColor = Color.White;
+                        textBoxPositionRampMin.BackColor = Color.White;
+                        textBoxPositionRampSlewRateNeg.BackColor = Color.White;
+                    }
+                    else
+                    {
+
+                        textBoxPositionRampMax.BackColor = Color.LightGreen;
+                        textBoxPositionRampSlewRate.BackColor = Color.LightGreen;
+                        textBoxPositionRampMin.BackColor = Color.LightGreen;
+                        textBoxPositionRampSlewRateNeg.BackColor = Color.LightGreen;
+                }
+
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_setFilter")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_setRamp")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_readFilter")
+                {
+                            changeCommandButtonColor(notification, buttonReadFilterAndRampVelocity, "Načti");
+                            if (!(bool)notification.Value.Value)
+                            {
+                                textBoxVelocityFiltrOrder.BackColor = Color.White;
+                                textBoxVelocityFilterCutOffFreq.BackColor = Color.White;
+
+                            }
+                            else
+                            {
+                                textBoxVelocityFiltrOrder.BackColor = Color.LightGreen;
+                                textBoxVelocityFilterCutOffFreq.BackColor = Color.LightGreen;
+
+                            }
+                        }
+                if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_readRamp")
+                {
+                            changeCommandButtonColor(notification, buttonReadFilterAndRampVelocity, "Načti");
+                            if (!(bool)notification.Value.Value)
+                            {
+
+                                textBoxVelocityRampMax.BackColor = Color.White;
+                                textBoxVelocityRampSlewRate.BackColor = Color.White;
+                                textBoxVelocityRampMin.BackColor = Color.White;
+                                textBoxVelocityRampSlewRateNeg.BackColor = Color.White;
+                            }
+                            else
+                            {
+
+                                textBoxVelocityRampMax.BackColor = Color.LightGreen;
+                                textBoxVelocityRampSlewRate.BackColor = Color.LightGreen;
+                                textBoxVelocityRampMin.BackColor = Color.LightGreen;
+                                textBoxVelocityRampSlewRateNeg.BackColor = Color.LightGreen;
+                            }
+                        }
+
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_setFilter")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_setRamp")
+                {
+
+                }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_readFilter")
+                {
+                            changeCommandButtonColor(notification, buttonReadFilterAndRampStrain, "Načti");
+                            if (!(bool)notification.Value.Value)
+                            {
+                                textBoxStrainFiltrOrder.BackColor = Color.White;
+                                textBoxStrainFilterCutOffFreq.BackColor = Color.White;
+                                textBoxStrainRampMax.BackColor = Color.White;
+                                textBoxStrainRampSlewRate.BackColor = Color.White;
+                                textBoxStrainRampMin.BackColor = Color.White;
+                                textBoxStrainRampSlewRateNeg.BackColor = Color.White;
+                            }
+                            else
+                            {
+                                textBoxStrainFiltrOrder.BackColor = Color.LightGreen;
+                                textBoxStrainFilterCutOffFreq.BackColor = Color.LightGreen;
+                                textBoxStrainRampMax.BackColor = Color.LightGreen;
+                                textBoxStrainRampSlewRate.BackColor = Color.LightGreen;
+                                textBoxStrainRampMin.BackColor = Color.LightGreen;
+                                textBoxStrainRampSlewRateNeg.BackColor = Color.LightGreen;
+                            }
+                        }
+                if (monitoredItem.DisplayName == "MachineControl_strainControl_command_readRamp")
+                {
+                            changeCommandButtonColor(notification, buttonReadFilterAndRampPosition, "Načti");
+                            if (!(bool)notification.Value.Value)
+                            {
+                                textBoxStrainFiltrOrder.BackColor = Color.White;
+                                textBoxStrainFilterCutOffFreq.BackColor = Color.White;
+                                textBoxStrainRampMax.BackColor = Color.White;
+                                textBoxStrainRampSlewRate.BackColor = Color.White;
+                                textBoxStrainRampMin.BackColor = Color.White;
+                                textBoxStrainRampSlewRateNeg.BackColor = Color.White;
+                            }
+                            else
+                            {
+                                textBoxStrainFiltrOrder.BackColor = Color.LightGreen;
+                                textBoxStrainFilterCutOffFreq.BackColor = Color.LightGreen;
+                                textBoxStrainRampMax.BackColor = Color.LightGreen;
+                                textBoxStrainRampSlewRate.BackColor = Color.LightGreen;
+                                textBoxStrainRampMin.BackColor = Color.LightGreen;
+                                textBoxStrainRampSlewRateNeg.BackColor = Color.LightGreen;
+                            }
+                        }            
             }
 
 
@@ -2898,7 +3055,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             }
         }
 
-        private void NotificationWriteToValuesFintersAndRamps(MonitoredItem monitoredItem, MonitoredItemNotification notification)
+        private void NotificationWriteToValuesFiltersAndRamps(MonitoredItem monitoredItem, MonitoredItemNotification notification)
         {
             try
             {
@@ -5410,7 +5567,7 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void buttonReadFilterAndRampForce_Click(object sender, EventArgs e)
         {
-            sendCommandWithDialogWriteButtonText(buttonReadFilterAndRampForce,
+            sendCommandWithDialogWriteButtonText(buttonReadFilterAndRampStrain,
                 "Načti",
                 "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readFilter",
                 "Načíst data?",
