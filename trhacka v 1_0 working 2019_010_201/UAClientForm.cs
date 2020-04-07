@@ -5388,6 +5388,90 @@ namespace trhacka_v_1_0_working_2019_010_201
             checkValueAndSendCommandWhenChecked(checkBoxStopWhenForceUp, textBoxStopWhenForceUpSet, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.stopMinForce");
         }
 
+        private void buttonReadFilterAndRampPosition_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonReadFilterAndRampPosition,
+                "Načti",
+                "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readFilter",
+                "Načíst data?",
+                "Čtení");
+            writeNode(vTrue, "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.readRamp");
+        }
+
+        private void buttonReadFilterAndRampVelocity_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonReadFilterAndRampVelocity,
+                "Načti",
+                "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readFilter",
+                "Načíst data?",
+                "Čtení");
+            writeNode(vTrue, "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp");
+        }
+
+        private void buttonReadFilterAndRampForce_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonReadFilterAndRampForce,
+                "Načti",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readFilter",
+                "Načíst data?",
+                "Čtení");
+            writeNode(vTrue, "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp");
+        }
+
+        private void buttonPositionFilerParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonPositionFilerParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setFilter",
+                "Zapsat data?",
+                "Zápis");
+        }
+
+        private void buttonPositionRampParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonPositionRampParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.positionControl.command.setRamp",
+                "Zapsat data?",
+                "Zápis");
+        }
+
+        private void buttonVelocityFilerParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonVelocityFilerParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setFilter",
+                "Zapsat data?",
+                "Zápis");
+        }
+
+        private void buttonVelocityRampParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonVelocityRampParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.setRamp",
+                "Zapsat data?",
+                "Zápis");
+        }
+
+        private void buttonStrainFilerParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonStrainFilerParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setFilter",
+                "Zapsat data?",
+                "Zápis");
+        }
+
+        private void buttonStrainRampParametresWrite_Click(object sender, EventArgs e)
+        {
+            sendCommandWithDialogWriteButtonText(buttonStrainRampParametresWrite,
+                "Zapiš",
+                "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.setRamp",
+                "Zapsat data?",
+                "Zápis");
+        }
+
         private void checkBoxPreForce_CheckedChanged(object sender, EventArgs e)
         {
             checkValueAndSendCommandWhenChecked(checkBoxPreForce, textBoxPreStrainSet, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.preForce");

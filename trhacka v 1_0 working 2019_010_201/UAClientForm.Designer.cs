@@ -29,25 +29,25 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle145 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle146 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle147 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle148 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle149 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle150 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle151 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle152 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle153 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle154 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle155 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle156 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle157 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle158 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle159 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle160 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle161 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle162 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UAClientForm));
             this.buttonHighForce = new System.Windows.Forms.Button();
             this.buttonLowForce = new System.Windows.Forms.Button();
@@ -165,7 +165,7 @@
             this.textBoxStrainRampSlewRateNeg = new System.Windows.Forms.TextBox();
             this.textBoxStrainRampMin = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buttonReadFilterAndRampForce = new System.Windows.Forms.Button();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
@@ -182,7 +182,7 @@
             this.textBoxVelocityRampSlewRateNeg = new System.Windows.Forms.TextBox();
             this.textBoxVelocityRampMin = new System.Windows.Forms.TextBox();
             this.label67 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
+            this.buttonReadFilterAndRampVelocity = new System.Windows.Forms.Button();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.label46 = new System.Windows.Forms.Label();
@@ -199,7 +199,7 @@
             this.textBoxPositionRampSlewRateNeg = new System.Windows.Forms.TextBox();
             this.textBoxPositionRampMin = new System.Windows.Forms.TextBox();
             this.label68 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.buttonReadFilterAndRampPosition = new System.Windows.Forms.Button();
             this.label50 = new System.Windows.Forms.Label();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
@@ -563,57 +563,57 @@
             // 
             // Position
             // 
-            dataGridViewCellStyle1.Format = "N2";
-            dataGridViewCellStyle1.NullValue = null;
-            this.Position.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle145.Format = "N2";
+            dataGridViewCellStyle145.NullValue = null;
+            this.Position.DefaultCellStyle = dataGridViewCellStyle145;
             this.Position.HeaderText = "Pozice";
             this.Position.Name = "Position";
             // 
             // Velocity
             // 
-            dataGridViewCellStyle2.Format = "N2";
-            dataGridViewCellStyle2.NullValue = null;
-            this.Velocity.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle146.Format = "N2";
+            dataGridViewCellStyle146.NullValue = null;
+            this.Velocity.DefaultCellStyle = dataGridViewCellStyle146;
             this.Velocity.HeaderText = "Rychlost";
             this.Velocity.Name = "Velocity";
             // 
             // Force
             // 
-            dataGridViewCellStyle3.Format = "N2";
-            dataGridViewCellStyle3.NullValue = null;
-            this.Force.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle147.Format = "N2";
+            dataGridViewCellStyle147.NullValue = null;
+            this.Force.DefaultCellStyle = dataGridViewCellStyle147;
             this.Force.HeaderText = "Síla";
             this.Force.Name = "Force";
             // 
             // Acceleration
             // 
-            dataGridViewCellStyle4.Format = "N2";
-            dataGridViewCellStyle4.NullValue = null;
-            this.Acceleration.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle148.Format = "N2";
+            dataGridViewCellStyle148.NullValue = null;
+            this.Acceleration.DefaultCellStyle = dataGridViewCellStyle148;
             this.Acceleration.HeaderText = "Zrychlení";
             this.Acceleration.Name = "Acceleration";
             // 
             // Duration
             // 
-            dataGridViewCellStyle5.Format = "N2";
-            dataGridViewCellStyle5.NullValue = null;
-            this.Duration.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle149.Format = "N2";
+            dataGridViewCellStyle149.NullValue = null;
+            this.Duration.DefaultCellStyle = dataGridViewCellStyle149;
             this.Duration.HeaderText = "Doba";
             this.Duration.Name = "Duration";
             // 
             // ActualDuration
             // 
-            dataGridViewCellStyle6.Format = "N2";
-            dataGridViewCellStyle6.NullValue = null;
-            this.ActualDuration.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle150.Format = "N2";
+            dataGridViewCellStyle150.NullValue = null;
+            this.ActualDuration.DefaultCellStyle = dataGridViewCellStyle150;
             this.ActualDuration.HeaderText = "Průběh";
             this.ActualDuration.Name = "ActualDuration";
             // 
             // EndForce
             // 
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.EndForce.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle151.Format = "N2";
+            dataGridViewCellStyle151.NullValue = null;
+            this.EndForce.DefaultCellStyle = dataGridViewCellStyle151;
             this.EndForce.HeaderText = "Síla STOP";
             this.EndForce.Name = "EndForce";
             // 
@@ -804,7 +804,7 @@
             this.endpointListView.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.endpointListView.HideSelection = false;
             this.endpointListView.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
+            listViewItem9});
             this.endpointListView.Location = new System.Drawing.Point(8, 112);
             this.endpointListView.MultiSelect = false;
             this.endpointListView.Name = "endpointListView";
@@ -1622,7 +1622,7 @@
             this.groupBoxStrain.Controls.Add(this.textBoxStrainRampSlewRateNeg);
             this.groupBoxStrain.Controls.Add(this.textBoxStrainRampMin);
             this.groupBoxStrain.Controls.Add(this.label66);
-            this.groupBoxStrain.Controls.Add(this.button3);
+            this.groupBoxStrain.Controls.Add(this.buttonReadFilterAndRampForce);
             this.groupBoxStrain.Controls.Add(this.label35);
             this.groupBoxStrain.Controls.Add(this.label36);
             this.groupBoxStrain.Controls.Add(this.label37);
@@ -1667,14 +1667,15 @@
             this.label66.TabIndex = 15;
             this.label66.Text = "Rampa -";
             // 
-            // button3
+            // buttonReadFilterAndRampForce
             // 
-            this.button3.Location = new System.Drawing.Point(83, 130);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(228, 23);
-            this.button3.TabIndex = 14;
-            this.button3.Text = "Načti";
-            this.button3.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampForce.Location = new System.Drawing.Point(83, 130);
+            this.buttonReadFilterAndRampForce.Name = "buttonReadFilterAndRampForce";
+            this.buttonReadFilterAndRampForce.Size = new System.Drawing.Size(228, 23);
+            this.buttonReadFilterAndRampForce.TabIndex = 14;
+            this.buttonReadFilterAndRampForce.Text = "Načti";
+            this.buttonReadFilterAndRampForce.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampForce.Click += new System.EventHandler(this.buttonReadFilterAndRampForce_Click);
             // 
             // label35
             // 
@@ -1720,6 +1721,7 @@
             this.buttonStrainRampParametresWrite.TabIndex = 7;
             this.buttonStrainRampParametresWrite.Text = "Zapiš";
             this.buttonStrainRampParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonStrainRampParametresWrite.Click += new System.EventHandler(this.buttonStrainRampParametresWrite_Click);
             // 
             // textBoxStrainRampSlewRate
             // 
@@ -1754,6 +1756,7 @@
             this.buttonStrainFilerParametresWrite.TabIndex = 3;
             this.buttonStrainFilerParametresWrite.Text = "Zapiš";
             this.buttonStrainFilerParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonStrainFilerParametresWrite.Click += new System.EventHandler(this.buttonStrainFilerParametresWrite_Click);
             // 
             // textBoxStrainFilterCutOffFreq
             // 
@@ -1785,7 +1788,7 @@
             this.groupBox6.Controls.Add(this.textBoxVelocityRampSlewRateNeg);
             this.groupBox6.Controls.Add(this.textBoxVelocityRampMin);
             this.groupBox6.Controls.Add(this.label67);
-            this.groupBox6.Controls.Add(this.button2);
+            this.groupBox6.Controls.Add(this.buttonReadFilterAndRampVelocity);
             this.groupBox6.Controls.Add(this.label44);
             this.groupBox6.Controls.Add(this.label45);
             this.groupBox6.Controls.Add(this.label46);
@@ -1830,14 +1833,15 @@
             this.label67.TabIndex = 14;
             this.label67.Text = "Rampa -";
             // 
-            // button2
+            // buttonReadFilterAndRampVelocity
             // 
-            this.button2.Location = new System.Drawing.Point(80, 131);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(228, 23);
-            this.button2.TabIndex = 13;
-            this.button2.Text = "Načti";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampVelocity.Location = new System.Drawing.Point(80, 131);
+            this.buttonReadFilterAndRampVelocity.Name = "buttonReadFilterAndRampVelocity";
+            this.buttonReadFilterAndRampVelocity.Size = new System.Drawing.Size(228, 23);
+            this.buttonReadFilterAndRampVelocity.TabIndex = 13;
+            this.buttonReadFilterAndRampVelocity.Text = "Načti";
+            this.buttonReadFilterAndRampVelocity.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampVelocity.Click += new System.EventHandler(this.buttonReadFilterAndRampVelocity_Click);
             // 
             // label44
             // 
@@ -1883,6 +1887,7 @@
             this.buttonVelocityRampParametresWrite.TabIndex = 7;
             this.buttonVelocityRampParametresWrite.Text = "Zapiš";
             this.buttonVelocityRampParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonVelocityRampParametresWrite.Click += new System.EventHandler(this.buttonVelocityRampParametresWrite_Click);
             // 
             // textBoxVelocityRampSlewRate
             // 
@@ -1917,6 +1922,7 @@
             this.buttonVelocityFilerParametresWrite.TabIndex = 3;
             this.buttonVelocityFilerParametresWrite.Text = "Zapiš";
             this.buttonVelocityFilerParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonVelocityFilerParametresWrite.Click += new System.EventHandler(this.buttonVelocityFilerParametresWrite_Click);
             // 
             // textBoxVelocityFilterCutOffFreq
             // 
@@ -1948,7 +1954,7 @@
             this.groupBox7.Controls.Add(this.textBoxPositionRampSlewRateNeg);
             this.groupBox7.Controls.Add(this.textBoxPositionRampMin);
             this.groupBox7.Controls.Add(this.label68);
-            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Controls.Add(this.buttonReadFilterAndRampPosition);
             this.groupBox7.Controls.Add(this.label50);
             this.groupBox7.Controls.Add(this.label51);
             this.groupBox7.Controls.Add(this.label52);
@@ -1993,14 +1999,15 @@
             this.label68.TabIndex = 13;
             this.label68.Text = "Rampa -";
             // 
-            // button1
+            // buttonReadFilterAndRampPosition
             // 
-            this.button1.Location = new System.Drawing.Point(83, 138);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(228, 23);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Načti";
-            this.button1.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampPosition.Location = new System.Drawing.Point(83, 138);
+            this.buttonReadFilterAndRampPosition.Name = "buttonReadFilterAndRampPosition";
+            this.buttonReadFilterAndRampPosition.Size = new System.Drawing.Size(228, 23);
+            this.buttonReadFilterAndRampPosition.TabIndex = 12;
+            this.buttonReadFilterAndRampPosition.Text = "Načti";
+            this.buttonReadFilterAndRampPosition.UseVisualStyleBackColor = true;
+            this.buttonReadFilterAndRampPosition.Click += new System.EventHandler(this.buttonReadFilterAndRampPosition_Click);
             // 
             // label50
             // 
@@ -2046,6 +2053,7 @@
             this.buttonPositionRampParametresWrite.TabIndex = 7;
             this.buttonPositionRampParametresWrite.Text = "Zapiš";
             this.buttonPositionRampParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonPositionRampParametresWrite.Click += new System.EventHandler(this.buttonPositionRampParametresWrite_Click);
             // 
             // textBoxPositionRampSlewRate
             // 
@@ -2080,6 +2088,7 @@
             this.buttonPositionFilerParametresWrite.TabIndex = 3;
             this.buttonPositionFilerParametresWrite.Text = "Zapiš";
             this.buttonPositionFilerParametresWrite.UseVisualStyleBackColor = true;
+            this.buttonPositionFilerParametresWrite.Click += new System.EventHandler(this.buttonPositionFilerParametresWrite_Click);
             // 
             // textBoxPositionFilterCutOffFreq
             // 
@@ -2171,16 +2180,16 @@
             // attributeColumn
             // 
             this.attributeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Gainsboro;
-            this.attributeColumn.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle152.BackColor = System.Drawing.Color.Gainsboro;
+            this.attributeColumn.DefaultCellStyle = dataGridViewCellStyle152;
             this.attributeColumn.HeaderText = "Attribute";
             this.attributeColumn.Name = "attributeColumn";
             // 
             // valueColumn
             // 
             this.valueColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.Gainsboro;
-            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle153.BackColor = System.Drawing.Color.Gainsboro;
+            this.valueColumn.DefaultCellStyle = dataGridViewCellStyle153;
             this.valueColumn.HeaderText = "Value";
             this.valueColumn.Name = "valueColumn";
             // 
@@ -2275,8 +2284,8 @@
             // 
             // dataGridViewTextBoxColumn6
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle154.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn6.DefaultCellStyle = dataGridViewCellStyle154;
             this.dataGridViewTextBoxColumn6.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
@@ -2285,8 +2294,8 @@
             // 
             // dataGridViewTextBoxColumn7
             // 
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle155.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn7.DefaultCellStyle = dataGridViewCellStyle155;
             this.dataGridViewTextBoxColumn7.HeaderText = "Value";
             this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
@@ -2296,8 +2305,8 @@
             // dataGridViewTextBoxColumn8
             // 
             this.dataGridViewTextBoxColumn8.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle156.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn8.DefaultCellStyle = dataGridViewCellStyle156;
             this.dataGridViewTextBoxColumn8.HeaderText = "Data Type";
             this.dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
@@ -2345,8 +2354,8 @@
             // 
             // dataGridViewTextBoxColumn3
             // 
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle157.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn3.DefaultCellStyle = dataGridViewCellStyle157;
             this.dataGridViewTextBoxColumn3.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
@@ -2355,8 +2364,8 @@
             // 
             // dataGridViewTextBoxColumn4
             // 
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle158.BackColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn4.DefaultCellStyle = dataGridViewCellStyle158;
             this.dataGridViewTextBoxColumn4.HeaderText = "Value";
             this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2365,8 +2374,8 @@
             // dataGridViewTextBoxColumn5
             // 
             this.dataGridViewTextBoxColumn5.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle159.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle159;
             this.dataGridViewTextBoxColumn5.HeaderText = "Data Type";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
@@ -2690,8 +2699,8 @@
             // 
             // dataGridViewTextBoxColumn1
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.Gainsboro;
-            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle160.BackColor = System.Drawing.Color.Gainsboro;
+            this.dataGridViewTextBoxColumn1.DefaultCellStyle = dataGridViewCellStyle160;
             this.dataGridViewTextBoxColumn1.HeaderText = "Tag Name";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
@@ -2701,8 +2710,8 @@
             // dataGridViewTextBoxColumn2
             // 
             this.dataGridViewTextBoxColumn2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.White;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle161.BackColor = System.Drawing.Color.White;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle161;
             this.dataGridViewTextBoxColumn2.HeaderText = "Value";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
@@ -2710,8 +2719,8 @@
             // typeColumn
             // 
             this.typeColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.Gainsboro;
-            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle162.BackColor = System.Drawing.Color.Gainsboro;
+            this.typeColumn.DefaultCellStyle = dataGridViewCellStyle162;
             this.typeColumn.HeaderText = "Data Type";
             this.typeColumn.Name = "typeColumn";
             this.typeColumn.ReadOnly = true;
@@ -4351,9 +4360,9 @@
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Button buttonReadCellParametersHigh;
         private System.Windows.Forms.GroupBox groupBox14;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button buttonReadFilterAndRampForce;
+        private System.Windows.Forms.Button buttonReadFilterAndRampVelocity;
+        private System.Windows.Forms.Button buttonReadFilterAndRampPosition;
         private System.Windows.Forms.TextBox textBoxStrainRampSlewRateNeg;
         private System.Windows.Forms.TextBox textBoxStrainRampMin;
         private System.Windows.Forms.Label label66;

@@ -54,36 +54,36 @@
   <PropertyGroup />
   <ItemGroup>
     <Reference Include="ColorSlider">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\ColorSlider.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\ColorSlider.dll</HintPath>
     </Reference>
     <Reference Include="CsvHelper, Version=7.0.0.0, Culture=neutral, PublicKeyToken=8c4959082be5c823, processorArchitecture=MSIL">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\CsvHelper.dll</HintPath>
+      <HintPath>..\..\Project7\version11\packages\CsvHelper.7.1.1\lib\net45\CsvHelper.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\LiveCharts.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts.Geared">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.Geared.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\LiveCharts.Geared.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts.WinForms, Version=0.9.7.1, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.WinForms.dll</HintPath>
+      <HintPath>..\..\Project7\version11\packages\LiveCharts.WinForms.0.9.7.1\lib\net45\LiveCharts.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\LiveCharts.Wpf.dll</HintPath>
+      <HintPath>..\..\Project7\version11\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
     </Reference>
     <Reference Include="Opc.Ua.Client">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\Opc.Ua.Client.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\Opc.Ua.Client.dll</HintPath>
     </Reference>
     <Reference Include="Opc.Ua.Core">
-      <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\Opc.Ua.Core.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\Opc.Ua.Core.dll</HintPath>
     </Reference>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="ScottPlot, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\old_trhacka-v-1_0-working-2019_010_20\packages\ScottPlot.4.0.2\lib\netstandard2.0\ScottPlot.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\ScottPlot.dll</HintPath>
     </Reference>
     <Reference Include="ScottPlot.WinForms, Version=4.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\old_trhacka-v-1_0-working-2019_010_20\packages\ScottPlot.WinForms.4.0.2\lib\net461\ScottPlot.WinForms.dll</HintPath>
+      <HintPath>..\..\trhacka-v-1_0-working-2019_010_20_0\trhacka v 1_0 working 2019_010_20\bin\Debug\ScottPlot.WinForms.dll</HintPath>
     </Reference>
     <Reference Include="SmoothProgressBar">
       <HintPath>..\..\UA_Client_1503_fast_working_v414\UA_Client_1503_fast_working_v414\bin\Debug\SmoothProgressBar.dll</HintPath>
