@@ -386,6 +386,7 @@
             this.openFileDialogProgram = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogProgram = new System.Windows.Forms.SaveFileDialog();
             this.timerSendProgram = new System.Windows.Forms.Timer(this.components);
+            this.tabProgram = new System.Windows.Forms.TabPage();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -621,6 +622,7 @@
             // 
             this.opcTabControl.Controls.Add(this.connectPage);
             this.opcTabControl.Controls.Add(this.subscribePage);
+            this.opcTabControl.Controls.Add(this.tabProgram);
             this.opcTabControl.Controls.Add(this.tabPageTenzometers);
             this.opcTabControl.Controls.Add(this.tabPageFiltersRamps);
             this.opcTabControl.Controls.Add(this.browsePage);
@@ -3975,6 +3977,16 @@
             // 
             this.timerSendProgram.Tick += new System.EventHandler(this.timerSendProgram_Tick);
             // 
+            // tabProgram
+            // 
+            this.tabProgram.Location = new System.Drawing.Point(4, 22);
+            this.tabProgram.Name = "tabProgram";
+            this.tabProgram.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProgram.Size = new System.Drawing.Size(459, 688);
+            this.tabProgram.TabIndex = 10;
+            this.tabProgram.Text = "Program";
+            this.tabProgram.UseVisualStyleBackColor = true;
+            // 
             // UAClientForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -4410,6 +4422,7 @@
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Button buttonReadActualCellParameters;
+        private System.Windows.Forms.TabPage tabProgram;
     }
 }
 

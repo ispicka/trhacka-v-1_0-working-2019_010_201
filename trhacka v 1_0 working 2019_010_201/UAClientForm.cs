@@ -2868,7 +2868,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 }
                 if (monitoredItem.DisplayName == "MachineControl_positionControl_command_setFilter")
                 {
-                    changeCommandButtonColor(notification, buttonPositionRampParametresWrite, "Zapiš");
+                    changeCommandButtonColor(notification, buttonPositionFilerParametresWrite, "Zapiš");
                     if (!(bool)notification.Value.Value)
                     {
                         textBoxPositionFiltrOrder.BackColor = Color.White;
@@ -2944,14 +2944,14 @@ namespace trhacka_v_1_0_working_2019_010_201
                     changeCommandButtonColor(notification, buttonVelocityFilerParametresWrite, "Zapiš");
                     if (!(bool)notification.Value.Value)
                     {
-                        textBoxPositionFiltrOrder.BackColor = Color.White;
-                        textBoxPositionFilterCutOffFreq.BackColor = Color.White;
+                        textBoxVelocityFiltrOrder.BackColor = Color.White;
+                        textBoxVelocityFilterCutOffFreq.BackColor = Color.White;
 
                     }
                     else
                     {
-                        textBoxPositionFiltrOrder.BackColor = Color.LightSkyBlue;
-                        textBoxPositionFilterCutOffFreq.BackColor = Color.LightSkyBlue;
+                        textBoxVelocityFiltrOrder.BackColor = Color.LightSkyBlue;
+                        textBoxVelocityFilterCutOffFreq.BackColor = Color.LightSkyBlue;
 
                     }
                 }
@@ -2961,18 +2961,18 @@ namespace trhacka_v_1_0_working_2019_010_201
                     if (!(bool)notification.Value.Value)
                     {
 
-                        textBoxPositionRampMax.BackColor = Color.White;
-                        textBoxPositionRampSlewRate.BackColor = Color.White;
-                        textBoxPositionRampMin.BackColor = Color.White;
-                        textBoxPositionRampSlewRateNeg.BackColor = Color.White;
+                        textBoxVelocityRampMax.BackColor = Color.White;
+                        textBoxVelocityRampSlewRate.BackColor = Color.White;
+                        textBoxVelocityRampMin.BackColor = Color.White;
+                        textBoxVelocityRampSlewRateNeg.BackColor = Color.White;
                     }
                     else
                     {
 
-                        textBoxPositionRampMax.BackColor = Color.LightGreen;
-                        textBoxPositionRampSlewRate.BackColor = Color.LightGreen;
-                        textBoxPositionRampMin.BackColor = Color.LightGreen;
-                        textBoxPositionRampSlewRateNeg.BackColor = Color.LightGreen;
+                        textBoxVelocityRampMax.BackColor = Color.LightSkyBlue;
+                        textBoxVelocityRampSlewRate.BackColor = Color.LightSkyBlue;
+                        textBoxVelocityRampMin.BackColor = Color.LightSkyBlue;
+                        textBoxVelocityRampSlewRateNeg.BackColor = Color.LightSkyBlue;
                     }
                 }
                 if (monitoredItem.DisplayName == "MachineControl_velocityControl_command_readFilter")
@@ -3020,14 +3020,14 @@ namespace trhacka_v_1_0_working_2019_010_201
                     changeCommandButtonColor(notification, buttonStrainFilerParametresWrite, "Zapiš");
                     if (!(bool)notification.Value.Value)
                     {
-                        textBoxVelocityFiltrOrder.BackColor = Color.White;
-                        textBoxVelocityFilterCutOffFreq.BackColor = Color.White;
+                        textBoxStrainFiltrOrder.BackColor = Color.White;
+                        textBoxStrainFilterCutOffFreq.BackColor = Color.White;
 
                     }
                     else
                     {
-                        textBoxVelocityFiltrOrder.BackColor = Color.LightSkyBlue;
-                        textBoxVelocityFilterCutOffFreq.BackColor = Color.LightSkyBlue;
+                        textBoxStrainFiltrOrder.BackColor = Color.LightSkyBlue;
+                        textBoxStrainFilterCutOffFreq.BackColor = Color.LightSkyBlue;
 
                     }
                 }
@@ -3036,18 +3036,18 @@ namespace trhacka_v_1_0_working_2019_010_201
                     changeCommandButtonColor(notification, buttonStrainRampParametresWrite, "Zapiš");
                     if (!(bool)notification.Value.Value)
                     {
-                        textBoxVelocityRampMax.BackColor = Color.White;
-                        textBoxVelocityRampSlewRate.BackColor = Color.White;
-                        textBoxVelocityRampMin.BackColor = Color.White;
-                        textBoxVelocityRampSlewRateNeg.BackColor = Color.White;
+                        textBoxStrainRampMax.BackColor = Color.White;
+                        textBoxStrainRampSlewRate.BackColor = Color.White;
+                        textBoxStrainRampMin.BackColor = Color.White;
+                        textBoxStrainRampSlewRateNeg.BackColor = Color.White;
                     }
                     else
                     {
 
-                        textBoxVelocityRampMax.BackColor = Color.LightSkyBlue;
-                        textBoxVelocityRampSlewRate.BackColor = Color.LightSkyBlue;
-                        textBoxVelocityRampMin.BackColor = Color.LightSkyBlue;
-                        textBoxVelocityRampSlewRateNeg.BackColor = Color.LightSkyBlue;
+                        textBoxStrainRampMax.BackColor = Color.LightSkyBlue;
+                        textBoxStrainRampSlewRate.BackColor = Color.LightSkyBlue;
+                        textBoxStrainRampMin.BackColor = Color.LightSkyBlue;
+                        textBoxStrainRampSlewRateNeg.BackColor = Color.LightSkyBlue;
                     }
                 }
 
@@ -5646,7 +5646,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readFilter",
                 "Načíst data?",
                 "Čtení");
-            writeNode(vTrue, "ns=6;s=::AsGlobalPV:MachineControl.velocityControl.command.readRamp");
+            writeNode(vTrue, "ns=6;s=::AsGlobalPV:MachineControl.strainControl.command.readRamp");
         }
 
         private void buttonPositionFilerParametresWrite_Click(object sender, EventArgs e)

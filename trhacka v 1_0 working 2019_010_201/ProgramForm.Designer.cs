@@ -35,7 +35,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridViewActualProgram = new System.Windows.Forms.DataGridView();
             this.dataSet1 = new System.Data.DataSet();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
@@ -53,13 +52,18 @@
             this.labelPath = new System.Windows.Forms.Label();
             this.Step = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Command = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.PozitionCommand = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.VelocityCommand = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ForceCommand = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.PreForceCommand = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.ForceOffCommand = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Velocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Force = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ForceOff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Acceleration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ActualDuration = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.EndForce = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewActualProgram)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.toolStrip1.SuspendLayout();
@@ -71,16 +75,21 @@
             this.dataGridViewActualProgram.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Step,
             this.Command,
+            this.PozitionCommand,
+            this.VelocityCommand,
+            this.ForceCommand,
+            this.PreForceCommand,
+            this.ForceOffCommand,
             this.Position,
             this.Velocity,
             this.Force,
+            this.ForceOff,
             this.Acceleration,
             this.Duration,
-            this.ActualDuration,
-            this.EndForce});
-            this.dataGridViewActualProgram.Location = new System.Drawing.Point(0, 75);
+            this.ActualDuration});
+            this.dataGridViewActualProgram.Location = new System.Drawing.Point(16, 65);
             this.dataGridViewActualProgram.Name = "dataGridViewActualProgram";
-            this.dataGridViewActualProgram.Size = new System.Drawing.Size(894, 385);
+            this.dataGridViewActualProgram.Size = new System.Drawing.Size(1020, 372);
             this.dataGridViewActualProgram.TabIndex = 41;
             this.dataGridViewActualProgram.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewActualProgram_CellContentClick);
             // 
@@ -109,7 +118,7 @@
             this.toolStripButtonTest});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(894, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1180, 25);
             this.toolStrip1.TabIndex = 42;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -214,6 +223,7 @@
             "STEP",
             "STOP_PROGRAM",
             "START_PROGRAM",
+            "PRE_FORCE",
             "POSITION_CONTROL",
             "VELOCITY_CONTROL",
             "FORCE_CONTROL",
@@ -226,6 +236,46 @@
             this.Command.Name = "Command";
             this.Command.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Command.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // PozitionCommand
+            // 
+            this.PozitionCommand.HeaderText = "P";
+            this.PozitionCommand.Name = "PozitionCommand";
+            this.PozitionCommand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PozitionCommand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.PozitionCommand.Width = 25;
+            // 
+            // VelocityCommand
+            // 
+            this.VelocityCommand.HeaderText = "R";
+            this.VelocityCommand.Name = "VelocityCommand";
+            this.VelocityCommand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.VelocityCommand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.VelocityCommand.Width = 25;
+            // 
+            // ForceCommand
+            // 
+            this.ForceCommand.HeaderText = "S";
+            this.ForceCommand.Name = "ForceCommand";
+            this.ForceCommand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ForceCommand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ForceCommand.Width = 25;
+            // 
+            // PreForceCommand
+            // 
+            this.PreForceCommand.HeaderText = "PS";
+            this.PreForceCommand.Name = "PreForceCommand";
+            this.PreForceCommand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.PreForceCommand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.PreForceCommand.Width = 25;
+            // 
+            // ForceOffCommand
+            // 
+            this.ForceOffCommand.HeaderText = "VS";
+            this.ForceOffCommand.Name = "ForceOffCommand";
+            this.ForceOffCommand.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.ForceOffCommand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.ForceOffCommand.Width = 25;
             // 
             // Position
             // 
@@ -251,6 +301,11 @@
             this.Force.HeaderText = "Síla";
             this.Force.Name = "Force";
             // 
+            // ForceOff
+            // 
+            this.ForceOff.HeaderText = "Vypínací síla";
+            this.ForceOff.Name = "ForceOff";
+            // 
             // Acceleration
             // 
             dataGridViewCellStyle4.Format = "N2";
@@ -275,19 +330,11 @@
             this.ActualDuration.HeaderText = "Průběh";
             this.ActualDuration.Name = "ActualDuration";
             // 
-            // EndForce
-            // 
-            dataGridViewCellStyle7.Format = "N2";
-            dataGridViewCellStyle7.NullValue = null;
-            this.EndForce.DefaultCellStyle = dataGridViewCellStyle7;
-            this.EndForce.HeaderText = "Síla STOP";
-            this.EndForce.Name = "EndForce";
-            // 
             // ProgramForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(894, 462);
+            this.ClientSize = new System.Drawing.Size(1180, 462);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelProgram);
@@ -325,12 +372,17 @@
         private System.Windows.Forms.Label labelPath;
         private System.Windows.Forms.DataGridViewTextBoxColumn Step;
         private System.Windows.Forms.DataGridViewComboBoxColumn Command;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn PozitionCommand;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn VelocityCommand;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ForceCommand;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn PreForceCommand;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn ForceOffCommand;
         private System.Windows.Forms.DataGridViewTextBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn Velocity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Force;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ForceOff;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acceleration;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
         private System.Windows.Forms.DataGridViewTextBoxColumn ActualDuration;
-        private System.Windows.Forms.DataGridViewTextBoxColumn EndForce;
     }
 }
