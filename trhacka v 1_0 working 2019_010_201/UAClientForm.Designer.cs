@@ -92,6 +92,7 @@
             this.subscribeButton = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.tabProgram = new System.Windows.Forms.TabPage();
             this.tabPageTenzometers = new System.Windows.Forms.TabPage();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
@@ -386,7 +387,6 @@
             this.openFileDialogProgram = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialogProgram = new System.Windows.Forms.SaveFileDialog();
             this.timerSendProgram = new System.Windows.Forms.Timer(this.components);
-            this.tabProgram = new System.Windows.Forms.TabPage();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
@@ -906,6 +906,16 @@
             this.label12.Size = new System.Drawing.Size(48, 13);
             this.label12.TabIndex = 32;
             this.label12.Text = "Node Id:";
+            // 
+            // tabProgram
+            // 
+            this.tabProgram.Location = new System.Drawing.Point(4, 22);
+            this.tabProgram.Name = "tabProgram";
+            this.tabProgram.Padding = new System.Windows.Forms.Padding(3);
+            this.tabProgram.Size = new System.Drawing.Size(459, 688);
+            this.tabProgram.TabIndex = 10;
+            this.tabProgram.Text = "Program";
+            this.tabProgram.UseVisualStyleBackColor = true;
             // 
             // tabPageTenzometers
             // 
@@ -3976,16 +3986,6 @@
             // timerSendProgram
             // 
             this.timerSendProgram.Tick += new System.EventHandler(this.timerSendProgram_Tick);
-            // 
-            // tabProgram
-            // 
-            this.tabProgram.Location = new System.Drawing.Point(4, 22);
-            this.tabProgram.Name = "tabProgram";
-            this.tabProgram.Padding = new System.Windows.Forms.Padding(3);
-            this.tabProgram.Size = new System.Drawing.Size(459, 688);
-            this.tabProgram.TabIndex = 10;
-            this.tabProgram.Text = "Program";
-            this.tabProgram.UseVisualStyleBackColor = true;
             // 
             // UAClientForm
             // 

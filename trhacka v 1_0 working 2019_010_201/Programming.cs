@@ -219,6 +219,7 @@ namespace trhacka_v_1_0_working_2019_010_201
                 step1.SetDuration == step2.SetDuration &&
                 step1.SetEndForce == step2.SetEndForce &&
                 step1.SetForce == step2.SetForce &&
+                step1.SetPreForce == step2.SetPreForce&&
                 step1.SetHome == step2.SetHome &&
                 step1.SetPosition == step2.SetPosition &&
                 step1.SetSpeed == step2.SetSpeed &&
@@ -293,8 +294,9 @@ namespace trhacka_v_1_0_working_2019_010_201
             map.Add("SET_VELOCITY", 8);
             map.Add("SET_SPEED", 9);
             map.Add("SET_MINIMUM_FORCE", 10);
-            map.Add("SET_HOME", 11);
-            map.Add("SET_POSITION", 12);
+            map.Add("SET_PRE_FORCE", 11);
+            map.Add("SET_HOME", 12);
+            map.Add("SET_POSITION", 13);
 
             float fVal = 0;
             int lVal = 0;

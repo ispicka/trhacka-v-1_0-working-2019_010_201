@@ -54,10 +54,10 @@ namespace trhacka_v_1_0_working_2019_010_201
         {
 
 
-            SetText(textBoxPointPozition, ChartsData.CartesianChartPositionTimeValues.Count.ToString());
-            SetText(textBoxPointsSpeed, ChartsData.CartesianChartVelocityTimeValues.Count.ToString());
-            SetText(textBoxPointsForce, ChartsData.CartesianChartStrainTimeValues.Count.ToString());
-
+            SetText(textBoxPointPozition, ChartsData.ChartPositionTimeValues.Count.ToString());
+            SetText(textBoxPointsSpeed, ChartsData.ChartVelocityTimeValues.Count.ToString());
+            SetText(textBoxPointsForce, ChartsData.ChartStrainTimeValues.Count.ToString());
+#if liveCharts
             if (timerDiv)
             {
 
@@ -117,35 +117,37 @@ namespace trhacka_v_1_0_working_2019_010_201
                 }
                 ChartsData.lockStrainTime = false;
                 cartesianChartAllTime.UpdaterState = UpdaterState.Paused;
-                ScottPlot();
+
 
 
             }
             timerDiv = !timerDiv;
-
+#else
+            ScottPlot();
+#endif
 
         }
         private void ScottPlot()
 
         {
-            bool plotPosition = ChartsData.CartesianChartPositionTimeValues.Count > 0;
+            bool plotPosition = ChartsData.ChartPositionTimeValues.Count > 0;
             double[][] scottPlotPosition = new double[2][];
-            scottPlotPosition[0] = new double[ChartsData.CartesianChartPositionTimeValues.Count];
-            scottPlotPosition[1] = new double[ChartsData.CartesianChartPositionTimeValues.Count];
+            scottPlotPosition[0] = new double[ChartsData.ChartPositionTimeValues.Count];
+            scottPlotPosition[1] = new double[ChartsData.ChartPositionTimeValues.Count];
 
-            bool plotStrain = ChartsData.CartesianChartStrainTimeValues.Count > 0;
+            bool plotStrain = ChartsData.ChartStrainTimeValues.Count > 0;
             double[][] scottPlotStrain = new double[2][];
-            scottPlotStrain[0] = new double[ChartsData.CartesianChartStrainTimeValues.Count];
-            scottPlotStrain[1] = new double[ChartsData.CartesianChartStrainTimeValues.Count];
+            scottPlotStrain[0] = new double[ChartsData.ChartStrainTimeValues.Count];
+            scottPlotStrain[1] = new double[ChartsData.ChartStrainTimeValues.Count];
 
-            bool plotVelocity = ChartsData.CartesianChartVelocityTimeValues.Count > 0;
+            bool plotVelocity = ChartsData.ChartVelocityTimeValues.Count > 0;
             double[][] scottPlotVelocity = new double[2][];
-            scottPlotVelocity[0] = new double[ChartsData.CartesianChartVelocityTimeValues.Count];
-            scottPlotVelocity[1] = new double[ChartsData.CartesianChartVelocityTimeValues.Count];
+            scottPlotVelocity[0] = new double[ChartsData.ChartVelocityTimeValues.Count];
+            scottPlotVelocity[1] = new double[ChartsData.ChartVelocityTimeValues.Count];
             formsPlotTimeSeries.plt.Clear();
-            plotDraw(plotPosition, scottPlotPosition, ChartsData.CartesianChartPositionTimeValues);
-            plotDraw(plotStrain, scottPlotStrain, ChartsData.CartesianChartStrainTimeValues);
-            plotDraw(plotVelocity, scottPlotVelocity, ChartsData.CartesianChartVelocityTimeValues);
+            plotDraw(plotPosition, scottPlotPosition, ChartsData.ChartPositionTimeValues);
+            plotDraw(plotStrain, scottPlotStrain, ChartsData.ChartStrainTimeValues);
+            plotDraw(plotVelocity, scottPlotVelocity, ChartsData.ChartVelocityTimeValues);
 
             formsPlotTimeSeries.Render();
         }
@@ -153,17 +155,21 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void plotDraw(bool plot, double[][] scottPlot, ChartValues<ObservablePoint> observablePoints)
         {
             int index = 0;
-            double startTime = ChartsData.CartesianChartPositionTimeValues[0].X;
-            foreach (ObservablePoint observablePoint in observablePoints)
+            if (ChartsData.ChartPositionTimeValues.Count != 0)
             {
-                scottPlot[0][index] = observablePoint.X - startTime;
-                scottPlot[1][index++] = observablePoint.Y;
+                double startTime = ChartsData.ChartPositionTimeValues[0].X;
+                foreach (ObservablePoint observablePoint in observablePoints)
+                {
+                    scottPlot[0][index] = observablePoint.X - startTime;
+                    scottPlot[1][index++] = observablePoint.Y;
+                }
+                if (plot)
+                {
+                    formsPlotTimeSeries.plt.AxisAuto();
+                    formsPlotTimeSeries.plt.PlotScatter(scottPlot[0], scottPlot[1], markerSize: 0);
+                }
             }
-            if (plot)
-            {
-                formsPlotTimeSeries.plt.AxisAuto();
-                formsPlotTimeSeries.plt.PlotScatter(scottPlot[0], scottPlot[1], markerSize: 0);
-            }
+
         }
 
         private void SetText(TextBox txt, string text)

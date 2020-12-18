@@ -176,7 +176,7 @@
             // 
             // formsPlotPositionForce
             // 
-            this.formsPlotPositionForce.Location = new System.Drawing.Point(31, 30);
+            this.formsPlotPositionForce.Location = new System.Drawing.Point(37, 30);
             this.formsPlotPositionForce.Name = "formsPlotPositionForce";
             this.formsPlotPositionForce.Size = new System.Drawing.Size(989, 701);
             this.formsPlotPositionForce.TabIndex = 45;

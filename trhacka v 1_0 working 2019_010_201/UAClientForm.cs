@@ -84,6 +84,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         SET_VELOCITY,
         VELOCITY_CONTROL,
         SET_MINIMUM_FORCE,
+        SET_PRE_FORCE,
         SET_HOME,
         SET_POSION,
         FORCE_CONTROL
@@ -100,9 +101,11 @@ namespace trhacka_v_1_0_working_2019_010_201
         public Int32 Duration;
         public Int32 Passed;
         public float EndForce;
+        public float PreForce;
         public bool SetPosition;
         public bool SetSpeed;
         public bool SetForce;
+        public bool SetPreForce;
         public bool SetHome;
         public bool SetZeroPosition;
         public bool SetEndForce;
@@ -119,12 +122,14 @@ namespace trhacka_v_1_0_working_2019_010_201
             Duration = 0;
             Passed = 0;
             EndForce = 0;
+            PreForce = 0;
             SetPosition = false;
             SetSpeed = false;
             SetForce = false;
             SetHome = false;
             SetZeroPosition = false;
             SetEndForce = false;
+            SetPreForce = false;
             SetAcceleration = false;
             SetDuration = false;
 
@@ -3342,33 +3347,16 @@ namespace trhacka_v_1_0_working_2019_010_201
             {
                 if (monitoredItem.DisplayName == "opcVlocityFast_ingValue")
                 {
-
-                    SetText(textBoxVelocity, ChartsData.textBoxVelocity.Text = notification.Value.ToString());
-                    ChartsData.WriteValuesToChart(textBoxVelocityTime.Text, textBoxVelocity.Text, ChartsData.ChartVelocityTimeValues, ChartsData.ChartVelocityTimeValuesLock,
-                        ref ChartsData.lockVelocityTime, ref ChartsData.lastTimeVelocity, ref ChartsData.lastValueVelocity);
-                    ChartsData.WriteValuesToChart(textBoxVelocity.Text, textBoxStrain.Text, ChartsData.ChartVelocityStrainValues, ChartsData.ChartVelocityStrainValuesLock,
-                         ref ChartsData.lockVelocityStrain, ref ChartsData.lastValueVelocityStrainVelocity, ref ChartsData.lastValueVelocityStrainStrain);
+                    WriteVelocity(notification.Value.ToString());
 
                 }
                 if (monitoredItem.DisplayName == "opcPositionFast_ingValue")
                 {
-
-                    SetText(textBoxPosition, ChartsData.textBoxPosition.Text = notification.Value.ToString());
-                    ChartsData.WriteValuesToChart(textBoxPositionTime.Text, textBoxPosition.Text, ChartsData.ChartPositionTimeValues, ChartsData.ChartPositionTimeValuesLock,
-                        ref ChartsData.lockPositionTime, ref ChartsData.lastTimePosition, ref ChartsData.lastValuePosition);
-                    ChartsData.WriteValuesToChart(textBoxPosition.Text, textBoxStrain.Text, ChartsData.ChartPositionStrainValues, ChartsData.ChartPositionStrainValuesLock,
-                        ref ChartsData.lockPositionStrain, ref ChartsData.lastValuePositionStrainPosition, ref ChartsData.lastValuePositionStrainStrain);
+                    WritePosition(notification.Value.ToString());
                 }
                 if (monitoredItem.DisplayName == "opcStrainFast_ingValue")
                 {
-
-                    SetText(textBoxStrain, ChartsData.textBoxStrain.Text = notification.Value.ToString());
-                    WriteValuesToChart(textBoxStrainTime.Text, textBoxStrain.Text, ChartsData.ChartStrainTimeValues, ChartsData.ChartStrainTimeValuesLock,
-                        ref ChartsData.lockStrainTime, ref ChartsData.lastTimeStrain, ref ChartsData.lastValueStrain);
-                    WriteValuesToChart(textBoxVelocity.Text, textBoxStrain.Text, ChartsData.ChartVelocityStrainValues, ChartsData.ChartVelocityStrainValuesLock,
-                        ref ChartsData.lockVelocityStrain, ref ChartsData.lastValueVelocityStrainVelocity, ref ChartsData.lastValueVelocityStrainStrain);
-                    WriteValuesToChart(textBoxPosition.Text, textBoxStrain.Text, ChartsData.ChartPositionStrainValues, ChartsData.ChartPositionStrainValuesLock,
-                        ref ChartsData.lockPositionStrain, ref ChartsData.lastValuePositionStrainPosition, ref ChartsData.lastValuePositionStrainStrain);
+                    WriteStrain(notification.Value.ToString());
 
                 }
 
@@ -3376,6 +3364,8 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
 
                     SetText(textBoxVelocityTime, ChartsData.textBoxVelocityTime.Text = notification.Value.ToString());
+                    WriteVelocity(ChartsData.textBoxVelocity.Text);
+
 
 
                 }
@@ -3383,12 +3373,16 @@ namespace trhacka_v_1_0_working_2019_010_201
                 {
 
                     SetText(textBoxPositionTime, ChartsData.textBoxPositionTime.Text = notification.Value.ToString());
+                    WritePosition(ChartsData.textBoxPosition.Text);
 
                 }
                 if (monitoredItem.DisplayName == "opcStrainFast_timeStamp")
                 {
 
-                    SetText(textBoxStrainTime, ChartsData.textBoxStrainTime.Text = notification.Value.ToString());
+                    SetText(textBoxStrainTime,
+                    ChartsData.textBoxStrainTime.Text =
+                    notification.Value.ToString());
+                    WriteStrain (ChartsData.textBoxStrain .Text);
 
                 }
 
@@ -3401,6 +3395,35 @@ namespace trhacka_v_1_0_working_2019_010_201
                 //throw;
             }
 
+        }
+
+        private void WriteStrain(string text)
+        {
+            SetText(textBoxStrain, ChartsData.textBoxStrain.Text = text);
+            WriteValuesToChart(textBoxStrainTime.Text, textBoxStrain.Text, ChartsData.ChartStrainTimeValues, ChartsData.ChartStrainTimeValuesLock,
+                ref ChartsData.lockStrainTime, ref ChartsData.lastTimeStrain, ref ChartsData.lastValueStrain);
+            WriteValuesToChart(textBoxVelocity.Text, textBoxStrain.Text, ChartsData.ChartVelocityStrainValues, ChartsData.ChartVelocityStrainValuesLock,
+                ref ChartsData.lockVelocityStrain, ref ChartsData.lastValueVelocityStrainVelocity, ref ChartsData.lastValueVelocityStrainStrain);
+            WriteValuesToChart(textBoxPosition.Text, textBoxStrain.Text, ChartsData.ChartPositionStrainValues, ChartsData.ChartPositionStrainValuesLock,
+                ref ChartsData.lockPositionStrain, ref ChartsData.lastValuePositionStrainPosition, ref ChartsData.lastValuePositionStrainStrain);
+        }
+
+        private void WritePosition(string text)
+        {
+            SetText(textBoxPosition, ChartsData.textBoxPosition.Text = text);
+            ChartsData.WriteValuesToChart(textBoxPositionTime.Text, textBoxPosition.Text, ChartsData.ChartPositionTimeValues, ChartsData.ChartPositionTimeValuesLock,
+                ref ChartsData.lockPositionTime, ref ChartsData.lastTimePosition, ref ChartsData.lastValuePosition);
+            ChartsData.WriteValuesToChart(textBoxPosition.Text, textBoxStrain.Text, ChartsData.ChartPositionStrainValues, ChartsData.ChartPositionStrainValuesLock,
+                ref ChartsData.lockPositionStrain, ref ChartsData.lastValuePositionStrainPosition, ref ChartsData.lastValuePositionStrainStrain);
+        }
+
+        private void WriteVelocity(string text)
+        {
+            SetText(textBoxVelocity, ChartsData.textBoxVelocity.Text = text);
+            ChartsData.WriteValuesToChart(textBoxVelocityTime.Text, textBoxVelocity.Text, ChartsData.ChartVelocityTimeValues, ChartsData.ChartVelocityTimeValuesLock,
+                ref ChartsData.lockVelocityTime, ref ChartsData.lastTimeVelocity, ref ChartsData.lastValueVelocity);
+            ChartsData.WriteValuesToChart(textBoxVelocity.Text, textBoxStrain.Text, ChartsData.ChartVelocityStrainValues, ChartsData.ChartVelocityStrainValuesLock,
+                 ref ChartsData.lockVelocityStrain, ref ChartsData.lastValueVelocityStrainVelocity, ref ChartsData.lastValueVelocityStrainStrain);
         }
 
         private void NotificationWriteToValuesProgram(MonitoredItem monitoredItem, MonitoredItemNotification notification)

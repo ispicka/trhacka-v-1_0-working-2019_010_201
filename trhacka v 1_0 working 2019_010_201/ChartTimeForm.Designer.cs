@@ -197,7 +197,7 @@
             this.cartesianChartAllTime.MaximumSize = new System.Drawing.Size(1000, 700);
             this.cartesianChartAllTime.MinimumSize = new System.Drawing.Size(1000, 350);
             this.cartesianChartAllTime.Name = "cartesianChartAllTime";
-            this.cartesianChartAllTime.Size = new System.Drawing.Size(1000, 363);
+            this.cartesianChartAllTime.Size = new System.Drawing.Size(1000, 700);
             this.cartesianChartAllTime.TabIndex = 11;
             this.cartesianChartAllTime.Text = "Time";
             this.cartesianChartAllTime.Visible = false;
@@ -225,9 +225,9 @@
             // 
             // formsPlotTimeSeries
             // 
-            this.formsPlotTimeSeries.Location = new System.Drawing.Point(42, 30);
+            this.formsPlotTimeSeries.Location = new System.Drawing.Point(29, 12);
             this.formsPlotTimeSeries.Name = "formsPlotTimeSeries";
-            this.formsPlotTimeSeries.Size = new System.Drawing.Size(970, 886);
+            this.formsPlotTimeSeries.Size = new System.Drawing.Size(970, 677);
             this.formsPlotTimeSeries.TabIndex = 42;
             // 
             // ChartTimeForm

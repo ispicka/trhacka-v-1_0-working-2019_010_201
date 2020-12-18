@@ -60,6 +60,7 @@
             this.Position = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Velocity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Force = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PreForce = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ForceOff = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Acceleration = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Duration = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -83,6 +84,7 @@
             this.Position,
             this.Velocity,
             this.Force,
+            this.PreForce,
             this.ForceOff,
             this.Acceleration,
             this.Duration,
@@ -118,7 +120,7 @@
             this.toolStripButtonTest});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1180, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1308, 25);
             this.toolStrip1.TabIndex = 42;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -175,6 +177,7 @@
             this.toolStripButtonTest.Name = "toolStripButtonTest";
             this.toolStripButtonTest.Size = new System.Drawing.Size(43, 22);
             this.toolStripButtonTest.Text = "Testuj";
+            this.toolStripButtonTest.Click += new System.EventHandler(this.toolStripButtonTest_Click);
             // 
             // label1
             // 
@@ -231,6 +234,7 @@
             "SET_VELOCITY",
             "SET_SPEED",
             "SET_MINIMUM_FORCE",
+            "SET_PRE_FORCE",
             "SET_HOME",
             "SET_POSITION"});
             this.Command.Name = "Command";
@@ -301,6 +305,11 @@
             this.Force.HeaderText = "Síla";
             this.Force.Name = "Force";
             // 
+            // PreForce
+            // 
+            this.PreForce.HeaderText = "Předpětí";
+            this.PreForce.Name = "PreForce";
+            // 
             // ForceOff
             // 
             this.ForceOff.HeaderText = "Vypínací síla";
@@ -334,7 +343,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1180, 462);
+            this.ClientSize = new System.Drawing.Size(1308, 462);
             this.Controls.Add(this.labelPath);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelProgram);
@@ -380,6 +389,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Position;
         private System.Windows.Forms.DataGridViewTextBoxColumn Velocity;
         private System.Windows.Forms.DataGridViewTextBoxColumn Force;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PreForce;
         private System.Windows.Forms.DataGridViewTextBoxColumn ForceOff;
         private System.Windows.Forms.DataGridViewTextBoxColumn Acceleration;
         private System.Windows.Forms.DataGridViewTextBoxColumn Duration;
