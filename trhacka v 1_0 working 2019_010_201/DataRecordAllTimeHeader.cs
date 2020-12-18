@@ -11,7 +11,7 @@ namespace trhacka_v_1_0_working_2019_010_201
     {
         public DataRecordAllTimeMap()
         {
-            AutoMap();
+            AutoMap(System.Globalization. CultureInfo.InvariantCulture);
 
         }
     }

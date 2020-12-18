@@ -146,7 +146,7 @@ namespace trhacka_v_1_0_working_2019_010_201
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter writer = new StreamWriter(saveFileDialog1.FileName);
-                CsvWriter writerCSV = new CsvWriter(writer);
+                CsvWriter writerCSV = new CsvWriter(writer, System.Globalization.CultureInfo.InvariantCulture);
                 int lengthMax = ChartsData.CartesianChartVelocityStrainValues.Count;
                 for (int i = 0; i < lengthMax; i++)
                 {
