@@ -83,7 +83,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void ScottPlot()
 
         {
-            bool plotVelocityForce = ChartsData.CartesianChartVelocityStrainValues.Count > 0;
+            bool plotVelocityForce = ChartsData.CartesianChartVelocityStrainValues.Count > 1;
             if (!plotVelocityForce) return;
             double[][] scottPlotData = new double[2][];
             scottPlotData[0] = new double[ChartsData.CartesianChartVelocityStrainValues.Count];
@@ -162,7 +162,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void ButtonClearChart_Click(object sender, EventArgs e)
         {
-            ChartsData.CartesianChartVelocityStrainValues.Clear();
+            ChartsData.ChartVelocityStrainValues.Clear();
+            formsPlotVelocityForce.plt.Clear();
         }
 
         private void NumericUpDownTimeToWriteToChart_ValueChanged(object sender, EventArgs e)

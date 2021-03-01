@@ -92,7 +92,7 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void ScottPlot()
 
         {
-            bool plotPositionForce = ChartsData.ChartPositionStrainValues.Count > 0;
+            bool plotPositionForce = ChartsData.ChartPositionStrainValues.Count > 1;
             if (!plotPositionForce) return;
             double[][] scottPlotPosition = new double[2][];
             scottPlotPosition[0] = new double[ChartsData.ChartPositionStrainValues.Count];
@@ -176,7 +176,8 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void ButtonClearChart_Click(object sender, EventArgs e)
         {
-            ChartsData.CartesianChartPositionStrainValues.Clear();
+            ChartsData.ChartPositionStrainValues.Clear();
+            formsPlotPositionForce.plt.Clear();
         }
 
         private void NumericUpDownTimeToWriteToChart_ValueChanged(object sender, EventArgs e)

@@ -130,26 +130,30 @@ namespace trhacka_v_1_0_working_2019_010_201
         private void ScottPlot()
 
         {
-            bool plotPosition = ChartsData.ChartPositionTimeValues.Count > 0;
-            double[][] scottPlotPosition = new double[2][];
-            scottPlotPosition[0] = new double[ChartsData.ChartPositionTimeValues.Count];
-            scottPlotPosition[1] = new double[ChartsData.ChartPositionTimeValues.Count];
+            bool plotPosition = ChartsData.ChartPositionTimeValues.Count > 1;
+            bool plotStrain = ChartsData.ChartStrainTimeValues.Count > 1;
+            bool plotVelocity = ChartsData.ChartVelocityTimeValues.Count > 1;
 
-            bool plotStrain = ChartsData.ChartStrainTimeValues.Count > 0;
-            double[][] scottPlotStrain = new double[2][];
-            scottPlotStrain[0] = new double[ChartsData.ChartStrainTimeValues.Count];
-            scottPlotStrain[1] = new double[ChartsData.ChartStrainTimeValues.Count];
+            if (plotPosition && plotStrain && plotVelocity)
+            {
+                double[][] scottPlotPosition = new double[2][];
+                scottPlotPosition[0] = new double[ChartsData.ChartPositionTimeValues.Count];
+                scottPlotPosition[1] = new double[ChartsData.ChartPositionTimeValues.Count];
 
-            bool plotVelocity = ChartsData.ChartVelocityTimeValues.Count > 0;
-            double[][] scottPlotVelocity = new double[2][];
-            scottPlotVelocity[0] = new double[ChartsData.ChartVelocityTimeValues.Count];
-            scottPlotVelocity[1] = new double[ChartsData.ChartVelocityTimeValues.Count];
-            formsPlotTimeSeries.plt.Clear();
-            plotDraw(plotPosition, scottPlotPosition, ChartsData.ChartPositionTimeValues);
-            plotDraw(plotStrain, scottPlotStrain, ChartsData.ChartStrainTimeValues);
-            plotDraw(plotVelocity, scottPlotVelocity, ChartsData.ChartVelocityTimeValues);
+                double[][] scottPlotStrain = new double[2][];
+                scottPlotStrain[0] = new double[ChartsData.ChartStrainTimeValues.Count];
+                scottPlotStrain[1] = new double[ChartsData.ChartStrainTimeValues.Count];
 
-            formsPlotTimeSeries.Render();
+                double[][] scottPlotVelocity = new double[2][];
+                scottPlotVelocity[0] = new double[ChartsData.ChartVelocityTimeValues.Count];
+                scottPlotVelocity[1] = new double[ChartsData.ChartVelocityTimeValues.Count];
+                formsPlotTimeSeries.plt.Clear();
+                plotDraw(plotPosition, scottPlotPosition, ChartsData.ChartPositionTimeValues);
+                plotDraw(plotStrain, scottPlotStrain, ChartsData.ChartStrainTimeValues);
+                plotDraw(plotVelocity, scottPlotVelocity, ChartsData.ChartVelocityTimeValues); 
+                formsPlotTimeSeries.Render();
+            }
+
         }
 
         private void plotDraw(bool plot, double[][] scottPlot, ChartValues<ObservablePoint> observablePoints)
@@ -270,9 +274,11 @@ namespace trhacka_v_1_0_working_2019_010_201
 
         private void buttonClearChart_Click(object sender, EventArgs e)
         {
-            ChartsData.CartesianChartStrainTimeValues.Clear();
-            ChartsData.CartesianChartVelocityTimeValues.Clear();
-            ChartsData.CartesianChartPositionTimeValues.Clear();
+            ChartsData.ChartPositionTimeValues.Clear();
+            ChartsData.ChartStrainTimeValues.Clear();
+            ChartsData.ChartVelocityTimeValues.Clear();
+            ChartsData.ChartPositionTimeValues.Clear();
+            formsPlotTimeSeries.plt.Clear();
 
 
         }
